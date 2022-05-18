@@ -1,23 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Node, ExtNode } from '../../components/relatives-tree/types';
+import { Node } from './components/relatives-tree/types';
 
-import averageTree from '../../components/relatives-tree/samples/average-tree.json';
-import couple from '../../components/relatives-tree/samples/couple.json';
-import diffParents from '../../components/relatives-tree/samples/diff-parents.json';
-import divorcedParents from '../../components/relatives-tree/samples/divorced-parents.json';
-import empty from '../../components/relatives-tree/samples/empty.json';
-import severalSpouses from '../../components/relatives-tree/samples/several-spouses.json';
-import simpleFamily from '../../components/relatives-tree/samples/simple-family.json';
-import testTreeN1 from '../../components/relatives-tree/samples/test-tree-n1.json';
-import testTreeN2 from '../../components/relatives-tree/samples/test-tree-n2.json';
+import averageTree from './components/relatives-tree/samples/average-tree.json';
+import couple from './components/relatives-tree/samples/couple.json';
+import diffParents from './components/relatives-tree/samples/diff-parents.json';
+import divorcedParents from './components/relatives-tree/samples/divorced-parents.json';
+import empty from './components/relatives-tree/samples/empty.json';
+import severalSpouses from './components/relatives-tree/samples/several-spouses.json';
+import simpleFamily from './components/relatives-tree/samples/simple-family.json';
+import testTreeN1 from './components/relatives-tree/samples/test-tree-n1.json';
+import testTreeN2 from './components/relatives-tree/samples/test-tree-n2.json';
 
 import styles from './FamilyTree.module.css';
-import FamilyNode from '../../components/FamilyNode/FamilyNode';
-import ReactFamilyTree from '../../components/react-family-tree';
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-
-const WIDTH = 70;
-const HEIGHT = 80;
+import { Tree } from './components/Tree/Tree';
 
 const DEFAULT_SOURCE = 'average-tree.json';
 
@@ -95,47 +90,13 @@ export default React.memo<{}>(function FamilyTree() {
         </a>
       </header>
       {nodes.length > 0 && (
-        <TransformWrapper>
-          {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-            <React.Fragment>
-              <div className="tools">
-                <button onClick={() => zoomIn()}>+</button>
-                <button onClick={() => zoomOut()}>-</button>
-                <button onClick={() => resetTransform()}>x</button>
-              </div>
-              <TransformComponent>
-                <ReactFamilyTree
-                  nodes={nodes as Node[]}
-                  rootId={rootId}
-                  width={WIDTH}
-                  height={HEIGHT}
-                  className={styles.tree}
-                  renderNode={(node: ExtNode) => (
-                    <FamilyNode
-                      key={node.id}
-                      node={node}
-                      isRoot={node.id === rootId}
-                      onSubClick={setRootId}
-                      style={{
-                        width: WIDTH,
-                        height: HEIGHT,
-                        transform: `translate(${node.left * (WIDTH / 2)}px, ${
-                          node.top * (HEIGHT / 2)
-                        }px)`,
-                      }}
-                    />
-                  )}
-                />
-              </TransformComponent>
-            </React.Fragment>
-          )}
-        </TransformWrapper>
+        <Tree nodes={nodes} rootId={rootId} setRootId={setRootId} />
       )}
-      {rootId !== myId && (
+      {/* {rootId !== myId && (
         <div className={styles.reset} onClick={onResetClick}>
           Reset
         </div>
-      )}
+      )} */}
     </div>
   );
 });
