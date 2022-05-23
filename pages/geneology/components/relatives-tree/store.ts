@@ -5,7 +5,6 @@ import { FamilyType } from './types';
 
 // TODO think about refactoring
 class Store {
-
   private nextId: number;
 
   families: Map<number, Family>;
@@ -20,10 +19,12 @@ class Store {
     this.families = new Map();
     this.nodes = toMap(nodes);
 
-    this.root = (this.nodes.get(rootId)!);
+    this.root = this.nodes.get(rootId)!;
   }
 
-  getNextId(): number { return ++this.nextId; }
+  getNextId(): number {
+    return ++this.nextId;
+  }
 
   getNode(id: string): Node {
     return this.nodes.get(id)!;
@@ -38,7 +39,7 @@ class Store {
   }
 
   get familiesArray(): readonly Family[] {
-    return [...this.families.values()];
+    return Array.from(this.families.values());
   }
 
   get rootFamilies(): readonly Family[] {
@@ -48,7 +49,6 @@ class Store {
   get rootFamily(): Family {
     return this.rootFamilies.find(family => family.main)!;
   }
-
 }
 
 export default Store;
