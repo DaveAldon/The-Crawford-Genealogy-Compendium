@@ -5,8 +5,8 @@ import ReactFamilyTree from '../../components/react-family-tree';
 import { ExtNode, Node } from '../../components/relatives-tree/types';
 import styles from './Tree.module.css';
 
-const WIDTH = 70;
-const HEIGHT = 80;
+const WIDTH = 80;
+const HEIGHT = 110;
 
 interface ITree {
   nodes: Node[];
@@ -37,6 +37,8 @@ export const Tree: React.FC<ITree> = props => {
                   node={node}
                   isRoot={node.id === rootId}
                   onSubClick={setRootId}
+                  photoSrc={`https://i.pravatar.cc/150?u=${node.id}`}
+                  name={node.id}
                   style={{
                     width: WIDTH,
                     height: HEIGHT,

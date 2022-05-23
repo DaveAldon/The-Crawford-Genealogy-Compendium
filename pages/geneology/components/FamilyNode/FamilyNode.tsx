@@ -8,6 +8,9 @@ interface Props {
   isRoot: boolean;
   onSubClick: (id: string) => void;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
+  photoSrc?: string;
+  name?: string;
 }
 
 export default React.memo<Props>(function FamilyNode({
@@ -15,6 +18,9 @@ export default React.memo<Props>(function FamilyNode({
   isRoot,
   onSubClick,
   style,
+  children,
+  photoSrc,
+  name,
 }) {
   return (
     <div className={styles.root} style={style} title={node.id}>
@@ -23,8 +29,22 @@ export default React.memo<Props>(function FamilyNode({
           styles.inner,
           styles[node.gender],
           isRoot && styles.isRoot,
-        )}
-      />
+        )}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+          }}>
+          <img height={'75%'} src={photoSrc} />
+          <p
+            style={{
+              fontSize: '.5rem',
+            }}>
+            {name}
+          </p>
+          {children}
+        </div>
+      </div>
       {node.hasSubTree && (
         <div
           className={classNames(styles.sub, styles[node.gender])}
