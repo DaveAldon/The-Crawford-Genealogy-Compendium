@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Node } from './components/relatives-tree/types';
+import { Node } from '../../components/relatives-tree/types';
 
-import averageTree from './components/relatives-tree/samples/average-tree.json';
-import couple from './components/relatives-tree/samples/couple.json';
-import diffParents from './components/relatives-tree/samples/diff-parents.json';
-import divorcedParents from './components/relatives-tree/samples/divorced-parents.json';
-import empty from './components/relatives-tree/samples/empty.json';
-import severalSpouses from './components/relatives-tree/samples/several-spouses.json';
-import simpleFamily from './components/relatives-tree/samples/simple-family.json';
-import testTreeN1 from './components/relatives-tree/samples/test-tree-n1.json';
-import testTreeN2 from './components/relatives-tree/samples/test-tree-n2.json';
+import averageTree from '../../components/relatives-tree/samples/average-tree.json';
+import couple from '../../components/relatives-tree/samples/couple.json';
+import diffParents from '../../components/relatives-tree/samples/diff-parents.json';
+import divorcedParents from '../../components/relatives-tree/samples/divorced-parents.json';
+import empty from '../../components/relatives-tree/samples/empty.json';
+import severalSpouses from '../../components/relatives-tree/samples/several-spouses.json';
+import simpleFamily from '../../components/relatives-tree/samples/simple-family.json';
+import testTreeN1 from '../../components/relatives-tree/samples/test-tree-n1.json';
+import testTreeN2 from '../../components/relatives-tree/samples/test-tree-n2.json';
 
 import styles from './FamilyTree.module.css';
-import { Tree } from './components/Tree/Tree';
+import { Tree } from '../../components/Tree/Tree';
 
 const DEFAULT_SOURCE = 'average-tree.json';
 
