@@ -35,7 +35,7 @@ export type Family = {
   Y: number;
   parents: readonly Unit[];
   children: readonly Unit[];
-}
+};
 
 export type Unit = {
   /** Family ID */
@@ -44,44 +44,51 @@ export type Unit = {
   readonly child: boolean;
   readonly nodes: readonly Node[];
   pos: number;
-}
+};
 
 export type Size = Readonly<{
   width: number;
   height: number;
-}>
+}>;
 
 export type Relation = Readonly<{
   id: string;
   type: RelType;
-}>
+}>;
 
 export type Node = Readonly<{
   id: string;
+  name: string;
   gender: Gender;
   parents: readonly Relation[];
   children: readonly Relation[];
   siblings: readonly Relation[];
   spouses: readonly Relation[];
   placeholder?: boolean;
-}>
+}>;
 
-export type ExtNode = Node & Readonly<{
-  top: number;
-  left: number;
-  hasSubTree: boolean;
-}>
+export type ExtNode = Node &
+  Readonly<{
+    top: number;
+    left: number;
+    hasSubTree: boolean;
+  }>;
 
-export type Connector = readonly [x1: number, y1: number, x2: number, y2: number];
+export type Connector = readonly [
+  x1: number,
+  y1: number,
+  x2: number,
+  y2: number,
+];
 
 export type RelData = Readonly<{
   canvas: Size;
   families: readonly Family[];
   nodes: readonly ExtNode[];
   connectors: readonly Connector[];
-}>
+}>;
 
 export type Options = Readonly<{
   rootId: string;
   placeholders?: boolean;
-}>
+}>;

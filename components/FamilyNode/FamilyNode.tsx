@@ -38,7 +38,9 @@ export default React.memo<Props>(function FamilyNode({
           <img height={'75%'} src={photoSrc} />
           <p
             style={{
-              fontSize: '.5rem',
+              fontSize: '.3rem',
+              fontWeight: 'bold',
+              textAlign: 'center',
             }}>
             {name}
           </p>

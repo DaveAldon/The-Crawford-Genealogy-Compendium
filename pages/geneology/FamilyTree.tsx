@@ -10,16 +10,18 @@ import severalSpouses from '../../components/relatives-tree/samples/several-spou
 import simpleFamily from '../../components/relatives-tree/samples/simple-family.json';
 import testTreeN1 from '../../components/relatives-tree/samples/test-tree-n1.json';
 import testTreeN2 from '../../components/relatives-tree/samples/test-tree-n2.json';
+import crawfordLine from '../../data/crawford-line.json';
 
 import styles from './FamilyTree.module.css';
 import { Tree } from '../../components/Tree/Tree';
 
-const DEFAULT_SOURCE = 'average-tree.json';
+const DEFAULT_SOURCE = 'crawford-line.json';
 
 type Source = Array<Node>;
 
 const SOURCES: { [key: string]: Source } = {
-  'average-tree.json': averageTree as Source,
+  'crawford-line.json': crawfordLine as Source,
+  /* 'average-tree.json': averageTree as Source,
   'couple.json': couple as Source,
   'diff-parents.json': diffParents as Source,
   'divorced-parents.json': divorcedParents as Source,
@@ -27,7 +29,7 @@ const SOURCES: { [key: string]: Source } = {
   'several-spouses.json': severalSpouses as Source,
   'simple-family.json': simpleFamily as Source,
   'test-tree-n1.json': testTreeN1 as Source,
-  'test-tree-n2.json': testTreeN2 as Source,
+  'test-tree-n2.json': testTreeN2 as Source, */
 };
 
 const URL = 'URL (Gist, Paste.bin, ...)';

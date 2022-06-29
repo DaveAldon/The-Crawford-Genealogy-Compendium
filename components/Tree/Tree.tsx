@@ -38,7 +38,7 @@ export const Tree: React.FC<ITree> = props => {
                   isRoot={node.id === rootId}
                   onSubClick={setRootId}
                   photoSrc={`https://i.pravatar.cc/150?u=${node.id}`}
-                  name={node.id}
+                  name={node.name}
                   style={{
                     width: WIDTH,
                     height: HEIGHT,
