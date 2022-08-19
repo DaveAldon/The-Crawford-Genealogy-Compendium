@@ -2,10 +2,14 @@ import type Store from '../store';
 import { Gender, Mutable, Node, Relation, RelType } from '../types';
 import { relToNode } from '../utils';
 
-const createRel = (id: string, type = RelType.blood): Relation => ({ id, type });
+const createRel = (id: string, type = RelType.blood): Relation => ({
+  id,
+  type,
+});
 
 const createNode = (gender: Gender): Mutable<Node> => ({
   id: `${gender}-ph`,
+  name: ``,
   placeholder: true,
   gender: gender,
   parents: [],
@@ -29,18 +33,15 @@ const createParents = (store: Store): readonly Relation[] => {
   });
 };
 
-const setParents = (parents: readonly Relation[]) => (
-  (node: Mutable<Node>) => node.parents = parents.slice()
-);
+const setParents = (parents: readonly Relation[]) => (node: Mutable<Node>) =>
+  (node.parents = parents.slice());
 
 export const placeholders = (store: Store): Store => {
   if (!store.root.parents.length) {
     const setParentsTo = setParents(createParents(store));
     setParentsTo(store.root);
 
-    store.root.siblings
-      .map(relToNode(store))
-      .forEach(setParentsTo);
+    store.root.siblings.map(relToNode(store)).forEach(setParentsTo);
   }
 
   return store;
