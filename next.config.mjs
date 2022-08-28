@@ -7,6 +7,7 @@ const nextConfig = {
     path: '',
   },
   assetPrefix: './',
+  pageExtensions: ['page.tsx', 'api.ts'],
 };
 
 export default nextConfig;
