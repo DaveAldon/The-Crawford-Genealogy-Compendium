@@ -4,8 +4,8 @@ import {
   TransformWrapper,
 } from '@pronestor/react-zoom-pan-pinch';
 import FamilyNode from '../FamilyNode/FamilyNode';
-import ReactFamilyTree from '../../components/react-family-tree';
-import { ExtNode, Node } from '../../components/relatives-tree/types';
+import ReactFamilyTree from '../react-family-tree';
+import { ExtNode, Node } from '../relatives-tree/types';
 import styles from './Tree.module.css';
 
 const WIDTH = 80;

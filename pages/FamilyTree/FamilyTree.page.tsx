@@ -1,15 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Node } from '../../components/relatives-tree/types';
-
-import averageTree from '../../components/relatives-tree/samples/average-tree.json';
-import couple from '../../components/relatives-tree/samples/couple.json';
-import diffParents from '../../components/relatives-tree/samples/diff-parents.json';
-import divorcedParents from '../../components/relatives-tree/samples/divorced-parents.json';
-import empty from '../../components/relatives-tree/samples/empty.json';
-import severalSpouses from '../../components/relatives-tree/samples/several-spouses.json';
-import simpleFamily from '../../components/relatives-tree/samples/simple-family.json';
-import testTreeN1 from '../../components/relatives-tree/samples/test-tree-n1.json';
-import testTreeN2 from '../../components/relatives-tree/samples/test-tree-n2.json';
+import { Gender, Node, RelType } from '../../components/relatives-tree/types';
 import crawfordLine from '../../data/crawford-line.json';
 
 import styles from './FamilyTree.module.css';
@@ -23,38 +13,77 @@ type Source = Array<Node>;
 
 const SOURCES: { [key: string]: Source } = {
   'crawford-line.json': crawfordLine as Source,
-  /* 'average-tree.json': averageTree as Source,
-  'couple.json': couple as Source,
-  'diff-parents.json': diffParents as Source,
-  'divorced-parents.json': divorcedParents as Source,
-  'empty.json': empty as Source,
-  'several-spouses.json': severalSpouses as Source,
-  'simple-family.json': simpleFamily as Source,
-  'test-tree-n1.json': testTreeN1 as Source,
-  'test-tree-n2.json': testTreeN2 as Source, */
 };
 
 const URL = 'URL (Gist, Paste.bin, ...)';
 
-const FamilyTree: React.FC = ({ data }: { data: any }) => {
-  console.log('sadfs', data);
+const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
   const [source, setSource] = useState<string>(DEFAULT_SOURCE);
   const [nodes, setNodes] = useState<Source>([]);
   const [myId, setMyId] = useState<string>('');
   const [rootId, setRootId] = useState<string>('');
 
+  const getData = () => {
+    const newNodes = data.map(person => {
+      const parents = [];
+      if (person.Father)
+        parents.push({ id: person.Father, relType: RelType.blood });
+      if (person.Mother)
+        parents.push({ id: person.Mother, relType: RelType.blood });
+      return {
+        id: person.id,
+        name: `${person.Firstname} ${person.Middlename} ${person.Lastname}`,
+        gender: person.Gender === 'M' ? Gender.male : Gender.female,
+        parents,
+        siblings: [],
+        spouses: [],
+        children: [],
+      };
+    });
+    newNodes.forEach(person => {
+      // spouses
+      person.spouses = data
+        .filter(p => p.Spouse === person.id)
+        .map(p => ({ id: p.id, relType: RelType.married }));
+
+      person.parents.forEach(parent => {
+        const parentPerson = newNodes.find(p => p.id === parent.id);
+        if (parentPerson) {
+          // children
+          parentPerson.children.push({
+            id: person.id,
+            relType: RelType.blood,
+          });
+          // siblings
+          parentPerson.children.forEach(child => {
+            if (child.id !== person.id) {
+              person.siblings.push({
+                id: child.id,
+                relType: RelType.blood,
+              });
+            }
+          });
+        }
+      });
+    });
+
+    return JSON.parse(JSON.stringify(newNodes));
+  };
+
   useEffect(() => {
     (async () => {
-      let newNodes;
+      //let newNodes;
       console.log('loadData', source, URL);
-      if (source === URL) {
+      /* if (source === URL) {
         const response = await fetch(prompt('Paste the url to load:') || '');
 
         newNodes = await response.json();
       } else {
         newNodes = SOURCES[source];
-      }
+      } */
 
+      const newNodes = getData();
+      console.log('newNodes', newNodes);
       if (newNodes) {
         setNodes([]); // Avoid invalid references to unknown nodes
         setRootId(newNodes[0].id);
@@ -77,8 +106,7 @@ const FamilyTree: React.FC = ({ data }: { data: any }) => {
   return (
     <div className={styles.root}>
       <header className={styles.header}>
-        <h1 className={styles.title}>FamilyTree demo</h1>
-
+        <h1 className={styles.title}>FamilyTree</h1>
         <div>
           <span>Source: </span>
           <select onChange={onSetSource} defaultValue={source}>
@@ -106,13 +134,27 @@ const FamilyTree: React.FC = ({ data }: { data: any }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export interface APIFamilyTree {
+  _id: string;
+  id: string;
+  Firstname: string;
+  Middlename: string;
+  Lastname: string;
+  Gender: string;
+  DOB: string;
+  Death: string;
+  Mother: string;
+  Father: string;
+  Spouse: string;
+}
+
+export async function getServerSideProps(_context: any) {
   const client = await clientPromise;
 
   const db = client.db('geneology');
 
-  let data = await db.collection('family tree').find({}).toArray();
-  data = JSON.parse(JSON.stringify(data));
+  const collectionData = await db.collection('family_tree').find({}).toArray();
+  const data: APIFamilyTree[] = JSON.parse(JSON.stringify(collectionData));
 
   return {
     props: { data },
