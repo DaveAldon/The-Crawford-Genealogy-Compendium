@@ -14,6 +14,8 @@ import crawfordLine from '../../data/crawford-line.json';
 
 import styles from './FamilyTree.module.css';
 import { Tree } from '../../components/Tree/Tree';
+import geneology from '../api/geneology.api';
+import clientPromise from '../../lib/mongodb';
 
 const DEFAULT_SOURCE = 'crawford-line.json';
 
@@ -34,7 +36,8 @@ const SOURCES: { [key: string]: Source } = {
 
 const URL = 'URL (Gist, Paste.bin, ...)';
 
-export default React.memo<{}>(function FamilyTree() {
+const FamilyTree: React.FC = ({ data }: { data: any }) => {
+  console.log('sadfs', data);
   const [source, setSource] = useState<string>(DEFAULT_SOURCE);
   const [nodes, setNodes] = useState<Source>([]);
   const [myId, setMyId] = useState<string>('');
@@ -101,4 +104,19 @@ export default React.memo<{}>(function FamilyTree() {
       )} */}
     </div>
   );
-});
+};
+
+export async function getServerSideProps(context) {
+  const client = await clientPromise;
+
+  const db = client.db('geneology');
+
+  let data = await db.collection('family tree').find({}).toArray();
+  data = JSON.parse(JSON.stringify(data));
+
+  return {
+    props: { data },
+  };
+}
+
+export default FamilyTree;

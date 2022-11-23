@@ -1,5 +1,8 @@
 import React from 'react';
-import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
+import {
+  TransformComponent,
+  TransformWrapper,
+} from '@pronestor/react-zoom-pan-pinch';
 import FamilyNode from '../FamilyNode/FamilyNode';
 import ReactFamilyTree from '../../components/react-family-tree';
 import { ExtNode, Node } from '../../components/relatives-tree/types';

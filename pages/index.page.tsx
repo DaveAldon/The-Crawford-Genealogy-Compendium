@@ -26,9 +26,7 @@ export default function Home({
           (This is a sample website - you’ll be building a site like this in{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
-        <Link href={`/geneology/FamilyTree`}>
-          <a>Family Tree</a>
-        </Link>
+        <Link href={`/FamilyTree/FamilyTree`}>Family Tree</Link>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -36,9 +34,7 @@ export default function Home({
           {allPostsData.map(({ id, date, title }) => {
             return (
               <li className={utilStyles.listItem} key={id}>
-                <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
+                <Link href={`/posts/${id}`}>{title}</Link>
                 <br />
                 <small className={utilStyles.lightText}>
                   <Date dateString={date} />
