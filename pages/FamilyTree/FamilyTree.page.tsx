@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FamilyTree.module.css';
 import { Tree } from '../../components/Tree/Tree';
-import clientPromise from '../../lib/mongodb';
+//import clientPromise from '../../lib/mongodb';
 import { APIFamilyTree } from '../../types/geneology';
 import { useFamilyTree } from './useFamilyTree/useFamilyTree';
 import { getSheetData } from '../../lib/googlesheets';

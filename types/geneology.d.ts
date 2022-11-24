@@ -10,6 +10,7 @@ export interface APIFamilyTree {
   Mother: string;
   Father: string;
   Spouse: string;
+  Divorced: string;
 }
 
 export interface TransformedFamilyTree {

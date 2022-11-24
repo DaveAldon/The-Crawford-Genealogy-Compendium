@@ -30,6 +30,7 @@ export const getSheetData = async () => {
         Mother: row[7],
         Father: row[8],
         Spouse: row[9],
+        Divorced: row[10],
       }));
     }
   } catch (err) {
