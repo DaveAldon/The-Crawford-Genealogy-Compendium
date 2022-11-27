@@ -23,13 +23,13 @@ interface ITree {
 export const Tree: React.FC<ITree> = props => {
   const { nodes, rootId, setRootId, onClickNode } = props;
   return (
-    <TransformWrapper centerOnInit initialScale={1}>
-      {({ zoomIn, zoomOut, resetTransform }) => (
+    <TransformWrapper limitToBounds={false} centerOnInit initialScale={1}>
+      {({ zoomIn, zoomOut, resetTransform, centerView }) => (
         <div className={styles.wrapper}>
           <div className="tools">
             <button onClick={() => zoomIn()}>+</button>
             <button onClick={() => zoomOut()}>-</button>
-            <button onClick={() => resetTransform()}>x</button>
+            <button onClick={() => centerView()}>x</button>
           </div>
           <TransformComponent wrapperStyle={{ width: '100%', height: '100%' }}>
             <ReactFamilyTree
