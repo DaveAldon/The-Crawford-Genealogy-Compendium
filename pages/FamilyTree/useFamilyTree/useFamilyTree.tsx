@@ -15,6 +15,8 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
   const [nodes, setNodes] = useState<Source>([]);
   const [myId, setMyId] = useState<string>('');
   const [rootId, setRootId] = useState<string>('');
+  const [activeNode, setActiveNode] = useState<string>('');
+  const [panelState, setPanelState] = useState<boolean>(false);
 
   useEffect(() => {
     (async () => {
@@ -28,7 +30,6 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
       } */
 
       const newNodes = getTransformedFamilyTree(data);
-      console.log('newNodes', newNodes);
       if (newNodes) {
         setNodes([]); // Avoid invalid references to unknown nodes
         setRootId(newNodes[0].id);
@@ -43,6 +44,11 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
     setSource(event.target.value);
   };
 
+  const onClickNode = (id: string) => {
+    setPanelState(true);
+    setActiveNode(id);
+  };
+
   return {
     sources,
     source,
@@ -52,5 +58,9 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
     myId,
     onResetClick,
     onSetSource,
+    onClickNode,
+    panelState,
+    setPanelState,
+    activeNode,
   };
 };

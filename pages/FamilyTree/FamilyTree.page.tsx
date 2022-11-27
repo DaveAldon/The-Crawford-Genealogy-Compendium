@@ -1,17 +1,33 @@
 import React from 'react';
 import styles from './FamilyTree.module.css';
-import { Tree } from '../../components/Tree/Tree';
+import { Tree } from './components/Tree/Tree';
 //import clientPromise from '../../lib/mongodb';
 import { APIFamilyTree } from '../../types/geneology';
 import { useFamilyTree } from './useFamilyTree/useFamilyTree';
 import { getSheetData } from '../../lib/googlesheets';
+import { SlidingPane } from './components/SlidingPane/SlidingPane';
 
 const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
-  const { sources, source, nodes, rootId, setRootId, onSetSource } =
-    useFamilyTree({ data });
+  const {
+    sources,
+    source,
+    nodes,
+    rootId,
+    setRootId,
+    onSetSource,
+    onClickNode,
+    panelState,
+    setPanelState,
+    activeNode,
+  } = useFamilyTree({ data });
 
   return (
     <div className={styles.root}>
+      <SlidingPane
+        isOpen={panelState}
+        activeNode={activeNode}
+        setPanelState={setPanelState}
+      />
       <header className={styles.header}>
         <h1 className={styles.title}>FamilyTree</h1>
         <div>
@@ -30,7 +46,13 @@ const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
         </a>
       </header>
       {nodes.length > 0 && (
-        <Tree nodes={nodes} rootId={rootId} setRootId={setRootId} />
+        <Tree
+          nodes={nodes}
+          rootId={rootId}
+          setRootId={setRootId}
+          onClickNode={onClickNode}
+          setPanelState={setPanelState}
+        />
       )}
     </div>
   );
