@@ -1,3 +1,9 @@
+.profileParent {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sliding Pane module specific */
 .slide-pane {
     display: flex;
     flex-direction: column;

@@ -7,7 +7,10 @@ import FamilyNode from '../FamilyNode/FamilyNode';
 import ReactFamilyTree from '../../../../components/react-family-tree';
 import { ExtNode, Node } from '../../../../components/relatives-tree/types';
 import styles from './Tree.module.css';
-import { ResourceTypes } from '../../../../lib/resources/resources.enum';
+import {
+  FallbackResources,
+  ResourceTypes,
+} from '../../../../lib/resources/resources.enum';
 import { getResource } from '../../../../lib/resources/resources';
 
 const WIDTH = 80;
@@ -24,7 +27,7 @@ export const Tree: React.FC<ITree> = props => {
   const { nodes, rootId, setRootId, onClickNode } = props;
   return (
     <TransformWrapper limitToBounds={false} centerOnInit initialScale={1}>
-      {({ zoomIn, zoomOut, resetTransform, centerView }) => (
+      {({ zoomIn, zoomOut, centerView }) => (
         <div className={styles.wrapper}>
           <div className="tools">
             <button onClick={() => zoomIn()}>+</button>
@@ -46,7 +49,7 @@ export const Tree: React.FC<ITree> = props => {
                   isRoot={node.id === rootId}
                   onSubClick={setRootId}
                   photoSrc={getResource(node.id, ResourceTypes.profile)}
-                  fallbackSrc={`https://i.pravatar.cc/150?u=${node.id}`}
+                  fallbackSrc={`${FallbackResources.profile}${node.id}`}
                   name={node.name}
                   style={{
                     width: WIDTH,

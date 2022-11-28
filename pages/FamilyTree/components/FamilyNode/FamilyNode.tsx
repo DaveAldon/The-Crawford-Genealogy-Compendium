@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import styles from './FamilyNode.module.css';
 import { ExtNode } from '../../../../components/relatives-tree/types';
-import { getResource } from '../../../../lib/resources/resources';
-import { ResourceTypes } from '../../../../lib/resources/resources.enum';
 import { useImageFallback } from '../../../../hooks/useImageFallback/useImageFallback';
 import Image from 'next/image';
 

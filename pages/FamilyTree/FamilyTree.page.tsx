@@ -6,6 +6,7 @@ import { APIFamilyTree } from '../../types/geneology';
 import { useFamilyTree } from './useFamilyTree/useFamilyTree';
 import { getSheetData } from '../../lib/googlesheets';
 import { SlidingPane } from './components/SlidingPane/SlidingPane';
+import { defaultAPIFamilyTree } from '../../utils/defaultData';
 
 const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
   const {
@@ -19,13 +20,17 @@ const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
     panelState,
     setPanelState,
     activeNode,
+    compendiumData,
   } = useFamilyTree({ data });
 
   return (
     <div className={styles.root}>
       <SlidingPane
         isOpen={panelState}
-        activeNode={activeNode}
+        activeNode={
+          compendiumData.find(item => item.id === activeNode) ||
+          defaultAPIFamilyTree
+        }
         setPanelState={setPanelState}
       />
       <header className={styles.header}>

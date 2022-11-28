@@ -5,9 +5,9 @@ export const getSheetData = async () => {
     const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
     const jwt = new google.auth.JWT(
       process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-      "",
+      '',
       (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
-      target
+      target,
     );
 
     const sheets = google.sheets({ version: 'v4', auth: jwt });
@@ -18,7 +18,7 @@ export const getSheetData = async () => {
 
     const rows = response.data.values;
     if (rows && rows.length) {
-      return rows.slice(1).map((row) => ({
+      return rows.slice(1).map(row => ({
         _id: row[0],
         id: row[0],
         Firstname: row[1],
@@ -26,15 +26,17 @@ export const getSheetData = async () => {
         Lastname: row[3],
         Gender: row[4],
         DOB: row[5],
-        Death: row[6],
-        Mother: row[7],
-        Father: row[8],
-        Spouse: row[9],
-        Divorced: row[10],
+        Birthplace: row[6],
+        Death: row[7],
+        Deathplace: row[8],
+        Mother: row[9],
+        Father: row[10],
+        Spouse: row[11],
+        Divorced: row[12],
       }));
     }
   } catch (err) {
     console.log(err);
   }
   return [];
-}
+};

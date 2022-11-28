@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useImageFallback = ({
   photoSrc,
@@ -9,8 +9,12 @@ export const useImageFallback = ({
 }) => {
   const [imageSrc, setImageSrc] = useState(photoSrc || fallbackSrc);
 
+  useEffect(() => {
+    setImageSrc(photoSrc || fallbackSrc);
+  }, [photoSrc, fallbackSrc]);
+
   const onError = () => {
-    if (imageSrc !== fallbackSrc) setImageSrc(fallbackSrc);
+    setImageSrc(fallbackSrc);
   };
 
   return {

@@ -6,7 +6,9 @@ export interface APIFamilyTree {
   Lastname: string;
   Gender: string;
   DOB: string;
+  Birthplace: string;
   Death: string;
+  Deathplace: string;
   Mother: string;
   Father: string;
   Spouse: string;
@@ -22,4 +24,4 @@ export interface TransformedFamilyTree {
   siblings: Relation[];
   spouses: Relation[];
   placeholder?: boolean;
-};
+}

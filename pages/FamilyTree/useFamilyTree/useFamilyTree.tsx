@@ -62,5 +62,6 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
     panelState,
     setPanelState,
     activeNode,
+    compendiumData: data,
   };
 };
