@@ -7,8 +7,10 @@ export interface APIFamilyTree {
   Gender: string;
   DOB: string;
   Birthplace: string;
+  BirthplaceCoords: string;
   Death: string;
   Deathplace: string;
+  DeathplaceCoords: string;
   Mother: string;
   Father: string;
   Spouse: string;

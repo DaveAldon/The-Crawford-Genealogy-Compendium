@@ -8,8 +8,8 @@ import {
 import { useImageFallback } from '../../../../hooks/useImageFallback/useImageFallback';
 import { BiArrowFromLeft } from 'react-icons/bi';
 import styles from './SlidingPane.module.css';
-import { Map, Marker } from 'pigeon-maps';
 import { APIFamilyTree } from '../../../../types/geneology';
+import { Map } from '../Map/Map';
 
 interface SlidingPaneProps {
   isOpen: boolean;
@@ -21,11 +21,6 @@ export const SlidingPane = (props: SlidingPaneProps) => {
   const photoSrc = getResource(activeNode.id, ResourceTypes.profile);
   const fallbackSrc = `${FallbackResources.profile}${activeNode.id}`;
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
-  const parsedBirthplacecoords = activeNode.Birthplace.split(',').map(Number);
-  const birthplaceCoords: [number, number] = [
-    parsedBirthplacecoords[0],
-    parsedBirthplacecoords[1],
-  ];
 
   return (
     <SlidingPaneLibrary
@@ -35,20 +30,39 @@ export const SlidingPane = (props: SlidingPaneProps) => {
       onRequestClose={() => setPanelState(false)}>
       <div className={styles.profileParent}>
         <BiArrowFromLeft />
-        <Image
-          src={imageSrc}
-          onError={onError}
-          alt="profile photo"
-          width={200}
-          height={200}
-        />
+        <div
+          style={{
+            width: '100%',
+            height: 300,
+            borderRadius: 10,
+            position: 'relative',
+            overflow: 'hidden',
+          }}>
+          <Image
+            src={imageSrc}
+            style={{ objectFit: 'cover' }}
+            fill
+            sizes="100vw"
+            onError={onError}
+            alt="profile photo"
+          />
+        </div>
         <p>
           {activeNode.Firstname} {activeNode.Middlename} {activeNode.Lastname}
         </p>
-        {birthplaceCoords.length === 2 ? (
-          <Map height={300} center={birthplaceCoords} defaultZoom={11}>
-            <Marker width={50} anchor={birthplaceCoords} />
-          </Map>
+        <p>
+          Born: {activeNode.DOB}
+          {activeNode.Death ? ` - Died: ${activeNode.Death}` : ''}
+        </p>
+        <Map
+          coords={activeNode.BirthplaceCoords}
+          label={`Place of Birth: ${activeNode.Birthplace}`}
+        />
+        {activeNode.Death ? (
+          <Map
+            coords={activeNode.DeathplaceCoords}
+            label={`Place of Death: ${activeNode.Deathplace}`}
+          />
         ) : null}
       </div>
     </SlidingPaneLibrary>

@@ -4,13 +4,14 @@ import styles from './FamilyNode.module.css';
 import { ExtNode } from '../../../../components/relatives-tree/types';
 import { useImageFallback } from '../../../../hooks/useImageFallback/useImageFallback';
 import Image from 'next/image';
+import { ProfilePhoto } from './components/ProfilePhoto/ProfilePhoto';
+import { ProfileInfo } from './components/ProfileInfo/ProfileInfo';
 
 interface Props {
   node: ExtNode;
   isRoot: boolean;
   onSubClick: (id: string) => void;
   style?: React.CSSProperties;
-  children?: React.ReactNode;
   photoSrc?: string;
   fallbackSrc: string;
   name?: string;
@@ -22,7 +23,6 @@ export default React.memo<Props>(function FamilyNode({
   isRoot,
   onSubClick,
   style,
-  children,
   photoSrc,
   fallbackSrc,
   name,
@@ -46,19 +46,10 @@ export default React.memo<Props>(function FamilyNode({
           style={{
             display: 'flex',
             flexDirection: 'column',
+            width: '100%',
           }}>
-          <div style={{ height: '75%', position: 'relative' }}>
-            <Image alt="" fill sizes="100vw" src={imageSrc} onError={onError} />
-          </div>
-          <p
-            style={{
-              fontSize: '.3rem',
-              fontWeight: 'bold',
-              textAlign: 'center',
-            }}>
-            {name}
-          </p>
-          {children}
+          <ProfilePhoto src={imageSrc} onError={onError} alt={name} />
+          <ProfileInfo name={name || ''} />
         </div>
       </div>
       {node.hasSubTree && (

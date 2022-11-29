@@ -27,12 +27,14 @@ export const getSheetData = async () => {
         Gender: row[4],
         DOB: row[5],
         Birthplace: row[6],
-        Death: row[7],
-        Deathplace: row[8],
-        Mother: row[9],
-        Father: row[10],
-        Spouse: row[11],
-        Divorced: row[12],
+        BirthplaceCoords: row[7],
+        Death: row[8],
+        Deathplace: row[9],
+        DeathplaceCoords: row[10],
+        Mother: row[11],
+        Father: row[12],
+        Spouse: row[13],
+        Divorced: row[14],
       }));
     }
   } catch (err) {
