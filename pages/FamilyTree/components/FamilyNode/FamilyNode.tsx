@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import styles from './FamilyNode.module.css';
 import { ExtNode } from '../../../../components/relatives-tree/types';
 import { useImageFallback } from '../../../../hooks/useImageFallback/useImageFallback';
-import Image from 'next/image';
 import { ProfilePhoto } from './components/ProfilePhoto/ProfilePhoto';
 import { ProfileInfo } from './components/ProfileInfo/ProfileInfo';
 
@@ -16,6 +15,7 @@ interface Props {
   fallbackSrc: string;
   name?: string;
   onClickNode: (id: string) => void;
+  headerText: string;
 }
 
 export default React.memo<Props>(function FamilyNode({
@@ -27,6 +27,7 @@ export default React.memo<Props>(function FamilyNode({
   fallbackSrc,
   name,
   onClickNode,
+  headerText,
 }) {
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
 
@@ -48,8 +49,9 @@ export default React.memo<Props>(function FamilyNode({
             flexDirection: 'column',
             width: '100%',
           }}>
+          <ProfileInfo height={'15%'} title={headerText} fontSize={'.50rem'} />
           <ProfilePhoto src={imageSrc} onError={onError} alt={name} />
-          <ProfileInfo name={name || ''} />
+          <ProfileInfo height={'25%'} title={name || ''} fontSize={'.40rem'} />
         </div>
       </div>
       {node.hasSubTree && (

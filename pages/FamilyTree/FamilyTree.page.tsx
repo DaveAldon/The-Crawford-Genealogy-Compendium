@@ -52,6 +52,7 @@ const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
       </header>
       {nodes.length > 0 && (
         <Tree
+          compendiumData={compendiumData}
           nodes={nodes}
           rootId={rootId}
           setRootId={setRootId}

@@ -1,28 +1,27 @@
 interface Props {
-  name: string;
+  title: string;
+  height: string | number;
+  fontSize: string | number;
 }
 export const ProfileInfo = (props: Props) => {
-  const { name } = props;
+  const { title, height, fontSize } = props;
   return (
     <div
       style={{
-        height: '35%',
+        height: height,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingRight: 5,
-        paddingLeft: 5,
-        backgroundColor: '#fff',
+        backgroundColor: '#1e2124',
       }}>
       <p
         style={{
-          fontSize: '.37rem',
+          fontSize: fontSize,
           fontWeight: 'bold',
           textAlign: 'center',
-          color: '#000',
-          lineHeight: 1.3,
+          color: '#fff',
         }}>
-        {name}
+        {title}
       </p>
     </div>
   );

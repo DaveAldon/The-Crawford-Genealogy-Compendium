@@ -24,9 +24,7 @@ export const SlidingPane = (props: SlidingPaneProps) => {
 
   return (
     <SlidingPaneLibrary
-      className="slide-pane"
       isOpen={isOpen}
-      width="400px"
       onRequestClose={() => setPanelState(false)}>
       <div className={styles.profileParent}>
         <BiArrowFromLeft />

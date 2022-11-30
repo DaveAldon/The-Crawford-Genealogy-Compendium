@@ -99,7 +99,7 @@ a {
 .slide-pane__overlay.overlay-after-open {
   background-color: unset;
   transition: background-color 0.5s;
-  width: 400px;
+  width: 50%;
 }
 
 .slide-pane__overlay.overlay-before-close {
@@ -126,7 +126,6 @@ a {
 .slide-pane .slide-pane__title {
   font-size: 18px;
   font-weight: normal;
-  max-width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
