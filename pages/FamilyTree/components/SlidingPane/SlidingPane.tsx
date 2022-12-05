@@ -10,6 +10,7 @@ import { BiArrowFromLeft } from 'react-icons/bi';
 import styles from './SlidingPane.module.css';
 import { APIFamilyTree } from '../../../../types/geneology';
 import { Map } from '../Map/Map';
+import { ProfileCard } from '../../../../components/ProfileCard/ProfileCard';
 
 interface SlidingPaneProps {
   isOpen: boolean;
@@ -27,6 +28,7 @@ export const SlidingPane = (props: SlidingPaneProps) => {
       isOpen={isOpen}
       onRequestClose={() => setPanelState(false)}>
       <div className={styles.profileParent}>
+        <ProfileCard imageSrc={imageSrc} />
         <BiArrowFromLeft />
         <div
           style={{
@@ -35,6 +37,7 @@ export const SlidingPane = (props: SlidingPaneProps) => {
             borderRadius: 10,
             position: 'relative',
             overflow: 'hidden',
+            border: '5px solid #424549',
           }}>
           <Image
             src={imageSrc}

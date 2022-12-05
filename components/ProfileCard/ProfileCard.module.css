@@ -1,0 +1,40 @@
+.profileCard {
+    height: 500px;
+    width: 100%;
+    background-color: #7289da;
+}
+.bannerContainer {
+    height: 50%;
+    width: 100%;
+    float: left;
+    position: relative;
+    background-color: #424549;
+}
+.imageContainer {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    height: 70%;
+    width: 70%;
+    border-radius: 10px;
+    background-color: red;
+}
+.image {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.topHalf, .bottomHalf {
+    height: 50%;
+    width: 100%;
+    float: left;
+}
+.topHalf {
+    background-color: #282b30;
+}
+.bottomHalf {
+    background-color: #424549;
+}
