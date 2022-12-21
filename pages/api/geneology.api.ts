@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import clientPromise from '../../lib/mongodb';
-//import { getGeneology } from '../../lib/atlas';
+//import { getGenealogy } from '../../lib/atlas';
 
 const geneology = async (_: NextApiRequest, _res: NextApiResponse) => {
   const client = await clientPromise;
@@ -12,7 +12,7 @@ const geneology = async (_: NextApiRequest, _res: NextApiResponse) => {
   return {
     props: { data },
   };
-  /* const result = await getGeneology();
+  /* const result = await getGenealogy();
   console.log('get result', result);
   res.status(200).json({ text: 'Hello' }); */
 };

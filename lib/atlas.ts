@@ -1,7 +1,7 @@
 import axios from 'axios';
 const uri = process.env.MONGODB_URI;
 
-export const getGeneology = async () => {
+export const getGenealogy = async () => {
   const data = JSON.stringify({
     collection: 'movies',
     database: 'sample_mflix',
