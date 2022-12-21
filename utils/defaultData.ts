@@ -15,4 +15,6 @@ export const defaultAPIFamilyTree: APIFamilyTree = {
   Father: '',
   Spouse: '',
   Divorced: '',
+  BirthplaceCoords: '',
+  DeathplaceCoords: '',
 };

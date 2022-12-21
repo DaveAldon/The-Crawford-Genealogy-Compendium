@@ -28,7 +28,12 @@ export const SlidingPane = (props: SlidingPaneProps) => {
       isOpen={isOpen}
       onRequestClose={() => setPanelState(false)}>
       <div className={styles.profileParent}>
-        <ProfileCard imageSrc={imageSrc} />
+        <ProfileCard
+          imageSrc={imageSrc}
+          name={`${activeNode.Firstname} ${activeNode.Middlename} ${activeNode.Lastname}`}
+          dob={activeNode.DOB}
+          dod={activeNode.Death}
+        />
         <BiArrowFromLeft />
         <div
           style={{
