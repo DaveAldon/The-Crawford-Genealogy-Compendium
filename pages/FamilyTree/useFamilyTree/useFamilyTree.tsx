@@ -45,11 +45,13 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
   };
 
   const onClickNode = (id: string) => {
-    if (id === activeNode) setPanelState(!panelState);
+    /* if (id === activeNode) setPanelState(!panelState);
     else {
       setPanelState(true);
       setActiveNode(id);
-    }
+    } */
+    setPanelState(true);
+    setActiveNode(id);
   };
 
   return {
