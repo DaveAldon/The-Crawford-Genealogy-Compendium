@@ -5,8 +5,9 @@ import { Tree } from './components/Tree/Tree';
 import { APIFamilyTree } from '../../types/geneology';
 import { useFamilyTree } from './useFamilyTree/useFamilyTree';
 import { getSheetData } from '../../lib/googlesheets';
-import { SlidingPane } from './components/SlidingPane/SlidingPane';
 import { defaultAPIFamilyTree } from '../../utils/defaultData';
+import { Heights } from '../../styles/constants.enum';
+import { DemographicsOverlay } from '../../components/DemographicsOverlay/DemographicsOverlay';
 
 const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
   const {
@@ -25,15 +26,19 @@ const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
 
   return (
     <div className={styles.root}>
-      <SlidingPane
+      <DemographicsOverlay
         isOpen={panelState}
         activeNode={
           compendiumData.find(item => item.id === activeNode) ||
           defaultAPIFamilyTree
         }
-        setPanelState={setPanelState}
+        setIsOpen={setPanelState}
       />
-      <header className={styles.header}>
+      <header
+        style={{
+          height: Heights.HEADER,
+        }}
+        className={styles.header}>
         <h1 className={styles.title}>FamilyTree</h1>
         <div>
           <span>Source: </span>
@@ -50,16 +55,18 @@ const FamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
           GitHub
         </a>
       </header>
-      {nodes.length > 0 && (
-        <Tree
-          compendiumData={compendiumData}
-          nodes={nodes}
-          rootId={rootId}
-          setRootId={setRootId}
-          onClickNode={onClickNode}
-          setPanelState={setPanelState}
-        />
-      )}
+      <div style={{ height: Heights.CONTENT }}>
+        {nodes.length > 0 && (
+          <Tree
+            compendiumData={compendiumData}
+            nodes={nodes}
+            rootId={rootId}
+            setRootId={setRootId}
+            onClickNode={onClickNode}
+            setPanelState={setPanelState}
+          />
+        )}
+      </div>
     </div>
   );
 };

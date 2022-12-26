@@ -1,3 +1,4 @@
+import { hext } from '@davealdon/hext';
 import Link from 'next/link';
 import { APIFamilyTree } from '../../types/geneology';
 import { Map } from '../Map/Map';
@@ -9,21 +10,23 @@ interface Props {
 export const MapCard = (props: Props) => {
   const { activeNode, birthplace } = props;
   return (
-    <Link
-      href={'#'}
-      className="block rounded-lg p-4 shadow-sm shadow-indigo-100">
+    // border line around it
+    <div
+      style={{
+        backgroundColor: hext('#FFFFFF', 10),
+      }}
+      className="mb-3 rounded-lg shadow-lg">
       <Map
         coords={
           birthplace ? activeNode.BirthplaceCoords : activeNode.DeathplaceCoords
         }
       />
-
-      <div className="mt-2">
+      <div className="p-3">
         <dl>
-          <div>
+          {/*  <div>
             <dt className="sr-only">Price</dt>
             <dd className="text-sm text-gray-500">$240,000</dd>
-          </div>
+          </div> */}
 
           <div>
             <dt className="sr-only">Name</dt>
@@ -34,10 +37,10 @@ export const MapCard = (props: Props) => {
           </div>
         </dl>
 
-        <div className="mt-6 flex items-center gap-8 text-xs">
+        <div className="mt-3 flex items-center gap-8 text-xs">
           <div className="sm:inline-flex sm:shrink-0 sm:items-center">
             <svg
-              className="h-4 w-4 text-indigo-700"
+              className="h-4 w-4 text-white-700"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -59,7 +62,7 @@ export const MapCard = (props: Props) => {
 
           <div className="sm:inline-flex sm:shrink-0 sm:items-center">
             <svg
-              className="h-4 w-4 text-indigo-700"
+              className="h-4 w-4 text-white-700"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -81,7 +84,7 @@ export const MapCard = (props: Props) => {
 
           <div className="sm:inline-flex sm:shrink-0 sm:items-center">
             <svg
-              className="h-4 w-4 text-indigo-700"
+              className="h-4 w-4 text-white-700"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -102,6 +105,6 @@ export const MapCard = (props: Props) => {
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };

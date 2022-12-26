@@ -9,8 +9,12 @@ export const Map = (props: MapProps) => {
   const mapCoords: [number, number] = [parsedCoords[0], parsedCoords[1]];
 
   return (
-    <div className="[&>*]:rounded">
-      <PigeonMap height={300} center={mapCoords} defaultZoom={5}>
+    <div className="[&>*]:rounded-lg">
+      <PigeonMap
+        height={300}
+        center={mapCoords}
+        defaultZoom={5}
+        metaWheelZoom={true}>
         <Marker width={50} anchor={mapCoords} />
       </PigeonMap>
     </div>
