@@ -39,9 +39,9 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
         viewBox="0 0 24 24"
         stroke="currentColor">
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M6 18L18 6M6 6l12 12"
         />
       </svg>
@@ -52,11 +52,10 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
     <motion.div
       animate={isOpen ? 'open' : 'closed'}
       variants={menuVariants}
-      className="noscroll fixed right-0 bottom-0 mt-10 mb-5 mr-5 z-10 overflow-y-scroll p-4 rounded-l-lg"
+      className="noscroll fixed right-0 bottom-0 m-0 sm:mt-10 sm:mb-5 sm:mr-5 z-10 overflow-y-scroll p-4 rounded-l-lg sm:w-1/2 max-w-xl"
       style={{
         height: `calc(${Heights.CONTENT} - 70px)`,
         borderRadius: '10px',
-        width: '50%',
         backdropFilter: 'blur(10px)',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
       }}>

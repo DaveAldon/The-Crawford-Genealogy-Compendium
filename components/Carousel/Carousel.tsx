@@ -22,7 +22,7 @@ export const Carousel = (props: Props) => {
       className="carousel slide relative mb-3 border-white rounded-lg"
       data-bs-ride="carousel">
       <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-        {srcs.map((src, i) => {
+        {srcs.map((_src, i) => {
           return (
             <button
               key={i}
@@ -43,11 +43,17 @@ export const Carousel = (props: Props) => {
         {srcs.map((src, i) => {
           switch (type) {
             case CarouselType.artifact:
-              return <Photo src={src} key={i} index={i} />;
+              return (
+                <Photo src={src.src} key={i} index={i} title={src.title} />
+              );
             case CarouselType.photo:
-              return <Photo src={src} key={i} index={i} />;
+              return (
+                <Photo src={src.src} key={i} index={i} title={src.title} />
+              );
             case CarouselType.video:
-              return <Video src={src} key={i} index={i} />;
+              return (
+                <Video src={src.src} key={i} index={i} title={src.title} />
+              );
             default:
               return null;
           }
