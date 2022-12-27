@@ -1,5 +1,38 @@
 import { google } from 'googleapis';
 
+export const getArtifactData = async (
+  sheetName: 'Movies' | 'Artifacts' | 'Photos',
+) => {
+  try {
+    const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+    const jwt = new google.auth.JWT(
+      process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
+      '',
+      (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
+      target,
+    );
+
+    const sheets = google.sheets({ version: 'v4', auth: jwt });
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.SPREADSHEET_ID,
+      range: sheetName,
+    });
+
+    const rows = response.data.values;
+    if (rows && rows.length) {
+      return rows.slice(1).map(row => ({
+        _id: row[0],
+        id: row[0],
+        artifact_id: row[1],
+        title: row[2],
+      }));
+    }
+  } catch (err) {
+    console.log(err);
+  }
+  return [];
+};
+
 export const getSheetData = async () => {
   try {
     const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
@@ -13,7 +46,7 @@ export const getSheetData = async () => {
     const sheets = google.sheets({ version: 'v4', auth: jwt });
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: 'Sheet1', // sheet name
+      range: 'People', // sheet name
     });
 
     const rows = response.data.values;
@@ -35,9 +68,6 @@ export const getSheetData = async () => {
         Father: row[12],
         Spouse: row[13],
         Divorced: row[14],
-        PhotoGallery: row[15],
-        MovieGallery: row[16],
-        Artifacts: row[17],
       }));
     }
   } catch (err) {

@@ -17,7 +17,4 @@ export const defaultAPIFamilyTree: APIFamilyTree = {
   Divorced: '',
   BirthplaceCoords: '',
   DeathplaceCoords: '',
-  PhotoGallery: '',
-  MovieGallery: '',
-  Artifacts: '',
 };

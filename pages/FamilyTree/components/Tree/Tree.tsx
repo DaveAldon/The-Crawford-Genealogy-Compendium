@@ -12,7 +12,7 @@ import {
   ResourceTypes,
 } from '../../../../lib/resources/resources.enum';
 import { getResource } from '../../../../lib/resources/resources';
-import { APIFamilyTree } from '../../../../types/geneology';
+import { APIArtifact, APIFamilyTree } from '../../../../types/geneology';
 
 const WIDTH = 90;
 const HEIGHT = 140;
@@ -24,9 +24,21 @@ interface ITree {
   onClickNode: (id: string) => void;
   setPanelState: (state: boolean) => void;
   compendiumData: APIFamilyTree[];
+  activeMovies: APIArtifact[];
+  activePhotos: APIArtifact[];
+  activeArtifacts: APIArtifact[];
 }
 export const Tree: React.FC<ITree> = props => {
-  const { nodes, rootId, setRootId, onClickNode, compendiumData } = props;
+  const {
+    nodes,
+    rootId,
+    setRootId,
+    onClickNode,
+    compendiumData,
+    activeMovies,
+    activeArtifacts,
+    activePhotos,
+  } = props;
   return (
     <TransformWrapper limitToBounds={false} centerOnInit initialScale={1}>
       {({ zoomIn, zoomOut, centerView }) => (
@@ -64,6 +76,11 @@ export const Tree: React.FC<ITree> = props => {
                     fallbackSrc={`${FallbackResources.profile}${node.id}`}
                     name={node.name}
                     compendiumReference={compendiumData.find(
+                      item => item.id === node.id,
+                    )}
+                    hasMovies={activeMovies.some(item => item.id === node.id)}
+                    hasPhotos={activePhotos.some(item => item.id === node.id)}
+                    hasArtifacts={activeArtifacts.some(
                       item => item.id === node.id,
                     )}
                     style={{

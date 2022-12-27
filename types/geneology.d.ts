@@ -15,9 +15,13 @@ export interface APIFamilyTree {
   Father: string;
   Spouse: string;
   Divorced: string;
-  PhotoGallery: string;
-  MovieGallery: string;
-  Artifacts: string;
+}
+
+export interface APIArtifact {
+  _id: string;
+  id: string;
+  artifact_id: string;
+  title: string;
 }
 
 export interface TransformedFamilyTree {

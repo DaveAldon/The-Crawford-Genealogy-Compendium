@@ -31,6 +31,9 @@ interface Props {
   onClickNode: (id: string) => void;
   headerText: string;
   compendiumReference?: APIFamilyTree;
+  hasMovies: boolean;
+  hasPhotos: boolean;
+  hasArtifacts: boolean;
 }
 
 export default React.memo<Props>(function FamilyNode({
@@ -44,6 +47,9 @@ export default React.memo<Props>(function FamilyNode({
   onClickNode,
   headerText,
   compendiumReference,
+  hasMovies,
+  hasPhotos,
+  hasArtifacts,
 }) {
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
 
@@ -70,8 +76,10 @@ export default React.memo<Props>(function FamilyNode({
           <ProfileInfo height={'22%'} title={name || ''} fontSize={'.40rem'} />
           {compendiumReference ? (
             <ProfileChips
+              hasMovies={hasMovies}
+              hasPhotos={hasPhotos}
+              hasArtifacts={hasArtifacts}
               height={'10%'}
-              compendiumReference={compendiumReference}
             />
           ) : null}
         </div>

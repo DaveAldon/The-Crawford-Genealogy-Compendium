@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { getResource } from '../../lib/resources/resources';
 import { ResourceTypes } from '../../lib/resources/resources.enum';
 import { Heights } from '../../styles/constants.enum';
-import { APIFamilyTree } from '../../types/geneology';
+import { APIArtifact, APIFamilyTree } from '../../types/geneology';
 import { Carousel, CarouselType } from '../Carousel/Carousel';
 import { MapCard } from '../MapCard/MapCard';
 import { ProfileCard } from '../ProfileCard/ProfileCard';
@@ -12,9 +12,19 @@ interface SlidingOverlayProps {
   setIsOpen: (state: boolean) => void;
   activeNode: APIFamilyTree;
   children?: React.ReactNode;
+  activeMovies: APIArtifact[];
+  activeArtifacts: APIArtifact[];
+  activePhotos: APIArtifact[];
 }
 export const DemographicsOverlay = (props: SlidingOverlayProps) => {
-  const { isOpen, activeNode, setIsOpen } = props;
+  const {
+    isOpen,
+    activeNode,
+    setIsOpen,
+    activeMovies,
+    activeArtifacts,
+    activePhotos,
+  } = props;
   const photoSrc = getResource(activeNode.id, ResourceTypes.profile);
 
   const menuVariants = {
@@ -63,14 +73,26 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
         <CloseButton />
         <div className="h-5" />
         <ProfileCard photoSrc={photoSrc} activeNode={activeNode} />
-        {activeNode.PhotoGallery ? (
-          <Carousel type={CarouselType.photo} activeNode={activeNode} />
+        {activePhotos.length > 0 ? (
+          <Carousel
+            type={CarouselType.photo}
+            activeNode={activeNode}
+            activeArtifact={activePhotos}
+          />
         ) : null}
-        {activeNode.MovieGallery ? (
-          <Carousel type={CarouselType.video} activeNode={activeNode} />
+        {activeMovies.length > 0 ? (
+          <Carousel
+            type={CarouselType.video}
+            activeNode={activeNode}
+            activeArtifact={activeMovies}
+          />
         ) : null}
-        {activeNode.Artifacts ? (
-          <Carousel type={CarouselType.artifact} activeNode={activeNode} />
+        {activeArtifacts.length > 0 ? (
+          <Carousel
+            type={CarouselType.artifact}
+            activeNode={activeNode}
+            activeArtifact={activeArtifacts}
+          />
         ) : null}
         {activeNode.BirthplaceCoords ? (
           <MapCard activeNode={activeNode} birthplace />
