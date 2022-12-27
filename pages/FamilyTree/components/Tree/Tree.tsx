@@ -15,7 +15,7 @@ import { getResource } from '../../../../lib/resources/resources';
 import { APIFamilyTree } from '../../../../types/geneology';
 
 const WIDTH = 90;
-const HEIGHT = 130;
+const HEIGHT = 140;
 
 interface ITree {
   nodes: Node[];
@@ -63,6 +63,9 @@ export const Tree: React.FC<ITree> = props => {
                     photoSrc={getResource(node.id, ResourceTypes.profile)}
                     fallbackSrc={`${FallbackResources.profile}${node.id}`}
                     name={node.name}
+                    compendiumReference={compendiumData.find(
+                      item => item.id === node.id,
+                    )}
                     style={{
                       width: WIDTH,
                       height: HEIGHT,

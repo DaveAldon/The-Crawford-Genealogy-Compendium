@@ -5,6 +5,8 @@ import { ExtNode } from '../../../../components/relatives-tree/types';
 import { useImageFallback } from '../../../../hooks/useImageFallback/useImageFallback';
 import { ProfilePhoto } from './components/ProfilePhoto/ProfilePhoto';
 import { ProfileInfo } from './components/ProfileInfo/ProfileInfo';
+import { ProfileChips } from './components/ProfileChips/ProfileChips';
+import { APIFamilyTree } from '../../../../types/geneology';
 
 interface Props {
   node: ExtNode;
@@ -16,6 +18,7 @@ interface Props {
   name?: string;
   onClickNode: (id: string) => void;
   headerText: string;
+  compendiumReference?: APIFamilyTree;
 }
 
 export default React.memo<Props>(function FamilyNode({
@@ -28,6 +31,7 @@ export default React.memo<Props>(function FamilyNode({
   name,
   onClickNode,
   headerText,
+  compendiumReference,
 }) {
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
 
@@ -49,9 +53,15 @@ export default React.memo<Props>(function FamilyNode({
             flexDirection: 'column',
             width: '100%',
           }}>
-          <ProfileInfo height={'15%'} title={headerText} fontSize={'.50rem'} />
+          <ProfileInfo height={'12%'} title={headerText} fontSize={'.50rem'} />
           <ProfilePhoto src={imageSrc} onError={onError} alt={name} />
-          <ProfileInfo height={'25%'} title={name || ''} fontSize={'.40rem'} />
+          <ProfileInfo height={'22%'} title={name || ''} fontSize={'.40rem'} />
+          {compendiumReference ? (
+            <ProfileChips
+              height={'10%'}
+              compendiumReference={compendiumReference}
+            />
+          ) : null}
         </div>
       </div>
       {node.hasSubTree && (

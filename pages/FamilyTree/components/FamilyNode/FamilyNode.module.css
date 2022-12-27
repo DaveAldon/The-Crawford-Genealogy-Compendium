@@ -13,15 +13,17 @@
 }
 
 .male {
-  background: #a4ecff;
+  background: #1e2124;
+  border: 1px solid #a4ecff;
 }
 
 .female {
-  background: #fdaed8;
+  background: #1e2124;
+  border: 1px solid #fdaed8;
 }
 
 .isRoot {
-  border-color: rgba(0, 0, 0, 0.4);
+  /*border-color: rgba(0, 0, 0, 0.4);*/
 }
 
 .sub {

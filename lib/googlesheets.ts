@@ -35,6 +35,8 @@ export const getSheetData = async () => {
         Father: row[12],
         Spouse: row[13],
         Divorced: row[14],
+        PhotoGallery: row[15],
+        MovieGallery: row[16],
       }));
     }
   } catch (err) {

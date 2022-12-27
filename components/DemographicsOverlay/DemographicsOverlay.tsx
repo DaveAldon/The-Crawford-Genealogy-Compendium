@@ -6,6 +6,7 @@ import { APIFamilyTree } from '../../types/geneology';
 import { Gallery } from '../Gallery/Gallery';
 import { MapCard } from '../MapCard/MapCard';
 import { ProfileCard } from '../ProfileCard/ProfileCard';
+import { VideoGallery } from '../VideoGallery/VideoGallery';
 
 interface SlidingOverlayProps {
   isOpen: boolean;
@@ -52,17 +53,22 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
     <motion.div
       animate={isOpen ? 'open' : 'closed'}
       variants={menuVariants}
-      className="noscroll fixed right-0 bottom-0 mt-5 mb-5 mr-5 bg-black z-10 overflow-y-scroll p-4 rounded-l-lg"
+      className="noscroll fixed right-0 bottom-0 mt-10 mb-5 mr-5 z-10 overflow-y-scroll p-4 rounded-l-lg"
       style={{
-        height: `calc(${Heights.CONTENT} - 45px)`,
+        height: `calc(${Heights.CONTENT} - 70px)`,
         borderRadius: '10px',
         width: '50%',
+        backdropFilter: 'blur(10px)',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
       }}>
       <div className="">
         <CloseButton />
         <div className="h-5" />
         <ProfileCard photoSrc={photoSrc} activeNode={activeNode} />
-        <Gallery activeNode={activeNode} />
+        {activeNode.PhotoGallery ? <Gallery activeNode={activeNode} /> : null}
+        {activeNode.MovieGallery ? (
+          <VideoGallery activeNode={activeNode} />
+        ) : null}
         {activeNode.BirthplaceCoords ? (
           <MapCard activeNode={activeNode} birthplace />
         ) : null}
