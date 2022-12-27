@@ -1,5 +1,4 @@
 import { APIFamilyTree } from '../../types/geneology';
-import { Artifact } from './Artifact';
 import { Photo } from './Photo';
 import { useCarousel } from './useCarousel';
 import { Video } from './Video';
@@ -23,23 +22,18 @@ export const Carousel = (props: Props) => {
       className="carousel slide relative mb-3 border-white rounded-lg"
       data-bs-ride="carousel">
       <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-        <button
-          type="button"
-          data-bs-target={`#carousel-id-${type}`}
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"></button>
-        <button
-          type="button"
-          data-bs-target={`#carousel-id-${type}`}
-          data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button
-          type="button"
-          data-bs-target={`#carousel-id-${type}`}
-          data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
+        {srcs.map((src, i) => {
+          return (
+            <button
+              key={i}
+              type="button"
+              data-bs-target={`#carousel-id-${type}`}
+              data-bs-slide-to={i}
+              className={`${i === 1 ? 'active' : ''}`}
+              aria-current="true"
+              aria-label={`Slide ${i + 1}`}></button>
+          );
+        })}
       </div>
       <div
         className="carousel-inner relative w-full overflow-hidden rounded-lg"
@@ -49,7 +43,7 @@ export const Carousel = (props: Props) => {
         {srcs.map((src, i) => {
           switch (type) {
             case CarouselType.artifact:
-              return <Artifact src={src} key={i} index={i} />;
+              return <Photo src={src} key={i} index={i} />;
             case CarouselType.photo:
               return <Photo src={src} key={i} index={i} />;
             case CarouselType.video:

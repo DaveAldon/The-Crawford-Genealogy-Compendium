@@ -3,12 +3,9 @@ import { getResource } from '../../lib/resources/resources';
 import { ResourceTypes } from '../../lib/resources/resources.enum';
 import { Heights } from '../../styles/constants.enum';
 import { APIFamilyTree } from '../../types/geneology';
-import { Artifacts } from '../Artifacts/Artifacts';
 import { Carousel, CarouselType } from '../Carousel/Carousel';
-import { Gallery } from '../Gallery/Gallery';
 import { MapCard } from '../MapCard/MapCard';
 import { ProfileCard } from '../ProfileCard/ProfileCard';
-import { VideoGallery } from '../VideoGallery/VideoGallery';
 
 interface SlidingOverlayProps {
   isOpen: boolean;
@@ -67,13 +64,15 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
         <CloseButton />
         <div className="h-5" />
         <ProfileCard photoSrc={photoSrc} activeNode={activeNode} />
-        <Carousel type={CarouselType.photo} activeNode={activeNode} />
-        <Carousel type={CarouselType.artifact} activeNode={activeNode} />
-        {/* {activeNode.PhotoGallery ? <Gallery activeNode={activeNode} /> : null}
-        {activeNode.MovieGallery ? (
-          <VideoGallery activeNode={activeNode} />
+        {activeNode.PhotoGallery ? (
+          <Carousel type={CarouselType.photo} activeNode={activeNode} />
         ) : null}
-        {activeNode.Artifacts ? <Artifacts activeNode={activeNode} /> : null} */}
+        {activeNode.MovieGallery ? (
+          <Carousel type={CarouselType.video} activeNode={activeNode} />
+        ) : null}
+        {activeNode.Artifacts ? (
+          <Carousel type={CarouselType.artifact} activeNode={activeNode} />
+        ) : null}
         {activeNode.BirthplaceCoords ? (
           <MapCard activeNode={activeNode} birthplace />
         ) : null}
