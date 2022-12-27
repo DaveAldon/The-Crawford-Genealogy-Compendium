@@ -14,6 +14,10 @@ export const getVideoUrl = (index: number) => {
   return `/video${index}.m4v?raw=true`;
 };
 
+export const getArtifactUrl = (index: number) => {
+  return `/artifact${index}.jpg?raw=true`;
+};
+
 export enum FallbackResources {
   profile = 'https://i.pravatar.cc/150?u=',
 }

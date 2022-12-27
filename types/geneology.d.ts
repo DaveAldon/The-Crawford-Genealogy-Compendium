@@ -17,6 +17,7 @@ export interface APIFamilyTree {
   Divorced: string;
   PhotoGallery: string;
   MovieGallery: string;
+  Artifacts: string;
 }
 
 export interface TransformedFamilyTree {

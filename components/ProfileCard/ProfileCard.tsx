@@ -19,9 +19,12 @@ export const ProfileCard = (props: Props) => {
 
   const getAge = () => {
     const currentDecade = `${dayjs().format('YYYY').slice(0, 3)}0`;
-
     if (Death) {
-      return parseInt(Death.split('/')[2]) - parseInt(DOB.split('/')[2]);
+      const deathYear = parseInt(
+        Death.length === 4 ? Death : Death.split('/')[2],
+      );
+      const birthYear = parseInt(DOB.length === 4 ? DOB : DOB.split('/')[2]);
+      return deathYear - birthYear;
     } else {
       const baseAge = parseInt(currentDecade) - parseInt(DOB.slice(0, -1));
       return `${baseAge - 10}-${baseAge}s`;
@@ -32,18 +35,28 @@ export const ProfileCard = (props: Props) => {
     <div
       style={{
         backgroundColor: hext('#FFFFFF', 10),
+        height: 350,
       }}
-      className="mb-3 rounded-lg shadow-lg">
+      className="mb-3 rounded-lg shadow-lg relative">
+      <div className="rounded-md overflow-hidden absolute left-0 h-56 w-full">
+        <Image
+          alt="Home"
+          width={640}
+          height={480}
+          src={imageSrc}
+          onError={onError}
+          className="h-56 rounded-md object-cover blur-md"
+        />
+      </div>
       <Image
         alt="Home"
         width={640}
         height={480}
         src={imageSrc}
         onError={onError}
-        className="h-56 w-full rounded-md object-cover"
+        className="h-56 w-full object-contain absolute"
       />
-
-      <div className="p-3">
+      <div className="p-3 absolute bottom-0">
         <dl>
           {/* <div>
             <dt className="sr-only">Price</dt>
