@@ -19,5 +19,6 @@ export const getArtifactUrl = (index: number) => {
 };
 
 export enum FallbackResources {
-  profile = 'https://i.pravatar.cc/150?u=',
+  profileMale = '/man.png',
+  profileFemale = '/woman.png',
 }

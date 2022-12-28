@@ -22,7 +22,7 @@ const HoverableDiv = ({
 }) => {
   return (
     <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-      {children}
+      <div>{children}</div>
     </div>
   );
 };
@@ -56,7 +56,9 @@ export const Header = () => {
               <HoverableDiv
                 handleMouseOver={handleMouseOver}
                 handleMouseOut={handleMouseOut}>
-                {isHovering ? <AnimatedCircleLogo /> : <CircleLogo />}
+                <div>
+                  {isHovering ? <AnimatedCircleLogo /> : <CircleLogo />}
+                </div>
               </HoverableDiv>
               <p className="invisible sm:visible text-white transition hover:text-gray-400 text-sm">
                 The Crawford Genealogy Compendium

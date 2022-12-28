@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export const CircleLogo = () => (
   <div className="flex w-100 h-100 bg-red">
-    <Link
-      className="flex flex-row justify-center items-center gap-4 text-white"
-      href="/">
-      <img src="/tree.jpg" className="h-10 w-10 rounded-full object-cover" />
-    </Link>
+    <div className="flex flex-row justify-center items-center gap-4 text-white">
+      <img
+        src="/tree.jpg"
+        className="h-10 w-10 rounded-full object-cover"></img>
+    </div>
   </div>
 );
 

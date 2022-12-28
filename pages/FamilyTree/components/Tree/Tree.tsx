@@ -5,7 +5,11 @@ import {
 } from '@pronestor/react-zoom-pan-pinch';
 import FamilyNode from '../FamilyNode/FamilyNode';
 import ReactFamilyTree from '../../../../components/react-family-tree';
-import { ExtNode, Node } from '../../../../components/relatives-tree/types';
+import {
+  ExtNode,
+  Gender,
+  Node,
+} from '../../../../components/relatives-tree/types';
 import styles from './Tree.module.css';
 import {
   FallbackResources,
@@ -130,7 +134,11 @@ export const Tree: React.FC<ITree> = props => {
                     isRoot={node.id === rootId}
                     onSubClick={setRootId}
                     photoSrc={getResource(node.id, ResourceTypes.profile)}
-                    fallbackSrc={`${FallbackResources.profile}${node.id}`}
+                    fallbackSrc={`${
+                      node.gender === Gender.male
+                        ? FallbackResources.profileMale
+                        : FallbackResources.profileFemale
+                    }`}
                     name={node.name}
                     compendiumReference={compendiumData.find(
                       item => item.id === node.id,

@@ -13,7 +13,11 @@ export const ProfileCard = (props: Props) => {
   const { photoSrc, activeNode } = props;
   const name = `${activeNode.Firstname} ${activeNode.Middlename} ${activeNode.Lastname}`;
   const { DOB, Death } = activeNode;
-  const fallbackSrc = `${FallbackResources.profile}${activeNode.id}`;
+  const fallbackSrc = `${
+    activeNode.Gender === 'M'
+      ? FallbackResources.profileMale
+      : FallbackResources.profileFemale
+  }`;
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
 
   const getAge = () => {
