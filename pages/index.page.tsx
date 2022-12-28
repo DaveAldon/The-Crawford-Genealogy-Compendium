@@ -5,7 +5,7 @@ import { Roadmap } from '../components/Roadmap/Roadmap';
 
 export default function Home() {
   return (
-    <div className="text-black">
+    <div className="text-black bg-black">
       <Header />
       <section className="text-gray-600 body-font">
         <div className="max-w-7xl mx-auto flex px-5 py-24 lg:flex-row flex-col items-center">
@@ -60,8 +60,8 @@ export default function Home() {
           <h1 className="mb-8 text-6xl font-semibold text-white">
             Current Roadmap
           </h1>
-          <h1 className="mb-8 text-2xl text-gray-600 text-center">
-            Our current goals for this website are below, and will continue to
+          <h1 className="mb-8 text-xl text-gray-600 text-center">
+            Our current goals for this project are below, and will continue to
             expand.
           </h1>
           <Roadmap />
