@@ -40,7 +40,11 @@ export const Tree: React.FC<ITree> = props => {
     activePhotos,
   } = props;
   return (
-    <TransformWrapper limitToBounds={false} centerOnInit initialScale={1}>
+    <TransformWrapper
+      limitToBounds={false}
+      centerOnInit
+      initialScale={1}
+      minScale={0.1}>
       {({ zoomIn, zoomOut, centerView }) => (
         <div className={styles.wrapper}>
           <div className="tools">

@@ -1,4 +1,4 @@
 export enum Heights {
-  HEADER = '48px',
-  CONTENT = 'calc(100vh - 48px)',
+  HEADER = '54px',
+  CONTENT = 'calc(100vh - 54px)',
 }

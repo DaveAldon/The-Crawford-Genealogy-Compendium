@@ -62,11 +62,12 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
     <motion.div
       animate={isOpen ? 'open' : 'closed'}
       variants={menuVariants}
-      className="noscroll fixed right-0 bottom-0 m-0 sm:mt-10 sm:mb-5 sm:mr-5 z-10 overflow-y-scroll p-4 rounded-l-lg sm:w-1/2 max-w-xl"
+      className="fixed right-0 left-0 sm:left-auto bottom-0 m-0 sm:mt-10 sm:mb-5 sm:mr-5 z-10 overflow-y-scroll p-4 rounded-l-lg sm:w-1/2 max-w-xl noscroll"
       style={{
         height: `calc(${Heights.CONTENT} - 70px)`,
         borderRadius: '10px',
         backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
       }}>
       <div className="">

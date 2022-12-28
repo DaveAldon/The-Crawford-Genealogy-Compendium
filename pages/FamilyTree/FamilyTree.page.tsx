@@ -8,6 +8,7 @@ import { getArtifactData, getSheetData } from '../../lib/googlesheets';
 import { defaultAPIFamilyTree } from '../../utils/defaultData';
 import { Heights } from '../../styles/constants.enum';
 import { DemographicsOverlay } from '../../components/DemographicsOverlay/DemographicsOverlay';
+import { Header } from '../../components/Header/Header';
 
 const FamilyTree = ({
   data,
@@ -21,12 +22,9 @@ const FamilyTree = ({
   artifacts: APIArtifact[];
 }) => {
   const {
-    sources,
-    source,
     nodes,
     rootId,
     setRootId,
-    onSetSource,
     onClickNode,
     panelState,
     setPanelState,
@@ -47,27 +45,7 @@ const FamilyTree = ({
         activeArtifacts={artifacts.filter(item => item.id === activeNode)}
         setIsOpen={setPanelState}
       />
-      <header
-        style={{
-          height: Heights.HEADER,
-        }}
-        className={styles.header}>
-        <h1 className={styles.title}>FamilyTree</h1>
-        <div>
-          <span>Source: </span>
-          <select onChange={onSetSource} defaultValue={source}>
-            {Object.keys(sources).map(item => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <a href="https://github.com/SanichKotikov/react-family-tree-example">
-          GitHub
-        </a>
-      </header>
+      <Header />
       <div style={{ height: Heights.CONTENT }}>
         {nodes.length > 0 && (
           <Tree
