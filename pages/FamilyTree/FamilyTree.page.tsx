@@ -33,7 +33,7 @@ const FamilyTree = ({
   } = useFamilyTree({ data });
 
   return (
-    <div className={styles.root}>
+    <div className="flex flex-col h-screen justify-between bg-[#424549]">
       <DemographicsOverlay
         isOpen={panelState}
         activeNode={
@@ -46,7 +46,14 @@ const FamilyTree = ({
         setIsOpen={setPanelState}
       />
       <Header />
-      <div style={{ height: Heights.CONTENT }}>
+      <div
+        style={{
+          height: Heights.CONTENT,
+          position: 'absolute',
+          bottom: 0,
+          top: 54,
+          width: '100%',
+        }}>
         {nodes.length > 0 && (
           <Tree
             compendiumData={compendiumData}

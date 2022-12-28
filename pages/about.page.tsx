@@ -68,8 +68,8 @@ export default function About() {
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               Although the team working on this project is small, the family is
-              not. Any help is deeply appreciated, and we are always hoping that
-              more people become as interested in genealogy as we are.
+              not. Any help is deeply appreciated, and I am always hoping that
+              more people become as interested in genealogy as I am.
             </p>
           </div>
         </div>

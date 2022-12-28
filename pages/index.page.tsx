@@ -11,9 +11,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex px-5 py-24 lg:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 md:ml-24 pt-6 flex flex-col md:items-start md:text-left mb-10 items-center text-center">
             <h1 className="mb-5 sm:text-6xl text-5xl font-semibold items-center xl:w-2/2 text-white">
-              We are creating a genealogy resource that is open and free
+              We are creating a Crawford genealogy that is open and free
             </h1>
-            <p className="mb-4 xl:w-3/4 text-gray-600 text-lg">
+            <p className="mb-4 xl:w-3/4 text-gray-400 text-lg">
               The Crawford Genealogy Compendium is an effort to curate the
               Crawford family&apos;s history, documents, and artifacts without
               any barriers or paywalls. We believe that anyone who wants to
@@ -60,7 +60,7 @@ export default function Home() {
           <h1 className="mb-8 text-6xl font-semibold text-white">
             Current Roadmap
           </h1>
-          <h1 className="mb-8 text-xl text-gray-600 text-center">
+          <h1 className="mb-8 text-xl text-gray-400 text-center">
             Our current goals for this project are below, and will continue to
             expand.
           </h1>
