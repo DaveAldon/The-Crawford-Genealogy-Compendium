@@ -67,8 +67,8 @@ export const ProfileCard = (props: Props) => {
           </div>
         </dl>
 
-        <div className="flex flex-row gap-8 text-xs">
-          <div className="inline-flex shrink-0 items-center">
+        <div className="flex flex-row gap-2 md:gap-8 text-xs">
+          <div className="inline-flex shrink-0 items-center gap-0 md:gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -82,14 +82,14 @@ export const ProfileCard = (props: Props) => {
               />
             </svg>
 
-            <div className="mt-1.5 ml-3 mt-0">
+            <div className="mt-1.5 ml-1 mt-0">
               <p className="text-gray-500">Born</p>
               <p className="font-medium">{DOB}</p>
             </div>
           </div>
 
           {Death ? (
-            <div className="inline-flex shrink-0 items-center gap-3 sm:gap-0">
+            <div className="inline-flex shrink-0 items-center gap-0 md:gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -100,7 +100,7 @@ export const ProfileCard = (props: Props) => {
                 <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
               </svg>
 
-              <div className="mt-1.5 sm:ml-3 sm:mt-0">
+              <div className="mt-1.5 ml-1 mt-0">
                 <p className="text-gray-500">Died</p>
 
                 <p className="font-medium">{Death}</p>
@@ -108,7 +108,7 @@ export const ProfileCard = (props: Props) => {
             </div>
           ) : null}
 
-          <div className="inline-flex shrink-0 items-center gap-3 sm:gap-0">
+          <div className="inline-flex shrink-0 items-center gap-0 md:gap-2">
             <svg
               className="h-4 w-4 text-white-700"
               xmlns="http://www.w3.org/2000/svg"
@@ -123,9 +123,8 @@ export const ProfileCard = (props: Props) => {
               />
             </svg>
 
-            <div className="mt-1.5 sm:ml-3 sm:mt-0">
+            <div className="mt-1.5 ml-1 mt-0">
               <p className="text-gray-500">Age</p>
-
               <p className="font-medium">{getAge()}</p>
             </div>
           </div>

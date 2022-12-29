@@ -61,7 +61,7 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
     <motion.div
       animate={isOpen ? 'open' : 'closed'}
       variants={menuVariants}
-      className="fixed right-1 left-0 sm:left-auto bottom-0 top-10 sm:top-3 m-0 sm:mt-10 sm:mb-5 z-20 overflow-y-scroll p-4 rounded-l-lg sm:w-1/2 max-w-xl noscroll text-white"
+      className="pb-20 sm:pb-0 fixed right-1 left-0 sm:left-auto bottom-0 top-12 sm:top-3 m-0 sm:mt-10 sm:mb-5 z-20 overflow-y-scroll p-4 rounded-l-lg sm:w-1/2 max-w-xl noscroll text-white"
       style={{
         height: `calc(${Heights.CONTENT} - 10px)`,
         borderRadius: '10px',

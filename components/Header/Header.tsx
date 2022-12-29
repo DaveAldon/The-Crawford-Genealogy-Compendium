@@ -25,22 +25,17 @@ export const Header = () => {
           style={{
             height: Heights.HEADER,
           }}>
-          <div className="flex w-100 h-100 bg-red">
+          <div className="flex w-10 h-100 bg-red">
             <Link
               className="flex flex-row justify-center items-center gap-4 text-white"
               href="/">
-              <>
-                <CircleLogo />
-                <p className="invisible sm:visible text-white transition hover:text-gray-400 text-sm">
-                  The Crawford Genealogy Compendium
-                </p>
-              </>
+              <CircleLogo />
             </Link>
           </div>
 
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Site Nav" className="block">
-              <ul className="flex items-center gap-6 text-sm">
+              <ul className="flex items-center gap-6 text-sm w-full">
                 {links.map((link, i) => (
                   <HeaderLink key={i} href={link.href}>
                     {link.children}

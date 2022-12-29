@@ -14,6 +14,7 @@ export const Map = (props: MapProps) => {
         height={300}
         center={mapCoords}
         defaultZoom={5}
+        twoFingerDrag={true}
         metaWheelZoom={true}>
         <Marker width={50} anchor={mapCoords} />
       </PigeonMap>
