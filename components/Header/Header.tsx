@@ -1,45 +1,21 @@
 import Link from 'next/link';
-import { useState } from 'react';
 import { Heights } from '../../styles/constants.enum';
-import { AnimatedCircleLogo, CircleLogo } from '../Logos/CircleLogo';
+import { CircleLogo } from '../Logos/CircleLogo';
 
 const HeaderLink = ({ href, children }: { href: string; children: string }) => (
   <li>
     <Link className="text-white transition hover:text-gray-400" href={href}>
-      {children}
+      <p style={{ whiteSpace: 'nowrap' }}>{children}</p>
     </Link>
   </li>
 );
 
-const HoverableDiv = ({
-  handleMouseOver,
-  handleMouseOut,
-  children,
-}: {
-  handleMouseOver: () => void;
-  handleMouseOut: () => void;
-  children?: React.ReactNode;
-}) => {
-  return (
-    <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-      <div>{children}</div>
-    </div>
-  );
-};
-
 export const Header = () => {
   const links = [
+    { href: '/', children: 'Home' },
     { href: '/FamilyTree/FamilyTree', children: 'Family Tree' },
     { href: '/about', children: 'About' },
   ];
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
 
   return (
     <header aria-label="Site Header" className="bg-[#212224] fixed w-full z-50">
@@ -53,16 +29,12 @@ export const Header = () => {
             <Link
               className="flex flex-row justify-center items-center gap-4 text-white"
               href="/">
-              <HoverableDiv
-                handleMouseOver={handleMouseOver}
-                handleMouseOut={handleMouseOut}>
-                <div>
-                  {isHovering ? <AnimatedCircleLogo /> : <CircleLogo />}
-                </div>
-              </HoverableDiv>
-              <p className="invisible sm:visible text-white transition hover:text-gray-400 text-sm">
-                The Crawford Genealogy Compendium
-              </p>
+              <>
+                <CircleLogo />
+                <p className="invisible sm:visible text-white transition hover:text-gray-400 text-sm">
+                  The Crawford Genealogy Compendium
+                </p>
+              </>
             </Link>
           </div>
 
