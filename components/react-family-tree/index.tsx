@@ -28,7 +28,7 @@ export default React.memo<Props>(function ReactFamilyTree(props) {
       style={{
         position: 'relative',
         width: data.canvas.width * width,
-        height: data.canvas.height * height,
+        height: `calc(100vh - 54px)`,
       }}>
       {data.connectors.map((connector, idx) => (
         <Connector

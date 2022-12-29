@@ -2,7 +2,7 @@ import { Header } from '../Header/Header';
 
 export const Loading = () => {
   return (
-    <div className="flex flex-col h-screen justify-between bg-black">
+    <div className="flex flex-col h-screen justify-between bg-black text-white">
       <Header />
       <span
         className="flex flex-col items-center justify-center"
