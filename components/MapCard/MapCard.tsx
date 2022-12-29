@@ -9,6 +9,8 @@ interface Props {
 }
 export const MapCard = (props: Props) => {
   const { activeNode, birthplace } = props;
+  const birthplaceNormalised = `- ${activeNode.Birthplace}` || '';
+  const deathplaceNormalised = `- ${activeNode.Deathplace}` || '';
   return (
     // border line around it
     <div
@@ -26,7 +28,10 @@ export const MapCard = (props: Props) => {
           <div>
             <dt className="sr-only">Name</dt>
             <dd className="font-medium">
-              Place of {birthplace ? `Birth` : `Death`}
+              Place of{' '}
+              {birthplace
+                ? `Birth ${birthplaceNormalised}`
+                : `Death ${deathplaceNormalised}`}
             </dd>
           </div>
         </dl>
