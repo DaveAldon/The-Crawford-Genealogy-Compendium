@@ -7,23 +7,13 @@ export const Loading = () => {
       <span
         className="flex flex-col items-center justify-center"
         style={{ height: 'calc(100% - 60px)' }}>
-        <svg
-          className="animate-spin h-20 w-20 mr-3"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24">
-          <circle
-            className="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="4"></circle>
-          <path
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8v8z"></path>
-        </svg>
+        <div className="flex items-center justify-center space-x-2">
+          <div
+            className="spinner-grow inline-block w-12 h-12 bg-current rounded-full opacity-0"
+            role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
       </span>
     </div>
   );
