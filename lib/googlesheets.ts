@@ -25,6 +25,7 @@ export const getArtifactData = async (
         id: row[0],
         artifact_id: row[1],
         title: row[2],
+        extension: row[3],
       }));
     }
   } catch (err) {

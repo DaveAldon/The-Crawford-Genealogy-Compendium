@@ -6,16 +6,16 @@ export enum ResourceTypes {
   profile = '/profile.png?raw=true',
 }
 
-export const getGalleryUrl = (index: number) => {
-  return `/gallery${index}.jpg?raw=true`;
+export const getGalleryUrl = (index: number, extension: string) => {
+  return `/gallery${index}.${extension}?raw=true`;
 };
 
-export const getVideoUrl = (index: number) => {
-  return `/video${index}.m4v?raw=true`;
+export const getVideoUrl = (index: number, extension: string) => {
+  return `/video${index}.${extension}?raw=true`;
 };
 
-export const getArtifactUrl = (index: number) => {
-  return `/artifact${index}.jpg?raw=true`;
+export const getArtifactUrl = (index: number, extension: string) => {
+  return `/artifact${index}.${extension}?raw=true`;
 };
 
 export enum FallbackResources {

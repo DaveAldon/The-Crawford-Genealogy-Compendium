@@ -22,6 +22,7 @@ export interface APIArtifact {
   id: string;
   artifact_id: string;
   title: string;
+  extension: string;
 }
 
 export interface TransformedFamilyTree {
