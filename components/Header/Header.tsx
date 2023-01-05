@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Heights } from '../../styles/constants.enum';
 import { CircleLogo } from '../Logos/CircleLogo';
+import Layout from '../layout';
 
 const HeaderLink = ({ href, children }: { href: string; children: string }) => (
   <li>
@@ -19,6 +20,7 @@ export const Header = () => {
 
   return (
     <header aria-label="Site Header" className="bg-[#212224] fixed w-full z-50">
+      <Layout />
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div
           className="flex items-center justify-between"
