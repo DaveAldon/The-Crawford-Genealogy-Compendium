@@ -1,4 +1,4 @@
-import geneology from './geneology.api';
+import geneology from './genealogy.api';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createRequest, createResponse } from 'node-mocks-http';
 

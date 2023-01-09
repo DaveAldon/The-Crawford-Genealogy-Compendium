@@ -16,10 +16,11 @@ export const ProfilePhoto = (props: Props) => {
         overflow: 'hidden',
       }}>
       <Image
+        priority
         alt={alt || ''}
         style={{ objectFit: 'cover' }}
         fill
-        sizes="100vw"
+        sizes="100%"
         src={src}
         onError={onError}
       />
