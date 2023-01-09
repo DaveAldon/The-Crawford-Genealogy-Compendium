@@ -40,7 +40,8 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
   const CloseButton = () => (
     <button
       onClick={() => setIsOpen(false)}
-      className="absolute top-0 left-0 mt-2 ml-3">
+      className="flex flex-row justify-center items-center">
+      Close{' '}
       <svg
         className="h-6 w-6 text-white"
         xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +58,19 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
     </button>
   );
 
+  const AdvancedViewButton = () => (
+    <a
+      className="group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring"
+      href={`/person/${activeNode.id}`}
+      target="_blank"
+      rel="noreferrer">
+      <span className="rounded-md absolute inset-0 border border-[#6366F1] group-active:border-[#6366F1]"></span>
+      <span className="rounded-md block border border-[#6366F1] bg-[#6366F1] px-12 py-3 transition-transform active:border-[#6366F1] active:bg-[#6366F1] group-hover:-translate-x-1 group-hover:-translate-y-1">
+        Show more details
+      </span>
+    </a>
+  );
+
   const Overlay = () => (
     <motion.div
       animate={isOpen ? 'open' : 'closed'}
@@ -70,7 +84,10 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
       }}>
       <div className="">
-        <CloseButton />
+        <div className="flex flex-row justify-between">
+          <AdvancedViewButton />
+          <CloseButton />
+        </div>
         <div className="h-5" />
         <ProfileCard photoSrc={photoSrc} activeNode={activeNode} />
         {activePhotos.length > 0 ? (

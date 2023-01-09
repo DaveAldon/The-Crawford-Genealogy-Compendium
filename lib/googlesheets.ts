@@ -1,5 +1,6 @@
 import { google } from 'googleapis';
-import { APIFamilyTree } from '../types/geneology';
+import { APIArtifact, APIFamilyTree } from '../types/geneology';
+import { getSheetUrl, GoogleSheetIds } from './resources/resources.enum';
 
 export const getArtifactData = async (
   sheetName: 'Movies' | 'Artifacts' | 'Photos',
@@ -78,28 +79,51 @@ export const getSheetData = async () => {
   return [];
 };
 
-export const queryDataBuilder = async (query: string) => {
-  const url = `https://docs.google.com/a/google.com/spreadsheets/d/${process.env.SPREADSHEET_ID}/gviz/tq?tq=${query}`;
+const queryDataBuilder = async (sheet: GoogleSheetIds, query: string) => {
+  const url = getSheetUrl(sheet, query);
   const response = await fetch(url);
   const data = await response.text();
   const parsed = JSON.parse((data.match(/(?<=.*\().*(?=\);)/s) || '')[0]);
   return parsed.table.rows[0] && parsed.table.rows[0].c;
 };
 
-export const getRowById = async (id: string) => {
-  const query = encodeURIComponent(`select * where A = '${id}'`);
-  const unparsedResult = await queryDataBuilder(query);
-  const result: any[] = [];
-  unparsedResult.forEach((item: any) => {
-    if (item === null) {
-      item = { v: '' };
-    } else {
-      if (item.v === null) {
-        item.v = '';
+const getRowById = async (sheet: GoogleSheetIds, id: string) => {
+  try {
+    const query = encodeURIComponent(`select * where A = '${id}'`);
+    const unparsedResult = await queryDataBuilder(sheet, query);
+    const result: any[] = [];
+    unparsedResult.forEach((item: any) => {
+      if (item === null) {
+        item = { v: '' };
+      } else {
+        if (item.v === null) {
+          item.v = '';
+        }
       }
-    }
-    result.push(item);
-  });
+      result.push(item);
+    });
+    return result;
+  } catch (err) {
+    console.log(err);
+    return [];
+  }
+};
+
+export const getArtifactRowById = async (sheet: GoogleSheetIds, id: string) => {
+  const result = await getRowById(sheet, id);
+  if (result.length === 0) return null;
+  const parsedResult: APIArtifact = {
+    _id: result[0].v,
+    id: result[0].v,
+    artifact_id: result[1].v,
+    title: result[2].v,
+    extension: result[3].v,
+  };
+  return parsedResult;
+};
+
+export const getPeopleRowById = async (id: string) => {
+  const result = await getRowById(GoogleSheetIds.People, id);
   const parsedResult: APIFamilyTree = {
     _id: result[0].v,
     id: result[0].v,
