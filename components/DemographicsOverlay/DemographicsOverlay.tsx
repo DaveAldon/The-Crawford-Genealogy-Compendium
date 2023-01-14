@@ -64,8 +64,8 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
       href={`/person/${activeNode.id}`}
       target="_blank"
       rel="noreferrer">
-      <span className="rounded-md absolute inset-0 border border-[#6366F1] group-active:border-[#6366F1]"></span>
-      <span className="rounded-md block border border-[#6366F1] bg-[#6366F1] px-12 py-3 transition-transform active:border-[#6366F1] active:bg-[#6366F1] group-hover:-translate-x-1 group-hover:-translate-y-1">
+      <span className="rounded-md absolute inset-0 border border-indigo-500 group-active:border-indigo-500"></span>
+      <span className="rounded-md block border border-indigo-500 bg-indigo-500 px-12 py-3 transition-transform active:border-indigo-500 active:bg-indigo-500 group-hover:-translate-x-1 group-hover:-translate-y-1">
         Show more details
       </span>
     </a>
