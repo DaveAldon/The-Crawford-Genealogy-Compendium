@@ -19,7 +19,9 @@ export const Header = () => {
   ];
 
   return (
-    <header aria-label="Site Header" className="bg-[#212224] fixed w-full z-50">
+    <header
+      aria-label="Site Header"
+      className="font-sans antialiased bg-[#212224] fixed w-full z-50">
       <Layout />
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div

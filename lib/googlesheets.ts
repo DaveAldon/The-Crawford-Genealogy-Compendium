@@ -122,6 +122,33 @@ export const getArtifactRowById = async (sheet: GoogleSheetIds, id: string) => {
   return parsedResult;
 };
 
+export const getAllArtifactsByPersonId = async (
+  sheet: GoogleSheetIds,
+  id: string,
+) => {
+  const query = encodeURIComponent(`select * where B = '${id}'`);
+  const unparsedResult = await queryDataBuilder(sheet, query);
+  const result: APIArtifact[] = [];
+  if (!unparsedResult) return result;
+  unparsedResult.forEach((item: any) => {
+    if (item === null) {
+      item = { v: '' };
+    } else {
+      if (item.v === null) {
+        item.v = '';
+      }
+    }
+    result.push({
+      _id: item[0].v,
+      id: item[0].v,
+      artifact_id: item[1].v,
+      title: item[2].v,
+      extension: item[3].v,
+    });
+  });
+  return result;
+};
+
 export const getPeopleRowById = async (id: string) => {
   const result = await getRowById(GoogleSheetIds.People, id);
   const parsedResult: APIFamilyTree = {

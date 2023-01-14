@@ -1,9 +1,9 @@
 import { hext } from '@davealdon/hext';
-import dayjs from 'dayjs';
 import Image from 'next/image';
 import { useImageFallback } from '../../hooks/useImageFallback/useImageFallback';
 import { FallbackResources } from '../../lib/resources/resources.enum';
 import { APIFamilyTree } from '../../types/geneology';
+import { getAge } from '../../utils/age';
 
 interface Props {
   photoSrc: string;
@@ -19,20 +19,6 @@ export const ProfileCard = (props: Props) => {
       : FallbackResources.profileFemale
   }`;
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
-
-  const getAge = () => {
-    const currentDecade = `${dayjs().format('YYYY').slice(0, 3)}0`;
-    if (Death) {
-      const deathYear = parseInt(
-        Death.length === 4 ? Death : Death.split('/')[2],
-      );
-      const birthYear = parseInt(DOB.length === 4 ? DOB : DOB.split('/')[2]);
-      return deathYear - birthYear;
-    } else {
-      const baseAge = parseInt(currentDecade) - parseInt(DOB.slice(0, -1));
-      return `${baseAge - 10}-${baseAge}s`;
-    }
-  };
 
   return (
     <div
@@ -125,7 +111,7 @@ export const ProfileCard = (props: Props) => {
 
             <div className="mt-1.5 ml-1 mt-0">
               <p className="text-gray-500">Age</p>
-              <p className="font-medium">{getAge()}</p>
+              <p className="font-medium">{getAge({ DOB, Death })}</p>
             </div>
           </div>
         </div>
