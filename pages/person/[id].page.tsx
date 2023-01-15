@@ -61,7 +61,7 @@ const Person = ({
   }`;
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
   const age = getAge({ DOB: person.DOB, Death: person.Death });
-
+  console.log(imageSrc);
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);

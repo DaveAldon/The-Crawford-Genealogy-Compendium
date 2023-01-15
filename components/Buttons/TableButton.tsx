@@ -28,7 +28,9 @@ export const FamilyLinkButton = ({
           backgroundColor,
         }}
         className="rounded px-3 py-1.5 text-xs font-medium flex flex-row items-center justify-between">
-        {`${person.Firstname} ${person.Middlename} ${person.Lastname}`}{' '}
+        {`${person.Firstname} ${
+          person.Middlename !== null ? person.Middlename + ' ' : ''
+        }${person.Lastname}`}{' '}
         <svg className="svg-icon" viewBox="0 0 20 20" width={18} height={18}>
           <path
             style={{
