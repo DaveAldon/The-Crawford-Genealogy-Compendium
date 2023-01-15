@@ -1,5 +1,3 @@
-const rows = ['Demographic', 'Value'];
-
 const Row = ({ value }: { value: string | React.ReactNode }) => {
   return <td className="whitespace-nowrap px-4 py-2 text-white">{value}</td>;
 };
@@ -30,13 +28,19 @@ export interface TableData {
   value: string | React.ReactNode;
 }
 
-export const Table = ({ data }: { data: TableData[] }) => {
+export const Table = ({
+  data,
+  title,
+}: {
+  data: TableData[];
+  title: string;
+}) => {
   return (
-    <div className="overflow-hidden overflow-x-auto rounded-lg border border-gray-200">
+    <div className="overflow-hidden overflow-x-auto rounded-lg border border-gray-200 mb-10 max-w-none lg:max-w-sm">
       <table className="min-w-full divide-y divide-gray-200 text-sm">
         <thead className="bg-gray-600">
           <tr>
-            {rows.map((row, index) => (
+            {[title, 'Value'].map((row, index) => (
               <Label key={index} title={row} />
             ))}
           </tr>

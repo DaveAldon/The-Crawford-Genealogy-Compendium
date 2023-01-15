@@ -23,7 +23,6 @@ export const useCarousel = ({
   type: CarouselType;
 }) => {
   const [srcs, setSrcs] = useState<SourceData[]>([]);
-
   useEffect(() => {
     const tmpSrcs: SourceData[] = [];
     if (type === CarouselType.photo) {
@@ -69,8 +68,8 @@ export const useCarousel = ({
       }
     }
     if (tmpSrcs.length === 1) tmpSrcs.push(tmpSrcs[0]);
-    setSrcs(tmpSrcs);
-  }, [activeNode]);
+    setSrcs([...tmpSrcs]);
+  }, [activeArtifact]);
 
   return {
     srcs,

@@ -15,8 +15,7 @@ interface Props {
 }
 export const Carousel = (props: Props) => {
   const { type } = props;
-  const { srcs } = useCarousel(props);
-
+  const { srcs } = useCarousel({ ...props });
   return (
     <div
       id={`carousel-id-${type}`}

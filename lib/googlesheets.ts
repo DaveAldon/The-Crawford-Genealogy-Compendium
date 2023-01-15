@@ -71,6 +71,7 @@ export const getSheetData = async () => {
         Father: row[12] || null,
         Spouse: row[13] || null,
         Divorced: row[14] || null,
+        Description: row[15] || null,
       }));
     }
   } catch (err) {
@@ -168,6 +169,7 @@ export const getPeopleRowById = async (id: string) => {
     Father: result[12].v,
     Spouse: result[13].v,
     Divorced: result[14].v,
+    Description: result[15].v,
   };
   return parsedResult;
 };

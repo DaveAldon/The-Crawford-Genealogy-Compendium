@@ -26,24 +26,31 @@ const Person = ({
   peopleResult,
   photosResult,
   id,
+  moviesResult,
+  artifactsResult,
 }: {
   peopleResult: APIFamilyTree[];
   photosResult: APIArtifact[];
   id: string;
+  moviesResult: APIArtifact[];
+  artifactsResult: APIArtifact[];
 }) => {
   const {
     person,
-    spouse,
-    mother,
-    father,
-    children,
-    updatePerson,
     photos,
-    siblings,
+    movies,
+    artifacts,
+    demographicsTable,
+    parentsTable,
+    childrenTable,
+    siblingsTable,
+    divorcedTable,
   } = usePerson({
     id,
     peopleResult,
     photosResult,
+    moviesResult,
+    artifactsResult,
   });
 
   const photoSrc = getResource(person.id, ResourceTypes.profile);
@@ -53,8 +60,6 @@ const Person = ({
       : FallbackResources.profileFemale
   }`;
   const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
-  const dob = person.DOB ? `${person.DOB}` : '';
-  const dod = person.Death ? `${person.Death}` : '';
   const age = getAge({ DOB: person.DOB, Death: person.Death });
 
   const [hydrated, setHydrated] = useState(false);
@@ -64,81 +69,6 @@ const Person = ({
   if (!hydrated) {
     return null;
   }
-
-  const tableData: TableData[] = [
-    {
-      label: 'Date of Birth',
-      value: dob,
-    },
-    {
-      label: 'Gender',
-      value: getGender(person.Gender),
-    },
-  ];
-  if (dod)
-    tableData.push({
-      label: 'Date of Death',
-      value: dod,
-    });
-  if (spouse)
-    tableData.push({
-      label: 'Spouse',
-      value: (
-        <FamilyLinkButton
-          updatePerson={updatePerson}
-          personId={spouse.id}
-          personName={`${spouse.Firstname} ${spouse.Middlename} ${spouse.Lastname}`}
-        />
-      ),
-    });
-  if (mother)
-    tableData.push({
-      label: 'Mother',
-      value: (
-        <FamilyLinkButton
-          updatePerson={updatePerson}
-          personId={mother.id}
-          personName={`${mother.Firstname} ${mother.Middlename} ${mother.Lastname}`}
-        />
-      ),
-    });
-  if (father)
-    tableData.push({
-      label: 'Father',
-      value: (
-        <FamilyLinkButton
-          updatePerson={updatePerson}
-          personId={father.id}
-          personName={`${father.Firstname} ${father.Middlename} ${father.Lastname}`}
-        />
-      ),
-    });
-  if (children.length > 0)
-    children.forEach(child => {
-      tableData.push({
-        label: 'Child',
-        value: (
-          <FamilyLinkButton
-            updatePerson={updatePerson}
-            personId={child.id}
-            personName={`${child.Firstname} ${child.Middlename} ${child.Lastname}`}
-          />
-        ),
-      });
-    });
-  if (siblings.length > 0)
-    siblings.forEach(sibling => {
-      tableData.push({
-        label: 'Sibling',
-        value: (
-          <FamilyLinkButton
-            updatePerson={updatePerson}
-            personId={sibling.id}
-            personName={`${sibling.Firstname} ${sibling.Middlename} ${sibling.Lastname}`}
-          />
-        ),
-      });
-    });
 
   return (
     <div className="text-white">
@@ -161,22 +91,55 @@ const Person = ({
                 {` ${person.Middlename}`} {person.Lastname} - {age}
               </h1>
               <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-indigo-500" />
-              <p className="pt-8 text-sm">
-                Totally optional short description about yourself, what you do
-                and so on.
-              </p>
-              <Table data={tableData} />
-              {person.BirthplaceCoords ? (
-                <MapCard activeNode={person} birthplace />
-              ) : null}
-              {person.DeathplaceCoords ? <MapCard activeNode={person} /> : null}
-              {photos && photos.length > 0 ? (
-                <Carousel
-                  type={CarouselType.photo}
-                  activeNode={person}
-                  activeArtifact={photos}
-                />
-              ) : null}
+              <p className="pt-8 text-sm">{person.Description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {demographicsTable.length > 0 ? (
+                  <Table title={'Demographics'} data={demographicsTable} />
+                ) : null}
+                {parentsTable.length > 0 ? (
+                  <Table title={'Parents'} data={parentsTable} />
+                ) : null}
+                {childrenTable.length > 0 ? (
+                  <Table title={'Children'} data={childrenTable} />
+                ) : null}
+                {siblingsTable.length > 0 ? (
+                  <Table title={'Siblings'} data={siblingsTable} />
+                ) : null}
+                {divorcedTable.length > 0 ? (
+                  <Table title={'Divorced'} data={divorcedTable} />
+                ) : null}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {person.BirthplaceCoords ? (
+                  <MapCard activeNode={person} birthplace />
+                ) : null}
+                {person.DeathplaceCoords ? (
+                  <MapCard activeNode={person} />
+                ) : null}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {photos && photos.length > 0 ? (
+                  <Carousel
+                    type={CarouselType.photo}
+                    activeNode={person}
+                    activeArtifact={photos}
+                  />
+                ) : null}
+                {movies && movies.length > 0 ? (
+                  <Carousel
+                    type={CarouselType.video}
+                    activeNode={person}
+                    activeArtifact={movies}
+                  />
+                ) : null}
+                {artifacts && artifacts.length > 0 ? (
+                  <Carousel
+                    type={CarouselType.artifact}
+                    activeNode={person}
+                    activeArtifact={artifacts}
+                  />
+                ) : null}
+              </div>
               <div className="pt-12 pb-8">
                 <button className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-4 rounded-full">
                   Get In Touch
@@ -199,17 +162,18 @@ const Person = ({
 
 export const getServerSideProps = async (context: any) => {
   const peopleResult = await getSheetData();
-  const movies = await getArtifactData('Movies');
-  const artifacts = await getArtifactData('Artifacts');
-  const photos = await getArtifactData('Photos');
+  const moviesResult = await getArtifactData('Movies');
+  const artifactsResult = await getArtifactData('Artifacts');
+  const photosResult = await getArtifactData('Photos');
   const id = context.query.id;
-  const photosResult = photos.filter((p: any) => p.id === id) as APIArtifact[];
 
   return {
     props: {
       id,
       peopleResult,
       photosResult,
+      moviesResult,
+      artifactsResult,
     },
   };
 

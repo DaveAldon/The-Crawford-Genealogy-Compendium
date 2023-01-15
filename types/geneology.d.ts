@@ -15,6 +15,7 @@ export interface APIFamilyTree {
   Father: string;
   Spouse: string;
   Divorced: string;
+  Description: string;
 }
 
 export interface APIArtifact {

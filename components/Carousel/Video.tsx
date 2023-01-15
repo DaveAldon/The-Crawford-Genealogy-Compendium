@@ -17,6 +17,7 @@ export const Video = ({
       <div style={{ height: '500px', backgroundColor: 'black' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <video
+          key={src}
           className="object-contain h-full w-full"
           autoPlay
           loop
