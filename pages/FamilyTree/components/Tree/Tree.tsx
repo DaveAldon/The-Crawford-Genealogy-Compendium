@@ -139,7 +139,7 @@ export const Tree: React.FC<ITree> = props => {
                         ? FallbackResources.profileMale
                         : FallbackResources.profileFemale
                     }`}
-                    name={node.name}
+                    name={node.name.replace(' null', ' ')}
                     compendiumReference={compendiumData.find(
                       item => item.id === node.id,
                     )}

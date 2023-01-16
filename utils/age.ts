@@ -10,6 +10,6 @@ export const getAge = ({ Death, DOB }: { Death: string; DOB: string }) => {
     return deathYear - birthYear;
   } else {
     const baseAge = parseInt(currentDecade) - parseInt(DOB.slice(0, -1));
-    return `${baseAge - 10}-${baseAge}s`;
+    return baseAge > 120 ? 'Unknown' : `${baseAge - 10}-${baseAge}s`;
   }
 };

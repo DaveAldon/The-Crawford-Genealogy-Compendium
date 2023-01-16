@@ -143,7 +143,7 @@ export const usePerson = ({
     if (person.Gender) {
       tmpDemographicsTable.push({
         label: 'Gender',
-        value: person.Gender,
+        value: person.Gender === 'M' ? 'Male' : 'Female',
       });
     }
     if (spouse) {

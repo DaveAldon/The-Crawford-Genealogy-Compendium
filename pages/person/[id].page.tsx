@@ -101,7 +101,7 @@ const Person = ({
                 {person.Lastname} - {age}
               </h1>
               <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-indigo-500" />
-              <p className="pt-8 text-md mb-8">{person.Description}</p>
+              <p className="pt-4 text-md mb-4">{person.Description}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {demographicsTable.length > 0 ? (
                   <Table title={'Demographics'} data={demographicsTable} />

@@ -49,7 +49,7 @@ export const ProfileCard = (props: Props) => {
         <dl>
           <div>
             <dt className="sr-only">Name</dt>
-            <dd className="font-medium">{name}</dd>
+            <dd className="font-medium">{name.replace(' null', ' ')}</dd>
           </div>
         </dl>
 
