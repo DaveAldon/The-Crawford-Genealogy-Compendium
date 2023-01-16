@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 
 export const getAge = ({ Death, DOB }: { Death: string; DOB: string }) => {
   const currentDecade = `${dayjs().format('YYYY').slice(0, 3)}0`;
+  if (!DOB) return 'Unknown';
   if (Death) {
     const deathYear = parseInt(
       Death.length === 4 ? Death : Death.split('/')[2],

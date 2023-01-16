@@ -120,7 +120,9 @@ export const Tree: React.FC<ITree> = props => {
                 const nodeReference = compendiumData.find(
                   item => item.id === node.id,
                 );
-                const dob = `${nodeReference?.DOB.split('/').pop() || '?'}`;
+                const dob = nodeReference?.DOB
+                  ? `${nodeReference?.DOB.split('/').pop() || '?'}`
+                  : '?';
                 const dod = nodeReference?.Death
                   ? ` - ${nodeReference?.Death.split('/').pop()}`
                   : '';
