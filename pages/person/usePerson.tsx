@@ -1,4 +1,3 @@
-import Router from 'next/router';
 import { useEffect, useState } from 'react';
 import { FamilyLinkButton } from '../../components/Buttons/TableButton';
 import { Table, TableData } from '../../components/Table/Table';
@@ -82,7 +81,6 @@ export const usePerson = ({
           p.Mother === person.Mother &&
           p.id !== person.id,
       ) as APIFamilyTree[];
-
       setSiblings([...tmpSibling]);
     } else {
       setSiblings([]);
@@ -175,8 +173,10 @@ export const usePerson = ({
           <FamilyLinkButton updatePerson={updatePerson} person={divorced} />
         ),
       });
+      setDivorcedTable([...tmpDivorcedTable]);
+    } else {
+      setDivorcedTable([]);
     }
-    setDivorcedTable([...tmpDivorcedTable]);
     if (children.length > 0) {
       children.forEach(child => {
         tmpChildrenTable.push({
@@ -187,6 +187,8 @@ export const usePerson = ({
         });
       });
       setChildrenTable([...tmpChildrenTable]);
+    } else {
+      setChildrenTable([]);
     }
     if (siblings.length > 0) {
       siblings.forEach(sibling => {
@@ -198,6 +200,8 @@ export const usePerson = ({
         });
       });
       setSiblingsTable([...tmpSiblingsTable]);
+    } else {
+      setSiblingsTable([]);
     }
   }, [person, mother, father, spouse, divorced, children, siblings]);
 

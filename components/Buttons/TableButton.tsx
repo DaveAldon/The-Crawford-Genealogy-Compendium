@@ -1,7 +1,5 @@
 import { APIFamilyTree } from '../../types/geneology';
 
-const indigo500 = 'rgb(67 56 202 / var(--tw-text-opacity))';
-const indigo100 = 'rgb(239 246 255 / var(--tw-text-opacity))';
 const cyan500 = '#06b6d4';
 const cyan100 = '#cffafe';
 const fuchsia500 = '#d946ef';

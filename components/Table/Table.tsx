@@ -31,16 +31,19 @@ export interface TableData {
 export const Table = ({
   data,
   title,
+  raw,
 }: {
   data: TableData[];
   title: string;
+  raw?: boolean;
 }) => {
+  const columns = raw ? [title] : [title, 'Value'];
   return (
-    <div className="overflow-hidden overflow-x-auto rounded-lg border border-gray-200 mb-10 max-w-none lg:max-w-sm">
+    <div className="overflow-hidden overflow-x-auto rounded-lg border border-gray-200 mb-10 max-w-none lg:max-w-1/2">
       <table className="min-w-full divide-y divide-gray-200 text-sm">
         <thead className="bg-gray-600">
           <tr>
-            {[title, 'Value'].map((row, index) => (
+            {columns.map((row, index) => (
               <Label key={index} title={row} />
             ))}
           </tr>
@@ -49,7 +52,7 @@ export const Table = ({
         <tbody className="divide-y divide-gray-600">
           {data.map((row, index) => (
             <tr key={index}>
-              <Row value={row.label} />
+              {raw ? null : <Row value={row.label} />}
               <Row value={row.value} />
             </tr>
           ))}
