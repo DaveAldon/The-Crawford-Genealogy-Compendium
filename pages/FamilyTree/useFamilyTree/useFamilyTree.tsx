@@ -32,8 +32,8 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
       const newNodes = getTransformedFamilyTree(data);
       if (newNodes) {
         setNodes([]); // Avoid invalid references to unknown nodes
-        setRootId(newNodes[0].id);
-        setMyId(newNodes[0].id);
+        setRootId(newNodes[4].id);
+        setMyId(newNodes[4].id);
         setNodes(newNodes);
       }
     })();
