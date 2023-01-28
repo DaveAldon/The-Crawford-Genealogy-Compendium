@@ -1,5 +1,6 @@
 export enum Endpoints {
   github = 'https://github.com/DaveAldon/Genealogy-Compendium-Resources/blob/master/resources/individuals/',
+  compendium = 'https://raw.githubusercontent.com/DaveAldon/Genealogy-Compendium-Resources/master/resources/paths.json',
 }
 
 export enum GoogleSheetIds {
