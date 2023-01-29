@@ -4,7 +4,7 @@ import { Header } from '../../components/Header/Header';
 import { MapCard } from '../../components/MapCard/MapCard';
 import { Table } from '../../components/Table/Table';
 import { useImageFallback } from '../../hooks/useImageFallback/useImageFallback';
-import { getArtifactData, getSheetData } from '../../lib/googlesheets';
+import { getSheetData } from '../../lib/googlesheets';
 import { getResource } from '../../lib/resources/resources';
 import {
   FallbackResources,
@@ -14,6 +14,7 @@ import { APIArtifact, APIFamilyTree } from '../../types/geneology';
 import { getAge } from '../../utils/age';
 import { usePerson } from './usePerson';
 import Image from 'next/image';
+import { getCompendiumJson } from '../../lib/compendiumJson';
 
 const Person = ({
   peopleResult,
@@ -160,9 +161,34 @@ const Person = ({
 
 export const getServerSideProps = async (context: any) => {
   const peopleResult = await getSheetData();
-  const moviesResult = await getArtifactData('Movies');
-  const artifactsResult = await getArtifactData('Artifacts');
-  const photosResult = await getArtifactData('Photos');
+
+  const moviesResult: APIArtifact[] = [];
+  const photosResult: APIArtifact[] = [];
+  const artifactsResult: APIArtifact[] = [];
+  const artifacts = await getCompendiumJson();
+
+  artifacts.forEach(item => {
+    item.resources.forEach(resource => {
+      const newItem: APIArtifact = {
+        _id: item.guid,
+        id: item.guid,
+        title: resource.description,
+        extension: resource.url,
+        artifact_id: '0',
+        url: resource.url,
+      };
+      if (resource.type === 'video') {
+        moviesResult.push(newItem);
+      } else if (resource.type === 'photo') {
+        if (!resource.url.includes('profile')) {
+          photosResult.push(newItem);
+        }
+      } else {
+        artifactsResult.push(newItem);
+      }
+    });
+  });
+
   const id = context.query.id;
 
   return {
@@ -174,30 +200,6 @@ export const getServerSideProps = async (context: any) => {
       artifactsResult,
     },
   };
-
-  /* const personResult = await getPeopleRowById(context.query.id);
-  const photosResult = await getAllArtifactsByPersonId(
-    GoogleSheetIds.Photos,
-    context.query.id,
-  );
-  const spouseResult = personResult.Spouse
-    ? await getPeopleRowById(personResult.Spouse)
-    : null;
-  const motherResult = personResult.Mother
-    ? await getPeopleRowById(personResult.Mother)
-    : null;
-  const fatherResult = personResult.Father
-    ? await getPeopleRowById(personResult.Father)
-    : null;
-  return {
-    props: {
-      personResult,
-      photosResult,
-      spouseResult,
-      motherResult,
-      fatherResult,
-    },
-  }; */
 };
 
 export default Person;

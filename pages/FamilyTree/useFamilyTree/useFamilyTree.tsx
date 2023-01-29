@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react';
-import crawfordLine from '../../../data/crawford-line.json';
 import { APIFamilyTree } from '../../../types/geneology';
 import { Node } from '../../../components/relatives-tree/types';
 import { getTransformedFamilyTree } from '../../../utils/transformFamilyTree';
@@ -7,7 +6,7 @@ import { getTransformedFamilyTree } from '../../../utils/transformFamilyTree';
 type Source = Array<Node>;
 const DEFAULT_SOURCE = 'crawford-line.json';
 const sources: { [key: string]: Source } = {
-  'crawford-line.json': crawfordLine as Source,
+  'crawford-line.json': {} as Source,
 };
 
 export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {

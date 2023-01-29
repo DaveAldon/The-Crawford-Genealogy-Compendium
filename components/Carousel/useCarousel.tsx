@@ -1,10 +1,4 @@
 import { useEffect, useState } from 'react';
-import { getResource } from '../../lib/resources/resources';
-import {
-  getArtifactUrl,
-  getGalleryUrl,
-  getVideoUrl,
-} from '../../lib/resources/resources.enum';
 import { APIArtifact, APIFamilyTree } from '../../types/geneology';
 import { CarouselType } from './Carousel';
 
@@ -14,7 +8,6 @@ interface SourceData {
 }
 
 export const useCarousel = ({
-  activeNode,
   activeArtifact,
   type,
 }: {
@@ -28,12 +21,8 @@ export const useCarousel = ({
     if (type === CarouselType.photo) {
       if (activeArtifact) {
         for (let i = 1; i <= activeArtifact.length; i++) {
-          const url = getResource(
-            activeNode.id,
-            getGalleryUrl(i, activeArtifact[i - 1].extension),
-          );
           tmpSrcs.push({
-            src: url,
+            src: activeArtifact[i - 1].url,
             title: activeArtifact[i - 1].title,
           });
         }
@@ -42,12 +31,8 @@ export const useCarousel = ({
     if (type === CarouselType.video) {
       if (activeArtifact) {
         for (let i = 1; i <= activeArtifact.length; i++) {
-          const url = getResource(
-            activeNode.id,
-            getVideoUrl(i, activeArtifact[i - 1].extension),
-          );
           tmpSrcs.push({
-            src: url,
+            src: activeArtifact[i - 1].url,
             title: activeArtifact[i - 1].title,
           });
         }
@@ -56,12 +41,8 @@ export const useCarousel = ({
     if (type === CarouselType.artifact) {
       if (activeArtifact) {
         for (let i = 1; i <= activeArtifact.length; i++) {
-          const url = getResource(
-            activeNode.id,
-            getArtifactUrl(i, activeArtifact[i - 1].extension),
-          );
           tmpSrcs.push({
-            src: url,
+            src: activeArtifact[i - 1].url,
             title: activeArtifact[i - 1].title,
           });
         }

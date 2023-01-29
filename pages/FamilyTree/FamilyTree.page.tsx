@@ -2,11 +2,12 @@ import React from 'react';
 import { Tree } from './components/Tree/Tree';
 import { APIFamilyTree, APIArtifact } from '../../types/geneology';
 import { useFamilyTree } from './useFamilyTree/useFamilyTree';
-import { getArtifactData, getSheetData } from '../../lib/googlesheets';
+import { getSheetData } from '../../lib/googlesheets';
 import { defaultAPIFamilyTree } from '../../utils/defaultData';
 import { Heights } from '../../styles/constants.enum';
 import { DemographicsOverlay } from '../../components/DemographicsOverlay/DemographicsOverlay';
 import { Header } from '../../components/Header/Header';
+import { getCompendiumJson } from '../../lib/compendiumJson';
 
 const FamilyTree = ({
   data,
@@ -72,12 +73,33 @@ const FamilyTree = ({
 
 export const getServerSideProps = async (_context: any) => {
   const people = await getSheetData();
-  const movies = await getArtifactData('Movies');
-  const artifacts = await getArtifactData('Artifacts');
-  const photos = await getArtifactData('Photos');
-  const moviesData: APIArtifact[] = movies;
-  const photosData: APIArtifact[] = photos;
-  const artifactsData: APIArtifact[] = artifacts;
+
+  const moviesData: APIArtifact[] = [];
+  const photosData: APIArtifact[] = [];
+  const artifactsData: APIArtifact[] = [];
+  const artifacts = await getCompendiumJson();
+
+  artifacts.forEach(item => {
+    item.resources.forEach(resource => {
+      const newItem: APIArtifact = {
+        _id: item.guid,
+        id: item.guid,
+        title: resource.description,
+        extension: resource.url,
+        artifact_id: '0',
+        url: resource.url,
+      };
+      if (resource.type === 'video') {
+        moviesData.push(newItem);
+      } else if (resource.type === 'photo') {
+        if (!resource.url.includes('profile')) {
+          photosData.push(newItem);
+        }
+      } else {
+        artifactsData.push(newItem);
+      }
+    });
+  });
 
   // replace undefined with empty string
   const data: APIFamilyTree[] = people.map((item: any) => {
