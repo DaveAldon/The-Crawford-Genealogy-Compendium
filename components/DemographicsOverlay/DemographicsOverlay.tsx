@@ -3,6 +3,7 @@ import { getResource } from '../../lib/resources/resources';
 import { ResourceTypes } from '../../lib/resources/resources.enum';
 import { Heights } from '../../styles/constants.enum';
 import { APIArtifact, APIFamilyTree } from '../../types/geneology';
+import { AdvancedViewButton } from '../Buttons/AdvancedViewButton';
 import { Carousel, CarouselType } from '../Carousel/Carousel';
 import { MapCard } from '../MapCard/MapCard';
 import { ProfileCard } from '../ProfileCard/ProfileCard';
@@ -58,19 +59,6 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
     </button>
   );
 
-  const AdvancedViewButton = () => (
-    <a
-      className="group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring"
-      href={`/person/${activeNode.id}`}
-      target="_blank"
-      rel="noreferrer">
-      <span className="rounded-md absolute inset-0 border border-indigo-500 group-active:border-indigo-500"></span>
-      <span className="rounded-md block border border-indigo-500 bg-indigo-500 px-12 py-3 transition-transform active:border-indigo-500 active:bg-indigo-500 group-hover:-translate-x-1 group-hover:-translate-y-1">
-        Show more details
-      </span>
-    </a>
-  );
-
   const Overlay = () => (
     <motion.div
       animate={isOpen ? 'open' : 'closed'}
@@ -85,7 +73,7 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
       }}>
       <div className="">
         <div className="flex flex-row justify-between">
-          <AdvancedViewButton />
+          <AdvancedViewButton guid={activeNode.id} />
           <CloseButton />
         </div>
         <div className="h-5" />

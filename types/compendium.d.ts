@@ -5,5 +5,7 @@ export interface PathsJSON {
     url: string;
     height: number;
     width: number;
+    type: FileType;
+    description: string;
   }[];
 }

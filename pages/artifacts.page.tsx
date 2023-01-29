@@ -4,19 +4,35 @@ import { getCompendiumJson } from '../lib/compendiumJson';
 import { Gallery, Image } from 'react-grid-gallery';
 import { useArtifacts } from './Artifacts/useArtifacts';
 import Lightbox from 'yet-another-react-lightbox';
+import Captions from 'yet-another-react-lightbox/plugins/captions';
 import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/captions.css';
+import { ReactNode } from 'react';
+import { AdvancedViewButton } from '../components/Buttons/AdvancedViewButton';
 
-export default function Artifacts({ images }: { images: Image[] }) {
-  const {
-    handleClick,
-    currentImage,
-    nextImage,
-    prevImage,
-    handleClose,
-    handleMoveNext,
-    handleMovePrev,
-    index,
-  } = useArtifacts({ images });
+export interface CustomImage extends Image {
+  description: ReactNode;
+  guid: string;
+  name: string;
+}
+
+export default function Artifacts({ images }: { images: CustomImage[] }) {
+  const { handleClick, currentImage, handleClose, index } = useArtifacts({
+    images,
+  });
+
+  const imagesWithLinks = images.map(image => {
+    return {
+      ...image,
+      description: (
+        <AdvancedViewButton
+          guid={image.guid}
+          text={`${image.name} - ${image.description || 'No description'}`}
+        />
+      ),
+    };
+  });
+
   return (
     <div className="text-black flex flex-col h-screen justify-between bg-black">
       <Header />
@@ -42,8 +58,9 @@ export default function Artifacts({ images }: { images: Image[] }) {
             <Lightbox
               open={currentImage ? true : false}
               close={() => handleClose()}
-              slides={[...images]}
+              slides={[...imagesWithLinks]}
               index={index}
+              plugins={[Captions]}
             />
           </div>
         </div>
@@ -55,13 +72,16 @@ export default function Artifacts({ images }: { images: Image[] }) {
 
 export const getServerSideProps = async (_context: any) => {
   const data = await getCompendiumJson();
-  const images: Image[] = [];
+  const images: CustomImage[] = [];
   data.forEach((item, i) => {
     item.resources.forEach((resource, ii) => {
       images.push({
         src: resource.url,
         width: resource.width,
         height: resource.height,
+        description: resource.description,
+        guid: item.guid,
+        name: item.name,
       });
     });
   });
