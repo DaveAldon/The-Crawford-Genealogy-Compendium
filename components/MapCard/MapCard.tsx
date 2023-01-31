@@ -1,6 +1,6 @@
 import { hext } from '@davealdon/hext';
 import Link from 'next/link';
-import { APIFamilyTree } from '../../types/geneology';
+import { APIFamilyTree } from '../../types/genealogy';
 import { Map } from '../Map/Map';
 
 interface Props {

@@ -1,24 +1,17 @@
 import { hext } from '@davealdon/hext';
 import Image from 'next/image';
-import { useImageFallback } from '../../hooks/useImageFallback/useImageFallback';
-import { FallbackResources } from '../../lib/resources/resources.enum';
-import { APIFamilyTree } from '../../types/geneology';
+import { NormalizedFamilyTree } from '../../types/genealogy';
 import { getAge } from '../../utils/age';
+import { getProfilePicture } from '../../utils/profilePicture';
 
 interface Props {
-  photoSrc: string;
-  activeNode: APIFamilyTree;
+  activeNode: NormalizedFamilyTree;
 }
 export const ProfileCard = (props: Props) => {
-  const { photoSrc, activeNode } = props;
+  const { activeNode } = props;
   const name = `${activeNode.Firstname} ${activeNode.Middlename} ${activeNode.Lastname}`;
   const { DOB, Death } = activeNode;
-  const fallbackSrc = `${
-    activeNode.Gender === 'M'
-      ? FallbackResources.profileMale
-      : FallbackResources.profileFemale
-  }`;
-  const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
+  const profilePicture = getProfilePicture(activeNode);
 
   return (
     <div
@@ -32,8 +25,7 @@ export const ProfileCard = (props: Props) => {
           alt="Home"
           width={640}
           height={480}
-          src={imageSrc}
-          onError={onError}
+          src={profilePicture}
           className="h-56 rounded-md object-cover blur-md"
         />
       </div>
@@ -41,8 +33,7 @@ export const ProfileCard = (props: Props) => {
         alt="Home"
         width={640}
         height={480}
-        src={imageSrc}
-        onError={onError}
+        src={profilePicture}
         className="h-56 w-full object-contain absolute"
       />
       <div className="p-3 absolute bottom-0">

@@ -2,11 +2,7 @@ import { motion } from 'framer-motion';
 import { getResource } from '../../lib/resources/resources';
 import { ResourceTypes } from '../../lib/resources/resources.enum';
 import { Heights } from '../../styles/constants.enum';
-import {
-  APIArtifact,
-  APIFamilyTree,
-  NormalizedFamilyTree,
-} from '../../types/geneology';
+import { NormalizedFamilyTree } from '../../types/genealogy';
 import { AdvancedViewButton } from '../Buttons/AdvancedViewButton';
 import { Carousel, CarouselType } from '../Carousel/Carousel';
 import { MapCard } from '../MapCard/MapCard';
@@ -32,7 +28,7 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
     },
   };
   const photos = activeNode.metadata.resources.filter(
-    photos => photos.type === 'photo',
+    photos => photos.type === 'photo' && !photos.url.includes('profile'),
   );
   const movies = activeNode.metadata.resources.filter(
     movies => movies.type === 'video',
@@ -80,7 +76,7 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
           <CloseButton />
         </div>
         <div className="h-5" />
-        <ProfileCard photoSrc={photoSrc} activeNode={activeNode} />
+        <ProfileCard activeNode={activeNode} />
         {photos.length > 0 ? (
           <Carousel
             type={CarouselType.photo}

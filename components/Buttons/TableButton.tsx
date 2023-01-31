@@ -1,4 +1,4 @@
-import { APIFamilyTree } from '../../types/geneology';
+import { APIFamilyTree } from '../../types/genealogy';
 
 const cyan500 = '#06b6d4';
 const cyan100 = '#cffafe';

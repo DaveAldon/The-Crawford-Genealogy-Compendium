@@ -5,7 +5,7 @@ import { ExtNode } from '../../../../components/relatives-tree/types';
 import { ProfilePhoto } from './components/ProfilePhoto/ProfilePhoto';
 import { ProfileInfo } from './components/ProfileInfo/ProfileInfo';
 import { ProfileChips } from './components/ProfileChips/ProfileChips';
-import { NormalizedFamilyTree } from '../../../../types/geneology';
+import { NormalizedFamilyTree } from '../../../../types/genealogy';
 import { getProfilePicture } from '../../../../utils/profilePicture';
 
 const EnterIcon = () => (

@@ -1,4 +1,4 @@
-import { PathsJSON } from './compendium.d';
+import { PathsJSON } from './compendium';
 
 export interface APIFamilyTree {
   _id: string;

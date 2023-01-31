@@ -16,7 +16,7 @@ import {
   ResourceTypes,
 } from '../../../../lib/resources/resources.enum';
 import { getResource } from '../../../../lib/resources/resources';
-import { NormalizedFamilyTree } from '../../../../types/geneology';
+import { NormalizedFamilyTree } from '../../../../types/genealogy';
 
 const WIDTH = 90;
 const HEIGHT = 140;
@@ -117,7 +117,8 @@ export const Tree: React.FC<ITree> = props => {
                   : '';
 
                 const photos = nodeReference?.metadata.resources.filter(
-                  photos => photos.type === 'photo',
+                  photos =>
+                    photos.type === 'photo' && !photos.url.includes('profile'),
                 );
                 const movies = nodeReference?.metadata.resources.filter(
                   movies => movies.type === 'video',

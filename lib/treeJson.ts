@@ -1,4 +1,4 @@
-import { NormalizedFamilyTree } from '../types/geneology';
+import { NormalizedFamilyTree } from '../types/genealogy';
 import { Endpoints } from './resources/resources.enum';
 
 export const getTreeData = async (): Promise<NormalizedFamilyTree[]> => {

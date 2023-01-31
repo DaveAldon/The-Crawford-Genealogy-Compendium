@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tree } from './components/Tree/Tree';
-import { NormalizedFamilyTree } from '../../types/geneology';
+import { NormalizedFamilyTree } from '../../types/genealogy';
 import { useFamilyTree } from './useFamilyTree/useFamilyTree';
 import { defaultAPIFamilyTree } from '../../utils/defaultData';
 import { Heights } from '../../styles/constants.enum';

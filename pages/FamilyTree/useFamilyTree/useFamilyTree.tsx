@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { APIFamilyTree, NormalizedFamilyTree } from '../../../types/geneology';
+import { APIFamilyTree, NormalizedFamilyTree } from '../../../types/genealogy';
 import { Node } from '../../../components/relatives-tree/types';
 import { getTreeData } from '../../../lib/treeJson';
 

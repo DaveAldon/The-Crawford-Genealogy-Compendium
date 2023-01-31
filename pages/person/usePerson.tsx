@@ -5,7 +5,7 @@ import {
   APIArtifact,
   APIFamilyTree,
   NormalizedFamilyTree,
-} from '../../types/geneology';
+} from '../../types/genealogy';
 
 export const usePerson = ({
   id,

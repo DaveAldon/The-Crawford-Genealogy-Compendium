@@ -1,4 +1,4 @@
-import { APIArtifact, APIFamilyTree } from '../../types/geneology';
+import { APIArtifact, APIFamilyTree } from '../../types/genealogy';
 import { Photo } from './Photo';
 import { useCarousel } from './useCarousel';
 import { Video } from './Video';

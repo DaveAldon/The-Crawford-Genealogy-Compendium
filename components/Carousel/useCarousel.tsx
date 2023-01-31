@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { APIArtifact, APIFamilyTree } from '../../types/geneology';
+import { APIArtifact, APIFamilyTree } from '../../types/genealogy';
 import { CarouselType } from './Carousel';
 
 interface SourceData {

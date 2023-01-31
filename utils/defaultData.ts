@@ -1,4 +1,4 @@
-import { NormalizedFamilyTree } from '../types/geneology';
+import { NormalizedFamilyTree } from '../types/genealogy';
 
 export const defaultAPIFamilyTree: NormalizedFamilyTree = {
   _id: '',
