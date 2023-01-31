@@ -3,31 +3,19 @@ import { Carousel, CarouselType } from '../../components/Carousel/Carousel';
 import { Header } from '../../components/Header/Header';
 import { MapCard } from '../../components/MapCard/MapCard';
 import { Table } from '../../components/Table/Table';
-import { useImageFallback } from '../../hooks/useImageFallback/useImageFallback';
-import { getSheetData } from '../../lib/googlesheets';
-import { getResource } from '../../lib/resources/resources';
-import {
-  FallbackResources,
-  ResourceTypes,
-} from '../../lib/resources/resources.enum';
-import { APIArtifact, APIFamilyTree } from '../../types/geneology';
+import { FallbackResources } from '../../lib/resources/resources.enum';
+import { NormalizedFamilyTree } from '../../types/geneology';
 import { getAge } from '../../utils/age';
 import { usePerson } from './usePerson';
 import Image from 'next/image';
-import { getCompendiumJson } from '../../lib/compendiumJson';
+import { getTreeData } from '../../lib/treeJson';
 
 const Person = ({
-  peopleResult,
-  photosResult,
+  people,
   id,
-  moviesResult,
-  artifactsResult,
 }: {
-  peopleResult: APIFamilyTree[];
-  photosResult: APIArtifact[];
+  people: NormalizedFamilyTree[];
   id: string;
-  moviesResult: APIArtifact[];
-  artifactsResult: APIArtifact[];
 }) => {
   const {
     person,
@@ -41,19 +29,18 @@ const Person = ({
     divorcedTable,
   } = usePerson({
     id,
-    peopleResult,
-    photosResult,
-    moviesResult,
-    artifactsResult,
+    peopleResult: people,
   });
 
-  const photoSrc = getResource(person.id, ResourceTypes.profile);
-  const fallbackSrc = `${
-    person.Gender === 'M'
-      ? FallbackResources.profileMale
-      : FallbackResources.profileFemale
-  }`;
-  const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
+  const imageSrc =
+    person.metadata.profile === ''
+      ? `${
+          person.Gender === 'M'
+            ? FallbackResources.profileMale
+            : FallbackResources.profileFemale
+        }`
+      : person.metadata.profile;
+
   const age = getAge({ DOB: person.DOB, Death: person.Death });
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
@@ -80,7 +67,6 @@ const Person = ({
                       width={640}
                       height={480}
                       src={imageSrc}
-                      onError={onError}
                       className="h-64 w-full rounded-md object-cover blur-md"
                     />
                   </div>
@@ -89,7 +75,6 @@ const Person = ({
                     width={640}
                     height={480}
                     src={imageSrc}
-                    onError={onError}
                     className="h-64 w-full object-contain absolute"
                   />
                 </div>
@@ -160,44 +145,13 @@ const Person = ({
 };
 
 export const getServerSideProps = async (context: any) => {
-  const peopleResult = await getSheetData();
-
-  const moviesResult: APIArtifact[] = [];
-  const photosResult: APIArtifact[] = [];
-  const artifactsResult: APIArtifact[] = [];
-  const artifacts = await getCompendiumJson();
-
-  artifacts.forEach(item => {
-    item.resources.forEach(resource => {
-      const newItem: APIArtifact = {
-        _id: item.guid,
-        id: item.guid,
-        title: resource.description,
-        extension: resource.url,
-        artifact_id: '0',
-        url: resource.url,
-      };
-      if (resource.type === 'video') {
-        moviesResult.push(newItem);
-      } else if (resource.type === 'photo') {
-        if (!resource.url.includes('profile')) {
-          photosResult.push(newItem);
-        }
-      } else {
-        artifactsResult.push(newItem);
-      }
-    });
-  });
-
+  const people = await getTreeData();
   const id = context.query.id;
 
   return {
     props: {
       id,
-      peopleResult,
-      photosResult,
-      moviesResult,
-      artifactsResult,
+      people,
     },
   };
 };

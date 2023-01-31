@@ -1,31 +1,29 @@
 import { useEffect, useState } from 'react';
 import { FamilyLinkButton } from '../../components/Buttons/TableButton';
 import { Table, TableData } from '../../components/Table/Table';
-import { APIArtifact, APIFamilyTree } from '../../types/geneology';
+import {
+  APIArtifact,
+  APIFamilyTree,
+  NormalizedFamilyTree,
+} from '../../types/geneology';
 
 export const usePerson = ({
   id,
   peopleResult,
-  photosResult,
-  moviesResult,
-  artifactsResult,
 }: {
   id: string;
-  peopleResult: APIFamilyTree[];
-  photosResult: APIArtifact[];
-  moviesResult: APIArtifact[];
-  artifactsResult: APIArtifact[];
+  peopleResult: NormalizedFamilyTree[];
 }) => {
-  const [people, _setPeople] = useState<APIFamilyTree[]>(peopleResult);
-  const [person, setPerson] = useState<APIFamilyTree>(
-    peopleResult.filter((p: any) => p.id === id)[0] as APIFamilyTree,
+  const [people, _setPeople] = useState<NormalizedFamilyTree[]>(peopleResult);
+  const [person, setPerson] = useState<NormalizedFamilyTree>(
+    peopleResult.filter((p: any) => p.id === id)[0] as NormalizedFamilyTree,
   );
-  const [spouse, setSpouse] = useState<APIFamilyTree | null>();
-  const [mother, setMother] = useState<APIFamilyTree | null>();
-  const [father, setFather] = useState<APIFamilyTree | null>();
-  const [children, setChildren] = useState<APIFamilyTree[]>([]);
-  const [siblings, setSiblings] = useState<APIFamilyTree[]>([]);
-  const [divorced, setDivorced] = useState<APIFamilyTree | null>();
+  const [spouse, setSpouse] = useState<NormalizedFamilyTree | null>();
+  const [mother, setMother] = useState<NormalizedFamilyTree | null>();
+  const [father, setFather] = useState<NormalizedFamilyTree | null>();
+  const [children, setChildren] = useState<NormalizedFamilyTree[]>([]);
+  const [siblings, setSiblings] = useState<NormalizedFamilyTree[]>([]);
+  const [divorced, setDivorced] = useState<NormalizedFamilyTree | null>();
   const [photos, setPhotos] = useState<APIArtifact[]>();
   const [movies, setMovies] = useState<APIArtifact[]>();
   const [artifacts, setArtifacts] = useState<APIArtifact[]>();
@@ -37,7 +35,9 @@ export const usePerson = ({
   const [divorcedTable, setDivorcedTable] = useState<TableData[]>([]);
 
   const updatePerson = (id: string) => {
-    const newPerson = people.find((p: any) => p.id === id) as APIFamilyTree;
+    const newPerson = people.find(
+      (p: any) => p.id === id,
+    ) as NormalizedFamilyTree;
     setPerson(newPerson);
   };
 
@@ -45,8 +45,8 @@ export const usePerson = ({
     if (person.Spouse) {
       setSpouse(
         people.find(
-          (p: APIFamilyTree) => p.id === person.Spouse,
-        ) as APIFamilyTree | null,
+          (p: NormalizedFamilyTree) => p.id === person.Spouse,
+        ) as NormalizedFamilyTree | null,
       );
     } else {
       setSpouse(null);
@@ -54,8 +54,8 @@ export const usePerson = ({
     if (person.Mother) {
       setMother(
         people.find(
-          (p: APIFamilyTree) => p.id === person.Mother,
-        ) as APIFamilyTree | null,
+          (p: NormalizedFamilyTree) => p.id === person.Mother,
+        ) as NormalizedFamilyTree | null,
       );
     } else {
       setMother(null);
@@ -63,8 +63,8 @@ export const usePerson = ({
     if (person.Father) {
       setFather(
         people.find(
-          (p: APIFamilyTree) => p.id === person.Father,
-        ) as APIFamilyTree | null,
+          (p: NormalizedFamilyTree) => p.id === person.Father,
+        ) as NormalizedFamilyTree | null,
       );
     } else {
       setFather(null);
@@ -76,11 +76,11 @@ export const usePerson = ({
     );
     if (person.Father !== null && person.Mother !== null) {
       const tmpSibling = people.filter(
-        (p: APIFamilyTree) =>
+        (p: NormalizedFamilyTree) =>
           p.Father === person.Father &&
           p.Mother === person.Mother &&
           p.id !== person.id,
-      ) as APIFamilyTree[];
+      ) as NormalizedFamilyTree[];
       setSiblings([...tmpSibling]);
     } else {
       setSiblings([]);
@@ -88,35 +88,29 @@ export const usePerson = ({
     if (person.Divorced) {
       setDivorced(
         people.find(
-          (p: APIFamilyTree) => p.id === person.Divorced,
-        ) as APIFamilyTree | null,
+          (p: NormalizedFamilyTree) => p.id === person.Divorced,
+        ) as NormalizedFamilyTree | null,
       );
     } else {
       setDivorced(null);
     }
 
-    if (photosResult) {
-      setPhotos([
-        ...photosResult.filter((p: APIArtifact) => p.id === person.id),
-      ]);
-    } else {
-      setPhotos([]);
-    }
-    if (moviesResult) {
-      const tmpMovies = moviesResult.filter(
-        (p: APIArtifact) => p.id === person.id,
-      );
-      setMovies([...tmpMovies]);
-    } else {
-      setMovies([]);
-    }
-    if (artifactsResult) {
-      setArtifacts([
-        ...artifactsResult.filter((p: APIArtifact) => p.id === person.id),
-      ]);
-    } else {
-      setArtifacts([]);
-    }
+    setPhotos([
+      ...person.metadata.resources.filter(
+        (p: APIArtifact) => p.type === 'photo',
+      ),
+    ]);
+
+    const tmpMovies = person.metadata.resources.filter(
+      (p: APIArtifact) => p.type === 'video',
+    );
+    setMovies([...tmpMovies]);
+
+    setArtifacts([
+      ...person.metadata.resources.filter(
+        (p: APIArtifact) => p.type === 'artifact',
+      ),
+    ]);
 
     window.history.pushState(null, '', `/person/${person.id}`);
   }, [person]);

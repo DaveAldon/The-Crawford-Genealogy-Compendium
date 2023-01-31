@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import { APIFamilyTree } from '../../../types/geneology';
+import { APIFamilyTree, NormalizedFamilyTree } from '../../../types/geneology';
 import { Node } from '../../../components/relatives-tree/types';
-import { getTransformedFamilyTree } from '../../../utils/transformFamilyTree';
+import { getTreeData } from '../../../lib/treeJson';
 
 type Source = Array<Node>;
 const DEFAULT_SOURCE = 'crawford-line.json';
@@ -9,7 +9,7 @@ const sources: { [key: string]: Source } = {
   'crawford-line.json': {} as Source,
 };
 
-export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
+export const useFamilyTree = ({ data }: { data: NormalizedFamilyTree[] }) => {
   const [source, setSource] = useState<string>(DEFAULT_SOURCE);
   const [nodes, setNodes] = useState<Source>([]);
   const [myId, setMyId] = useState<string>('');
@@ -28,12 +28,11 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
         newNodes = SOURCES[source];
       } */
 
-      const newNodes = getTransformedFamilyTree(data);
-      if (newNodes) {
+      if (data) {
         setNodes([]); // Avoid invalid references to unknown nodes
-        setRootId(newNodes[4].id);
-        setMyId(newNodes[4].id);
-        setNodes(newNodes);
+        setRootId(data[4].id);
+        setMyId(data[4].id);
+        setNodes(data);
       }
     })();
   }, [data, source]);
@@ -66,6 +65,5 @@ export const useFamilyTree = ({ data }: { data: APIFamilyTree[] }) => {
     panelState,
     setPanelState,
     activeNode,
-    compendiumData: data,
   };
 };

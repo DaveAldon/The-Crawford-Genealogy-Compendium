@@ -1,3 +1,5 @@
+import { PathsJSON } from './compendium.d';
+
 export interface APIFamilyTree {
   _id: string;
   id: string;
@@ -19,15 +21,22 @@ export interface APIFamilyTree {
 }
 
 export interface APIArtifact {
-  _id: string;
   id: string;
-  artifact_id: string;
-  title: string;
-  extension: string;
+  description: string;
+  type: string;
   url: string;
+  height: number;
+  width: number;
 }
 
-export interface TransformedFamilyTree {
+export interface MetaData {
+  guid: string;
+  name: string;
+  profile: string;
+  resources: APIArtifact[];
+}
+
+export interface NormalizedFamilyTree extends APIFamilyTree {
   id: string;
   name: string;
   gender: Gender;
@@ -36,4 +45,5 @@ export interface TransformedFamilyTree {
   siblings: Relation[];
   spouses: Relation[];
   placeholder?: boolean;
+  metadata: MetaData;
 }

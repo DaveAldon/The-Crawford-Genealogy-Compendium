@@ -1,6 +1,5 @@
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
-import { getCompendiumJson } from '../lib/compendiumJson';
 import { Gallery, Image } from 'react-grid-gallery';
 import { useArtifacts } from './Artifacts/useArtifacts';
 import Lightbox from 'yet-another-react-lightbox';
@@ -9,6 +8,7 @@ import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import { ReactNode } from 'react';
 import { AdvancedViewButton } from '../components/Buttons/AdvancedViewButton';
+import { getTreeData } from '../lib/treeJson';
 
 export interface CustomImage extends Image {
   description: ReactNode;
@@ -71,23 +71,32 @@ export default function Artifacts({ images }: { images: CustomImage[] }) {
 }
 
 export const getServerSideProps = async (_context: any) => {
-  const data = await getCompendiumJson();
+  const data = await getTreeData();
   const images: CustomImage[] = [];
-  data.forEach((item, i) => {
-    item.resources.forEach((resource, ii) => {
-      images.push({
-        src: resource.url,
-        width: resource.width,
-        height: resource.height,
-        description: resource.description,
-        guid: item.guid,
-        name: item.name,
-      });
+  data.forEach(item => {
+    if (!item.metadata.resources) return;
+    item.metadata.resources.forEach(resource => {
+      if (resource.type !== 'video') {
+        images.push({
+          src: resource.url,
+          width: resource.width,
+          height: resource.height,
+          description: resource.description,
+          guid: item.id,
+          name: item.name,
+        });
+      }
     });
   });
+
+  const randomizeArray = images
+    .map((value: CustomImage) => ({ value, sort: Math.random() }))
+    .sort((a: { sort: number }, b: { sort: number }) => a.sort - b.sort)
+    .map(({ value }: { value: CustomImage }) => value);
+
   return {
     props: {
-      images,
+      images: randomizeArray,
     },
   };
 };

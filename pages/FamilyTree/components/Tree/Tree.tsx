@@ -16,7 +16,7 @@ import {
   ResourceTypes,
 } from '../../../../lib/resources/resources.enum';
 import { getResource } from '../../../../lib/resources/resources';
-import { APIArtifact, APIFamilyTree } from '../../../../types/geneology';
+import { NormalizedFamilyTree } from '../../../../types/geneology';
 
 const WIDTH = 90;
 const HEIGHT = 140;
@@ -27,22 +27,11 @@ interface ITree {
   setRootId: (id: string) => void;
   onClickNode: (id: string) => void;
   setPanelState: (state: boolean) => void;
-  compendiumData: APIFamilyTree[];
-  activeMovies: APIArtifact[];
-  activePhotos: APIArtifact[];
-  activeArtifacts: APIArtifact[];
+  data: NormalizedFamilyTree[];
 }
 export const Tree: React.FC<ITree> = props => {
-  const {
-    nodes,
-    rootId,
-    setRootId,
-    onClickNode,
-    compendiumData,
-    activeMovies,
-    activeArtifacts,
-    activePhotos,
-  } = props;
+  const { nodes, rootId, setRootId, onClickNode, data } = props;
+
   return (
     <TransformWrapper
       limitToBounds={false}
@@ -117,15 +106,25 @@ export const Tree: React.FC<ITree> = props => {
               height={HEIGHT}
               className={styles.tree}
               renderNode={(node: ExtNode) => {
-                const nodeReference = compendiumData.find(
-                  item => item.id === node.id,
-                );
+                const nodeReference = data.find(item => item.id === node.id);
+                if (nodeReference === undefined) return null;
+
                 const dob = nodeReference?.DOB
                   ? `${nodeReference?.DOB.split('/').pop() || '?'}`
                   : '?';
                 const dod = nodeReference?.Death
                   ? ` - ${nodeReference?.Death.split('/').pop()}`
                   : '';
+
+                const photos = nodeReference?.metadata.resources.filter(
+                  photos => photos.type === 'photo',
+                );
+                const movies = nodeReference?.metadata.resources.filter(
+                  movies => movies.type === 'video',
+                );
+                const artifacts = nodeReference?.metadata.resources.filter(
+                  artifacts => artifacts.type === 'artifact',
+                );
 
                 return (
                   <FamilyNode
@@ -135,21 +134,13 @@ export const Tree: React.FC<ITree> = props => {
                     node={node}
                     isRoot={node.id === rootId}
                     onSubClick={setRootId}
-                    photoSrc={getResource(node.id, ResourceTypes.profile)}
-                    fallbackSrc={`${
-                      node.gender === Gender.male
-                        ? FallbackResources.profileMale
-                        : FallbackResources.profileFemale
-                    }`}
                     name={node.name.replace(' null', ' ')}
-                    compendiumReference={compendiumData.find(
-                      item => item.id === node.id,
-                    )}
-                    hasMovies={activeMovies.some(item => item.id === node.id)}
-                    hasPhotos={activePhotos.some(item => item.id === node.id)}
-                    hasArtifacts={activeArtifacts.some(
-                      item => item.id === node.id,
-                    )}
+                    person={nodeReference}
+                    hasMovies={movies !== undefined && movies.length > 0}
+                    hasPhotos={photos !== undefined && photos.length > 0}
+                    hasArtifacts={
+                      artifacts !== undefined && artifacts.length > 0
+                    }
                     style={{
                       width: WIDTH,
                       height: HEIGHT,

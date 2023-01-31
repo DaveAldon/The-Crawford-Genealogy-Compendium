@@ -2,7 +2,11 @@ import { motion } from 'framer-motion';
 import { getResource } from '../../lib/resources/resources';
 import { ResourceTypes } from '../../lib/resources/resources.enum';
 import { Heights } from '../../styles/constants.enum';
-import { APIArtifact, APIFamilyTree } from '../../types/geneology';
+import {
+  APIArtifact,
+  APIFamilyTree,
+  NormalizedFamilyTree,
+} from '../../types/geneology';
 import { AdvancedViewButton } from '../Buttons/AdvancedViewButton';
 import { Carousel, CarouselType } from '../Carousel/Carousel';
 import { MapCard } from '../MapCard/MapCard';
@@ -11,21 +15,11 @@ import { ProfileCard } from '../ProfileCard/ProfileCard';
 interface SlidingOverlayProps {
   isOpen: boolean;
   setIsOpen: (state: boolean) => void;
-  activeNode: APIFamilyTree;
+  activeNode: NormalizedFamilyTree;
   children?: React.ReactNode;
-  activeMovies: APIArtifact[];
-  activeArtifacts: APIArtifact[];
-  activePhotos: APIArtifact[];
 }
 export const DemographicsOverlay = (props: SlidingOverlayProps) => {
-  const {
-    isOpen,
-    activeNode,
-    setIsOpen,
-    activeMovies,
-    activeArtifacts,
-    activePhotos,
-  } = props;
+  const { isOpen, activeNode, setIsOpen } = props;
   const photoSrc = getResource(activeNode.id, ResourceTypes.profile);
   const menuVariants = {
     open: {
@@ -37,6 +31,15 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
       x: '-100%',
     },
   };
+  const photos = activeNode.metadata.resources.filter(
+    photos => photos.type === 'photo',
+  );
+  const movies = activeNode.metadata.resources.filter(
+    movies => movies.type === 'video',
+  );
+  const artifacts = activeNode.metadata.resources.filter(
+    artifacts => artifacts.type === 'artifact',
+  );
 
   const CloseButton = () => (
     <button
@@ -78,25 +81,25 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
         </div>
         <div className="h-5" />
         <ProfileCard photoSrc={photoSrc} activeNode={activeNode} />
-        {activePhotos.length > 0 ? (
+        {photos.length > 0 ? (
           <Carousel
             type={CarouselType.photo}
             activeNode={activeNode}
-            activeArtifact={activePhotos}
+            activeArtifact={photos}
           />
         ) : null}
-        {activeMovies.length > 0 ? (
+        {movies.length > 0 ? (
           <Carousel
             type={CarouselType.video}
             activeNode={activeNode}
-            activeArtifact={activeMovies}
+            activeArtifact={movies}
           />
         ) : null}
-        {activeArtifacts.length > 0 ? (
+        {artifacts.length > 0 ? (
           <Carousel
             type={CarouselType.artifact}
             activeNode={activeNode}
-            activeArtifact={activeArtifacts}
+            activeArtifact={artifacts}
           />
         ) : null}
         {activeNode.BirthplaceCoords ? (

@@ -2,11 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './FamilyNode.module.css';
 import { ExtNode } from '../../../../components/relatives-tree/types';
-import { useImageFallback } from '../../../../hooks/useImageFallback/useImageFallback';
 import { ProfilePhoto } from './components/ProfilePhoto/ProfilePhoto';
 import { ProfileInfo } from './components/ProfileInfo/ProfileInfo';
 import { ProfileChips } from './components/ProfileChips/ProfileChips';
-import { APIFamilyTree } from '../../../../types/geneology';
+import { NormalizedFamilyTree } from '../../../../types/geneology';
+import { getProfilePicture } from '../../../../utils/profilePicture';
 
 const EnterIcon = () => (
   <svg
@@ -25,12 +25,10 @@ interface Props {
   isRoot: boolean;
   onSubClick: (id: string) => void;
   style?: React.CSSProperties;
-  photoSrc?: string;
-  fallbackSrc: string;
   name?: string;
   onClickNode: (id: string) => void;
   headerText: string;
-  compendiumReference?: APIFamilyTree;
+  person: NormalizedFamilyTree;
   hasMovies: boolean;
   hasPhotos: boolean;
   hasArtifacts: boolean;
@@ -41,18 +39,14 @@ export default React.memo<Props>(function FamilyNode({
   isRoot,
   onSubClick,
   style,
-  photoSrc,
-  fallbackSrc,
   name,
   onClickNode,
   headerText,
-  compendiumReference,
+  person,
   hasMovies,
   hasPhotos,
   hasArtifacts,
 }) {
-  const { imageSrc, onError } = useImageFallback({ photoSrc, fallbackSrc });
-
   return (
     <div className={styles.root} style={style} title={node.id}>
       <div
@@ -72,9 +66,9 @@ export default React.memo<Props>(function FamilyNode({
             width: '100%',
           }}>
           <ProfileInfo height={'12%'} title={headerText} fontSize={'.50rem'} />
-          <ProfilePhoto src={imageSrc} onError={onError} alt={name} />
+          <ProfilePhoto src={getProfilePicture(person)} alt={name} />
           <ProfileInfo height={'22%'} title={name || ''} fontSize={'.40rem'} />
-          {compendiumReference ? (
+          {person ? (
             <ProfileChips
               hasMovies={hasMovies}
               hasPhotos={hasPhotos}

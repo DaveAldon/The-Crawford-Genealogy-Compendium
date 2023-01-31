@@ -1,6 +1,6 @@
-import { APIFamilyTree } from '../types/geneology';
+import { NormalizedFamilyTree } from '../types/geneology';
 
-export const defaultAPIFamilyTree: APIFamilyTree = {
+export const defaultAPIFamilyTree: NormalizedFamilyTree = {
   _id: '',
   id: '',
   Firstname: '',
@@ -18,4 +18,16 @@ export const defaultAPIFamilyTree: APIFamilyTree = {
   BirthplaceCoords: '',
   DeathplaceCoords: '',
   Description: '',
+  name: '',
+  gender: '',
+  parents: [],
+  children: [],
+  siblings: [],
+  spouses: [],
+  metadata: {
+    guid: '',
+    name: '',
+    profile: '',
+    resources: [],
+  },
 };

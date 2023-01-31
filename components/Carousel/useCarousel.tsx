@@ -23,7 +23,7 @@ export const useCarousel = ({
         for (let i = 1; i <= activeArtifact.length; i++) {
           tmpSrcs.push({
             src: activeArtifact[i - 1].url,
-            title: activeArtifact[i - 1].title,
+            title: activeArtifact[i - 1].description,
           });
         }
       }
@@ -33,7 +33,7 @@ export const useCarousel = ({
         for (let i = 1; i <= activeArtifact.length; i++) {
           tmpSrcs.push({
             src: activeArtifact[i - 1].url,
-            title: activeArtifact[i - 1].title,
+            title: activeArtifact[i - 1].description,
           });
         }
       }
@@ -43,7 +43,7 @@ export const useCarousel = ({
         for (let i = 1; i <= activeArtifact.length; i++) {
           tmpSrcs.push({
             src: activeArtifact[i - 1].url,
-            title: activeArtifact[i - 1].title,
+            title: activeArtifact[i - 1].description,
           });
         }
       }
