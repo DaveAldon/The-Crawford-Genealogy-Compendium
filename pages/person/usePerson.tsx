@@ -132,33 +132,41 @@ export const usePerson = ({
         label: 'Branch',
         value: person.metadata.military.branch,
       });
-      tmpMilitaryTable.push({
-        label: 'Rank',
-        value: person.metadata.military.rank,
-      });
-      tmpMilitaryTable.push({
-        label: 'Start Date',
-        value: person.metadata.military.start,
-      });
-      tmpMilitaryTable.push({
-        label: 'Discharge Date',
-        value: person.metadata.military.end,
-      });
-      person.metadata.military.awards.split(',').forEach(award => {
+      person.metadata.military.rank &&
         tmpMilitaryTable.push({
-          label: `Awarded - ${camelCase(
-            award.replaceAll('_', ' ').split('.')[0],
-          )}`,
-          value: (
-            <Image
-              width={200}
-              height={0}
-              src={getMilitaryImage(award)}
-              alt={award}
-            />
-          ),
+          label: 'Rank',
+          value: person.metadata.military.rank,
         });
-      });
+      person.metadata.military.start &&
+        tmpMilitaryTable.push({
+          label: 'Start Date',
+          value: person.metadata.military.start,
+        });
+      person.metadata.military.end &&
+        tmpMilitaryTable.push({
+          label: 'Discharge Date',
+          value: person.metadata.military.end,
+        });
+      if (
+        person.metadata.military.awards !== '' &&
+        person.metadata.military.awards !== undefined
+      ) {
+        person.metadata.military.awards.split(',').forEach(award => {
+          tmpMilitaryTable.push({
+            label: `Awarded - ${camelCase(
+              award.replaceAll('_', ' ').split('.')[0],
+            )}`,
+            value: (
+              <Image
+                width={200}
+                height={0}
+                src={getMilitaryImage(award)}
+                alt={award}
+              />
+            ),
+          });
+        });
+      }
 
       setMilitaryTable([...tmpMilitaryTable]);
     } else {
