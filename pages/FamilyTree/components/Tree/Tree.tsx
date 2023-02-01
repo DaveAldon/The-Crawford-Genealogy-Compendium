@@ -11,11 +11,6 @@ import {
   Node,
 } from '../../../../components/relatives-tree/types';
 import styles from './Tree.module.css';
-import {
-  FallbackResources,
-  ResourceTypes,
-} from '../../../../lib/resources/resources.enum';
-import { getResource } from '../../../../lib/resources/resources';
 import { NormalizedFamilyTree } from '../../../../types/genealogy';
 
 const WIDTH = 90;
@@ -127,6 +122,8 @@ export const Tree: React.FC<ITree> = props => {
                   artifacts => artifacts.type === 'artifact',
                 );
 
+                const military = nodeReference?.metadata.military !== undefined;
+
                 return (
                   <FamilyNode
                     headerText={`${dob} ${dod}`}
@@ -138,10 +135,11 @@ export const Tree: React.FC<ITree> = props => {
                     name={node.name.replace(' null', ' ')}
                     person={nodeReference}
                     hasMovies={movies !== undefined && movies.length > 0}
-                    hasPhotos={photos !== undefined && photos.length > 0}
-                    hasArtifacts={
-                      artifacts !== undefined && artifacts.length > 0
+                    hasPhotos={
+                      (photos !== undefined && photos.length > 0) ||
+                      (artifacts !== undefined && artifacts.length > 0)
                     }
+                    hasMilitary={military}
                     style={{
                       width: WIDTH,
                       height: HEIGHT,

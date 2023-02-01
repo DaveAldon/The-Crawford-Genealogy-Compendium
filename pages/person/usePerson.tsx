@@ -1,11 +1,14 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FamilyLinkButton } from '../../components/Buttons/TableButton';
 import { Table, TableData } from '../../components/Table/Table';
+import { getMilitaryImage } from '../../lib/resources/resources';
 import {
   APIArtifact,
   APIFamilyTree,
   NormalizedFamilyTree,
 } from '../../types/genealogy';
+import { camelCase } from '../../utils/capitalize';
 
 export const usePerson = ({
   id,
@@ -33,6 +36,7 @@ export const usePerson = ({
   const [childrenTable, setChildrenTable] = useState<TableData[]>([]);
   const [siblingsTable, setSiblingsTable] = useState<TableData[]>([]);
   const [divorcedTable, setDivorcedTable] = useState<TableData[]>([]);
+  const [militaryTable, setMilitaryTable] = useState<TableData[]>([]);
 
   const updatePerson = (id: string) => {
     const newPerson = people.find(
@@ -97,7 +101,7 @@ export const usePerson = ({
 
     setPhotos([
       ...person.metadata.resources.filter(
-        (p: APIArtifact) => p.type === 'photo',
+        (p: APIArtifact) => p.type === 'photo' && !p.url.includes('profile'),
       ),
     ]);
 
@@ -121,6 +125,45 @@ export const usePerson = ({
     const tmpDivorcedTable: TableData[] = [];
     const tmpChildrenTable: TableData[] = [];
     const tmpSiblingsTable: TableData[] = [];
+    const tmpMilitaryTable: TableData[] = [];
+
+    if (person.metadata.military) {
+      tmpMilitaryTable.push({
+        label: 'Branch',
+        value: person.metadata.military.branch,
+      });
+      tmpMilitaryTable.push({
+        label: 'Rank',
+        value: person.metadata.military.rank,
+      });
+      tmpMilitaryTable.push({
+        label: 'Start Date',
+        value: person.metadata.military.start,
+      });
+      tmpMilitaryTable.push({
+        label: 'Discharge Date',
+        value: person.metadata.military.end,
+      });
+      person.metadata.military.awards.split(',').forEach(award => {
+        tmpMilitaryTable.push({
+          label: `Awarded - ${camelCase(
+            award.replaceAll('_', ' ').split('.')[0],
+          )}`,
+          value: (
+            <Image
+              width={200}
+              height={0}
+              src={getMilitaryImage(award)}
+              alt={award}
+            />
+          ),
+        });
+      });
+
+      setMilitaryTable([...tmpMilitaryTable]);
+    } else {
+      setMilitaryTable([]);
+    }
 
     if (person.DOB) {
       tmpDemographicsTable.push({
@@ -216,5 +259,6 @@ export const usePerson = ({
     divorcedTable,
     movies,
     artifacts,
+    militaryTable,
   };
 };

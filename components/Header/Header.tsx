@@ -14,7 +14,7 @@ const HeaderLink = ({ href, children }: { href: string; children: string }) => (
 export const Header = () => {
   const links = [
     { href: '/', children: 'Home' },
-    { href: '/FamilyTree/FamilyTree', children: 'Family Tree' },
+    { href: '/FamilyTree', children: 'Family Tree' },
     { href: '/artifacts', children: 'Artifacts' },
     { href: '/about', children: 'About' },
   ];

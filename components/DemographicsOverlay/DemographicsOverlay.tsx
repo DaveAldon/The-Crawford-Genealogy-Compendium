@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import { getResource } from '../../lib/resources/resources';
-import { ResourceTypes } from '../../lib/resources/resources.enum';
 import { Heights } from '../../styles/constants.enum';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { AdvancedViewButton } from '../Buttons/AdvancedViewButton';
@@ -16,7 +14,6 @@ interface SlidingOverlayProps {
 }
 export const DemographicsOverlay = (props: SlidingOverlayProps) => {
   const { isOpen, activeNode, setIsOpen } = props;
-  const photoSrc = getResource(activeNode.id, ResourceTypes.profile);
   const menuVariants = {
     open: {
       opacity: 1,

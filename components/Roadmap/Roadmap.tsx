@@ -23,7 +23,7 @@ const SkillData: ISkillData[] = [
     title: `2023 Q1`,
     tasks: [
       'Add advanced view for detailed family member information, which can be linked to directly',
-      'Add major extended families to tree (namely Olson & Kerr)',
+      'Add a military view to see detailed information about the military service of a family member',
       'Create a newsletter',
       'Create a feed to browse artifacts, photos, and movies without needing a reference to the tree',
       'Add connections to William Wallace and William H. Crawford',
@@ -34,7 +34,7 @@ const SkillData: ISkillData[] = [
   {
     title: '2023 Q2',
     tasks: [
-      'Create a method to contribute, change, or redact information',
+      'Add major extended families to tree (namely Olson & Kerr)',
       'Add integrations with other genealogy services, such as Find A Grave',
       'Add a query system to find interesting demographics such as "show all military family members" or "show all people born in the 1800s"',
     ],
@@ -42,7 +42,10 @@ const SkillData: ISkillData[] = [
   },
   {
     title: '2023 Q3',
-    tasks: ['TBD'],
+    tasks: [
+      'Add a way for anyone to request changes to the tree',
+      'Add a feed that shows things that happened on the current day in history',
+    ],
     color: SkillType.INCOMPLETE,
   },
 ];

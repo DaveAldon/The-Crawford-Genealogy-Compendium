@@ -31,7 +31,7 @@ interface Props {
   person: NormalizedFamilyTree;
   hasMovies: boolean;
   hasPhotos: boolean;
-  hasArtifacts: boolean;
+  hasMilitary: boolean;
 }
 
 export default React.memo<Props>(function FamilyNode({
@@ -45,7 +45,7 @@ export default React.memo<Props>(function FamilyNode({
   person,
   hasMovies,
   hasPhotos,
-  hasArtifacts,
+  hasMilitary,
 }) {
   return (
     <div className={styles.root} style={style} title={node.id}>
@@ -72,7 +72,7 @@ export default React.memo<Props>(function FamilyNode({
             <ProfileChips
               hasMovies={hasMovies}
               hasPhotos={hasPhotos}
-              hasArtifacts={hasArtifacts}
+              hasMilitary={hasMilitary}
               height={'10%'}
             />
           ) : null}

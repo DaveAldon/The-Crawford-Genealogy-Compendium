@@ -1,7 +1,7 @@
 interface Props {
   hasMovies: boolean;
   hasPhotos: boolean;
-  hasArtifacts: boolean;
+  hasMilitary: boolean;
   height: string;
 }
 const SIZE = 12;
@@ -24,25 +24,26 @@ const Photo = ({ active }: { active: boolean }) => (
     xmlns="http://www.w3.org/2000/svg"
     width={SIZE}
     height={SIZE}
-    fill={active ? '#eff542' : 'grey'}
+    fill={active ? '#d742f5' : 'grey'}
     className="bi bi-image-fill"
     viewBox="0 0 16 16">
     <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" />
   </svg>
 );
-const Artifact = ({ active }: { active: boolean }) => (
+const Military = ({ active }: { active: boolean }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={SIZE}
     height={SIZE}
-    fill={active ? '#d742f5' : 'grey'}
-    className="bi bi-bookmark-heart"
+    fill={active ? '#eff542' : 'grey'}
+    className="bi bi-award-fill"
     viewBox="0 0 16 16">
-    <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+    <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z" />
+    <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
   </svg>
 );
 export const ProfileChips = (props: Props) => {
-  const { height, hasMovies, hasArtifacts, hasPhotos } = props;
+  const { height, hasMovies, hasMilitary, hasPhotos } = props;
   return (
     <div
       style={{
@@ -58,7 +59,7 @@ export const ProfileChips = (props: Props) => {
       <div style={{ width: '10px' }} />
       <Video active={hasMovies} />
       <div style={{ width: '10px' }} />
-      <Artifact active={hasArtifacts} />
+      <Military active={hasMilitary} />
     </div>
   );
 };

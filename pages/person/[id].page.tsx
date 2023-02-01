@@ -27,10 +27,13 @@ const Person = ({
     childrenTable,
     siblingsTable,
     divorcedTable,
+    militaryTable,
   } = usePerson({
     id,
     peopleResult: people,
   });
+
+  console.log(militaryTable);
 
   const imageSrc =
     person.metadata.profile === ''
@@ -88,6 +91,11 @@ const Person = ({
               </h1>
               <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-indigo-500" />
               <p className="pt-4 text-md mb-4">{person.Description}</p>
+              {militaryTable.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-1">
+                  <Table title={'Military'} data={militaryTable} />
+                </div>
+              ) : null}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {demographicsTable.length > 0 ? (
                   <Table title={'Demographics'} data={demographicsTable} />

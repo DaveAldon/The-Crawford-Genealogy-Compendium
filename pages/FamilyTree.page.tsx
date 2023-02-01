@@ -1,12 +1,12 @@
 import React from 'react';
-import { Tree } from './components/Tree/Tree';
-import { NormalizedFamilyTree } from '../../types/genealogy';
-import { useFamilyTree } from './useFamilyTree/useFamilyTree';
-import { defaultAPIFamilyTree } from '../../utils/defaultData';
-import { Heights } from '../../styles/constants.enum';
-import { DemographicsOverlay } from '../../components/DemographicsOverlay/DemographicsOverlay';
-import { Header } from '../../components/Header/Header';
-import { getTreeData } from '../../lib/treeJson';
+import { Tree } from './FamilyTree/components/Tree/Tree';
+import { NormalizedFamilyTree } from '../types/genealogy';
+import { useFamilyTree } from './FamilyTree/useFamilyTree/useFamilyTree';
+import { defaultAPIFamilyTree } from '../utils/defaultData';
+import { Heights } from '../styles/constants.enum';
+import { DemographicsOverlay } from '../components/DemographicsOverlay/DemographicsOverlay';
+import { Header } from '../components/Header/Header';
+import { getTreeData } from '../lib/treeJson';
 
 const FamilyTree = ({ data }: { data: NormalizedFamilyTree[] }) => {
   const {
@@ -60,13 +60,6 @@ export const getServerSideProps = async (_context: any) => {
       data: people,
     },
   };
-  /* const client = await clientPromise;
-  const db = client.db('geneology');
-  const collectionData = await db.collection('family_tree').find({}).toArray();
-  const data: APIFamilyTree[] = JSON.parse(JSON.stringify(collectionData));
-  return {
-    props: { data },
-  }; */
 };
 
 export default FamilyTree;

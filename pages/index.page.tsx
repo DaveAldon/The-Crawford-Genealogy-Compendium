@@ -23,7 +23,7 @@ export default function Home() {
             <div className="flex justify-center gap-4">
               <Link
                 className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
-                href="/FamilyTree/FamilyTree">
+                href="/FamilyTree">
                 <span className="justify-center">See the Family Tree</span>
               </Link>
               <Link

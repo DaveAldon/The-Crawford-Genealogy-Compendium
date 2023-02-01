@@ -34,6 +34,17 @@ export interface MetaData {
   name: string;
   profile: string;
   resources: APIArtifact[];
+  military?: Military;
+}
+
+export interface Military {
+  id: string;
+  branch: string;
+  rank: string;
+  start: string;
+  end: string;
+  description: string;
+  awards: string;
 }
 
 export interface NormalizedFamilyTree extends APIFamilyTree {
