@@ -16,6 +16,7 @@ export const Header = () => {
     { href: '/', children: 'Home' },
     { href: '/FamilyTree', children: 'Family Tree' },
     { href: '/artifacts', children: 'Artifacts' },
+    { href: '/military', children: 'Military' },
     { href: '/about', children: 'About' },
   ];
 

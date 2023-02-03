@@ -33,8 +33,6 @@ const Person = ({
     peopleResult: people,
   });
 
-  console.log(militaryTable);
-
   const imageSrc =
     person.metadata.profile === ''
       ? `${
@@ -60,7 +58,7 @@ const Person = ({
         <div className="max-w-4xl flex items-start h-auto lg:h-screen flex-wrap mx-auto py-32 ">
           <div
             id="profile"
-            className="w-full  rounded-lg lg:rounded-lg shadow-2xl bg-[#212224] mx-6 lg:mx-0">
+            className="w-full rounded-lg lg:rounded-lg shadow-2xl bg-[#212224] mx-6 lg:mx-0">
             <div className="p-4 md:p-12 text-center lg:text-left">
               <div className="rounded-md shadow-xl mx-auto -mt-16 h-64 w-full bg-cover bg-center overflow-hidden mb-5">
                 <div className="relative w-full">
