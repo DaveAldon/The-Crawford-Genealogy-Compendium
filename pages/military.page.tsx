@@ -9,15 +9,38 @@ import { ProfilePhoto } from './FamilyTree/components/FamilyNode/components/Prof
 interface EraData {
   title: string;
   src: string;
+  description: string;
 }
 const eras = [
   {
-    title: 'The Revolutionary War',
+    title: 'Revolutionary War',
     src: '/eras/revolution.jpg',
+    description:
+      'Fought between the United States and Great Britain from 1775 to 1783',
   },
   {
-    title: 'The Civil War',
+    title: 'War of 1812',
+    src: '/eras/1812.png',
+    description:
+      'Fought between the United States and Great Britain from 1812 to 1815',
+  },
+  {
+    title: 'Civil War',
     src: '/eras/civilwar.png',
+    description:
+      'Fought between the United States and the Confederate States from 1861 to 1865',
+  },
+  {
+    title: 'Korean War',
+    src: '/eras/koreanwar.jpg',
+    description:
+      'Fought between members of the United Nations and North Korea from 1950 to 1953',
+  },
+  {
+    title: 'War on Terror',
+    src: '/eras/waronterror.jpg',
+    description:
+      'An ongoing international counterterrorism military campaign following the September 11 attacks',
   },
 ];
 
@@ -29,16 +52,22 @@ const Era = ({ eraData }: { eraData: EraData }) => {
         flexDirection: 'column',
         width: '100%',
         height: '500px',
+        borderRadius: '10px',
+        overflow: 'hidden',
       }}>
       <ProfileInfo height={'12%'} title={eraData.title} fontSize={'.8rem'} />
       <ProfilePhoto src={eraData.src} alt={'name'} />
-      <ProfileInfo height={'22%'} title={'name' || ''} fontSize={'.40rem'} />
+      <ProfileInfo
+        height={'22%'}
+        title={eraData.description}
+        fontSize={'.70rem'}
+        style={{ padding: '10px', borderRadius: '0 0 10px 10px' }}
+      />
     </div>
   );
 };
 
 export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
-  console.log(data);
   return (
     <div className="text-black flex flex-col h-screen justify-between bg-black">
       <Header />
@@ -59,33 +88,57 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
               return (
                 <div
                   key={era.title}
-                  className="container lg:px-0 px-4 py-8 mx-auto items-center grid grid-cols-6 gap-2">
+                  className="container px-0 items-center grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 gap-2">
                   <Era eraData={era} />
-                  {data.map(person => {
-                    const profileSrc = getProfilePicture(person);
-                    return (
-                      <div
-                        key={person.id}
-                        style={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          width: '100%',
-                          height: '500px',
-                        }}>
-                        <ProfileInfo
-                          height={'12%'}
-                          title={'headerText'}
-                          fontSize={'.50rem'}
-                        />
-                        <ProfilePhoto src={profileSrc} alt={'name'} />
-                        <ProfileInfo
-                          height={'22%'}
-                          title={'name' || ''}
-                          fontSize={'.40rem'}
-                        />
-                      </div>
-                    );
-                  })}
+                  {data
+                    .filter(
+                      person => person.metadata.military?.theater === era.title,
+                    )
+                    .map(person => {
+                      const profileSrc = getProfilePicture(person);
+                      const description = person.metadata.military?.description
+                        ? ` - ${person.metadata.military?.description}`
+                        : '';
+                      return (
+                        <div
+                          key={person.id}
+                          style={{
+                            borderRadius: '10px',
+                            overflow: 'hidden',
+                          }}>
+                          <a
+                            href={`/person/${person.id}`}
+                            target="_blank"
+                            rel="noreferrer">
+                            <div
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                width: '100%',
+                                height: '500px',
+                                borderRadius: '10px',
+                                overflow: 'hidden',
+                              }}>
+                              <ProfileInfo
+                                height={'12%'}
+                                title={person.name.replace(' null', '') || ''}
+                                fontSize={'.8rem'}
+                              />
+                              <ProfilePhoto src={profileSrc} alt={'name'} />
+                              <ProfileInfo
+                                height={'22%'}
+                                title={`${person.metadata.military?.branch}${description}`}
+                                fontSize={'.8rem'}
+                                style={{
+                                  borderRadius: '0 0 10px 10px',
+                                  padding: '10px',
+                                }}
+                              />
+                            </div>
+                          </a>
+                        </div>
+                      );
+                    })}
                 </div>
               );
             })}

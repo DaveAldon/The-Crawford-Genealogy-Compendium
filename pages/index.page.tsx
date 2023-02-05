@@ -20,11 +20,23 @@ export default function Home() {
               learn about the Crawford family&apos;s genealogy should have the
               ability to access this information.
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <Link
                 className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
                 href="/FamilyTree">
                 <span className="justify-center">See the Family Tree</span>
+              </Link>
+              <Link
+                className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
+                href="/artifacts">
+                <span className="justify-center">View all Family Photos</span>
+              </Link>
+              <Link
+                className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
+                href="/military">
+                <span className="justify-center">
+                  See all Military Family Members
+                </span>
               </Link>
               <Link
                 className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"

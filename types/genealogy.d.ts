@@ -45,6 +45,7 @@ export interface Military {
   end: string;
   description: string;
   awards: string;
+  theater: string;
 }
 
 export interface NormalizedFamilyTree extends APIFamilyTree {
