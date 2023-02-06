@@ -33,7 +33,7 @@ export const Tree: React.FC<ITree> = props => {
       initialPositionY={-460}
       initialScale={1}
       minScale={0.1}>
-      {({ zoomIn, zoomOut, centerView }) => (
+      {({ zoomIn, zoomOut, setTransform }) => (
         <div className={styles.wrapper}>
           <div className="absolute z-10 left-0 flex flex-col gap-1 ml-1 mt-1">
             <button
@@ -80,7 +80,7 @@ export const Tree: React.FC<ITree> = props => {
             </button>
             <button
               className="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded"
-              onClick={() => centerView()}>
+              onClick={() => setTransform(0, 0, 0.5)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
