@@ -27,7 +27,7 @@ const SkillData: ISkillData[] = [
       'Create a newsletter',
       'Create a feed to browse artifacts, photos, and movies without needing a reference to the tree',
     ],
-    color: SkillType.INCOMPLETE,
+    color: SkillType.COMPLETED,
   },
   {
     title: '2023 Q2',

@@ -2,10 +2,13 @@ import Link from 'next/link';
 import { Heights } from '../../styles/constants.enum';
 import { CircleLogo } from '../Logos/CircleLogo';
 import Layout from '../layout';
+import MobileMenu from './MobileMenu';
 
 const HeaderLink = ({ href, children }: { href: string; children: string }) => (
   <li>
-    <Link className="text-white transition hover:text-gray-400" href={href}>
+    <Link
+      className="text-white transition hover:text-gray-400 hidden md:inline-block"
+      href={href}>
       <p style={{ whiteSpace: 'nowrap' }}>{children}</p>
     </Link>
   </li>
@@ -48,6 +51,7 @@ export const Header = () => {
                     {link.children}
                   </HeaderLink>
                 ))}
+                <MobileMenu />
               </ul>
             </nav>
           </div>

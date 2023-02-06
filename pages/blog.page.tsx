@@ -1,12 +1,8 @@
+import dayjs from 'dayjs';
 import matter from 'gray-matter';
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import Subscribe from '../components/Subscribe/Subscribe';
-
-function reformatDate(fullDate: string | number | Date) {
-  const date = new Date(fullDate);
-  return date.toDateString().slice(4);
-}
 
 export default function Blog({ allBlogs }: any) {
   return (
@@ -27,26 +23,36 @@ export default function Blog({ allBlogs }: any) {
             </div>
             <div className="lg:w-1/2 grid grid-cols-1 gap-4 items-center justify-center mx-auto ">
               {allBlogs &&
-                allBlogs.length > 1 &&
+                allBlogs.length > 0 &&
                 allBlogs.map(({ slug, frontmatter }: any) => (
-                  <a key={slug} href={`/blog/${slug}`}>
-                    <div className="flex flex-col shadow hover:shadow-md w-full bg-[#212224] rounded-lg overflow-hidden cursor-pointer">
-                      <img
-                        className="object-cover w-full h-48"
-                        src={frontmatter.photoSrc}
-                      />
+                  <div
+                    key={slug}
+                    className="flex flex-col shadow hover:shadow-md w-full bg-[#212224] rounded-lg overflow-hidden">
+                    <img
+                      className="object-cover w-full h-48"
+                      src={frontmatter.photoSrc}
+                    />
 
-                      <div className="relative p-4 items-center justify-center">
-                        <h3 className="text-base md:text-xl font-medium text-white">
-                          {frontmatter.title}
-                        </h3>
+                    <div className="relative p-4 items-center justify-center">
+                      <h3 className="text-base md:text-xl font-medium text-white">
+                        {frontmatter.title}
+                      </h3>
 
-                        <p className="mt-4 text-base md:text-lg text-white">
-                          {reformatDate(frontmatter.date)}
-                        </p>
-                      </div>
+                      <p className="mt-4 text-base md:text-lg text-white">
+                        {dayjs(frontmatter.date).format('MMMM D, YYYY')}
+                      </p>
+                      <a
+                        className="mt-6 group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring"
+                        href={`/blog/${slug}`}
+                        target="_blank"
+                        rel="noreferrer">
+                        <span className="rounded-md absolute inset-0 border border-indigo-500 group-active:border-indigo-500"></span>
+                        <span className="rounded-md block border border-indigo-500 bg-indigo-500 px-12 py-3 transition-transform active:border-indigo-500 active:bg-indigo-500 group-hover:-translate-x-1 group-hover:-translate-y-1">
+                          {'Read More'}
+                        </span>
+                      </a>
                     </div>
-                  </a>
+                  </div>
                 ))}
             </div>
           </div>

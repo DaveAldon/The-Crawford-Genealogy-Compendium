@@ -2,13 +2,14 @@ import Link from 'next/link';
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { Roadmap } from '../components/Roadmap/Roadmap';
+import Subscribe from '../components/Subscribe/Subscribe';
 
 export default function Home() {
   return (
     <div className="text-black bg-black">
       <Header />
       <section className="text-gray-600 body-font">
-        <div className="max-w-7xl mx-auto flex px-5 py-24 lg:flex-row flex-col items-center">
+        <div className="max-w-7xl mx-auto flex px-5 pt-24 lg:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 md:ml-24 pt-6 flex flex-col md:items-start md:text-left mb-10 items-center text-center">
             <h1 className="mb-5 sm:text-6xl text-5xl font-semibold items-center xl:w-2/2 text-white">
               We are creating a Crawford genealogy that is open and free
@@ -44,6 +45,12 @@ export default function Home() {
                 scroll>
                 <span className="justify-center">View our Roadmap</span>
               </Link>
+              <Link
+                className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
+                href="/blog"
+                scroll>
+                <span className="justify-center">Check out our Blog</span>
+              </Link>
             </div>
           </div>
           <div
@@ -67,6 +74,9 @@ export default function Home() {
               <source src="/homeVideo.mp4" type="video/mp4" />
             </video>
           </div>
+        </div>
+        <div className="lg:w-1/2 items-center text-center justify-center mx-auto mb-16">
+          <Subscribe />
         </div>
         <div id="roadmap" className="grr max-w-7xl mx-auto text-center">
           <h1 className="mb-8 text-6xl font-semibold text-white">

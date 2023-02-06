@@ -4,7 +4,12 @@ const nextConfig = {
   swcMinify: true,
   pageExtensions: ['page.tsx', 'api.ts'],
   images: {
-    domains: ['github.com', 'i.pravatar.cc', 'raw.githubusercontent.com'],
+    domains: [
+      'github.com',
+      'i.pravatar.cc',
+      'raw.githubusercontent.com',
+      'images.pexels.com',
+    ],
   },
   webpack: (config, { isServer }) => {
     config.module.rules.push({
