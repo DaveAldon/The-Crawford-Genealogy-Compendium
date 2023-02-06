@@ -34,7 +34,7 @@ export default function Artifacts({ images }: { images: CustomImage[] }) {
   });
 
   return (
-    <div className="text-black flex flex-col h-screen justify-between bg-black">
+    <div className="text-black flex flex-col justify-between bg-black">
       <Header />
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">

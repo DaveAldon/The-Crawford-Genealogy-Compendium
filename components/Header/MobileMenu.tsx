@@ -52,7 +52,7 @@ export default function MobileMenu() {
       {isMenuMounted && (
         <ul
           className={cn(
-            'flex flex-col absolute top-0 left-0 bg-black w-3/4 p-8',
+            'flex flex-col absolute top-12 left-0 bg-black w-full p-8 rounded-b-md',
             isMenuRendered && styles.menuRendered,
           )}>
           {links.map((link, i) => (
@@ -74,7 +74,7 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
+      className="h-5 w-5 absolute text-gray-100"
       width="20"
       height="20"
       viewBox="0 0 20 20"
@@ -101,7 +101,7 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
+      className="h-5 w-5 absolute text-gray-100"
       viewBox="0 0 24 24"
       width="24"
       height="24"

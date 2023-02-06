@@ -52,7 +52,7 @@ const Person = ({
   }
 
   return (
-    <div className="text-white">
+    <div className="text-white bg-black">
       <Header />
       <div className="font-sans leading-normal tracking-wider bg-cover">
         <div className="max-w-4xl flex items-start h-auto lg:h-screen flex-wrap mx-auto py-32 ">

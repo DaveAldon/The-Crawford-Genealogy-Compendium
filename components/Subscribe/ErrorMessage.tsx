@@ -4,7 +4,7 @@ export default function ErrorMessage({
   children: React.ReactNode;
 }) {
   return (
-    <p className="flex items-center text-sm font-bold text-red-800 dark:text-red-400">
+    <p className="flex items-center text-sm font-bold text-red-400">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"

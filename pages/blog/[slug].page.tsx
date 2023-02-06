@@ -17,7 +17,7 @@ export default function Blog({ frontmatter, markdownBody, siteTitle }: any) {
           <div className="flex flex-col text-center w-full mb-20">
             <div className="text-white mx-auto">
               <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
-                <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
+                <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl text-white">
                   {frontmatter.title}
                 </h1>
                 <Image
@@ -35,13 +35,13 @@ export default function Blog({ frontmatter, markdownBody, siteTitle }: any) {
                       src="/curator.jpg"
                       className="rounded-full"
                     />
-                    <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                    <p className="ml-2 text-sm text-gray-300">
                       {'David Crawford / '}
                       {dayjs(frontmatter.date).format('MMMM D, YYYY')}
                     </p>
                   </div>
                 </div>
-                <div className="w-full mt-4 prose dark:prose-dark max-w-none text-left">
+                <div className="w-full mt-4 prose-dark max-w-none text-left">
                   <ReactMarkdown className={style.reactMarkDown}>
                     {markdownBody}
                   </ReactMarkdown>

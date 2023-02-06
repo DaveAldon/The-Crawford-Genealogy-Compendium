@@ -58,10 +58,10 @@ const PersonCard = () => {
 
 export default function About() {
   return (
-    <div className="text-black flex flex-col h-screen justify-between bg-black">
+    <div className="text-black flex flex-col justify-between bg-black">
       <Header />
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 pt-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="text-2xl font-medium title-font mb-4 text-white tracking-widest">
               The Team

@@ -69,7 +69,7 @@ const Era = ({ eraData }: { eraData: EraData }) => {
 
 export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
   return (
-    <div className="text-black flex flex-col h-screen justify-between bg-black">
+    <div className="text-black flex flex-col justify-between bg-black">
       <Header />
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
