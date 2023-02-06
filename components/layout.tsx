@@ -7,6 +7,7 @@ export default function Layout() {
     <Head>
       <link rel="icon" href="/favicon.ico" />
       <meta name="description" content="Crawford Genealogy Compendium" />
+      <meta name="theme-color" content="#212224" />
       <title>{siteTitle}</title>
     </Head>
   );

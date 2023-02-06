@@ -5,11 +5,7 @@ import {
 } from '@pronestor/react-zoom-pan-pinch';
 import FamilyNode from '../FamilyNode/FamilyNode';
 import ReactFamilyTree from '../../../../components/react-family-tree';
-import {
-  ExtNode,
-  Gender,
-  Node,
-} from '../../../../components/relatives-tree/types';
+import { ExtNode, Node } from '../../../../components/relatives-tree/types';
 import styles from './Tree.module.css';
 import { NormalizedFamilyTree } from '../../../../types/genealogy';
 
@@ -30,7 +26,11 @@ export const Tree: React.FC<ITree> = props => {
   return (
     <TransformWrapper
       limitToBounds={false}
-      centerOnInit
+      wheel={{
+        step: 0.04,
+      }}
+      initialPositionX={-1050}
+      initialPositionY={-460}
       initialScale={1}
       minScale={0.1}>
       {({ zoomIn, zoomOut, centerView }) => (
