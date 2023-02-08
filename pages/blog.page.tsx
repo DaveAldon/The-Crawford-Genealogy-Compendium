@@ -21,7 +21,7 @@ export default function Blog({ allBlogs }: any) {
             <div className="lg:w-2/3 mx-auto">
               <Subscribe />
             </div>
-            <div className="lg:w-1/2 grid grid-cols-1 gap-4 items-center justify-center mx-auto ">
+            <div className="lg:w-1/2 w-full grid grid-cols-1 gap-4 items-center justify-center mx-auto">
               {allBlogs &&
                 allBlogs.length > 0 &&
                 allBlogs.map(({ slug, frontmatter }: any) => (
