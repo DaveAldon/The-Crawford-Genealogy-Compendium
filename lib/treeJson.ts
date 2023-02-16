@@ -1,9 +1,11 @@
+import path from 'path';
 import { NormalizedFamilyTree } from '../types/genealogy';
-import { Endpoints } from './resources/resources.enum';
+import fsPromises from 'fs/promises';
 
 export const getTreeData = async (): Promise<NormalizedFamilyTree[]> => {
-  const url = Endpoints.tree;
-  const response = await fetch(url);
-  const json = await response.json();
-  return json as NormalizedFamilyTree[];
+  // get json file in public/data/people.json
+  const filePath = path.join(process.cwd(), 'compendium/data/people.json');
+  const json = await fsPromises.readFile(filePath, 'utf8');
+  const objectData = JSON.parse(json);
+  return objectData as NormalizedFamilyTree[];
 };

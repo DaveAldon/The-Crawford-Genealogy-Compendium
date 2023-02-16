@@ -1,0 +1,5029 @@
+[
+  {
+    "name": "David Aldon Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      },
+      {
+        "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      },
+      {
+        "id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+      "resources": [
+        {
+          "url": "/resources/individuals/b14745c4-3d98-4bc3-a4d0-7e973c8a88ac/gallery1.jpg",
+          "height": 720,
+          "width": 960,
+          "type": "photo",
+          "description": "2021 - With wife Rachael Crawford on trip to Montana"
+        },
+        {
+          "url": "/resources/individuals/b14745c4-3d98-4bc3-a4d0-7e973c8a88ac/gallery2.jpg",
+          "height": 810,
+          "width": 811,
+          "type": "photo",
+          "description": "2022"
+        },
+        {
+          "url": "/resources/individuals/b14745c4-3d98-4bc3-a4d0-7e973c8a88ac/profile.png",
+          "height": 126,
+          "width": 108,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/b14745c4-3d98-4bc3-a4d0-7e973c8a88ac/profile.png"
+    },
+    "_id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+    "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+    "Firstname": "David",
+    "Middlename": "Aldon",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1990s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "Father": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "Spouse": "ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Rachael Kathryn Dirks",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+      "resources": [
+        {
+          "url": "/resources/individuals/ddc82712-fb58-4d90-9f2f-e5ab63f27895/profile.png",
+          "height": 178,
+          "width": 164,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/ddc82712-fb58-4d90-9f2f-e5ab63f27895/profile.png",
+      "military": {
+        "id": "ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+        "branch": "Army National Guard",
+        "rank": "Sergeant",
+        "start": "2017",
+        "end": "2023",
+        "description": "Deployed to Kuwait",
+        "awards": "army_commendation.jpg,army_achievement.jpg,global_war_on_terrorism.png,Overseas_service.jpg,Army_service.jpg,national_defence_service.jpg,Global_War_on_Terrorism_Expeditionary_Medal.png,armed_forces_reserve_medal_with_m_device.png,expert_rifle_qualification.png,grenade_qualification.png",
+        "theater": "War on Terror"
+      }
+    },
+    "_id": "ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "id": "ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "Firstname": "Rachael",
+    "Middlename": "Kathryn",
+    "Lastname": "Dirks",
+    "Gender": "F",
+    "DOB": "1990s",
+    "Birthplace": "CT",
+    "BirthplaceCoords": "41.7626,-72.6816",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Darrell Eugene Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "4ca66359-925d-4b59-accf-44523b32c716",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "28998cf8-1315-4920-8d4a-8cc7f9c76cbf",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+        "relType": "blood"
+      },
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      },
+      {
+        "id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+      "resources": [
+        {
+          "url": "/resources/individuals/d1c589c3-d35c-48f0-af1f-0040da00a53f/gallery1.png",
+          "height": 612,
+          "width": 916,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/d1c589c3-d35c-48f0-af1f-0040da00a53f/profile.png",
+          "height": 309,
+          "width": 253,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/d1c589c3-d35c-48f0-af1f-0040da00a53f/profile1.png",
+          "height": 242,
+          "width": 159,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/d1c589c3-d35c-48f0-af1f-0040da00a53f/profile1.png"
+    },
+    "_id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "Firstname": "Darrell",
+    "Middlename": "Eugene",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1960s",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "4ca66359-925d-4b59-accf-44523b32c716",
+    "Father": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+    "Spouse": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Debra Ann Olson",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+        "relType": "blood"
+      },
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      },
+      {
+        "id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+      "resources": [
+        {
+          "url": "/resources/individuals/9a5a268a-0733-4b3d-b161-7fcb20ab1037/profile.png",
+          "height": 220,
+          "width": 175,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/9a5a268a-0733-4b3d-b161-7fcb20ab1037/profile.png"
+    },
+    "_id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "Firstname": "Debra",
+    "Middlename": "Ann",
+    "Lastname": "Olson",
+    "Gender": "F",
+    "DOB": "1950s",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "David Ammon Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+        "relType": "blood"
+      },
+      {
+        "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+        "relType": "blood"
+      },
+      {
+        "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "4ca66359-925d-4b59-accf-44523b32c716",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      },
+      {
+        "id": "28998cf8-1315-4920-8d4a-8cc7f9c76cbf",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+      "resources": [
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/profile.png",
+          "height": 556,
+          "width": 432,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/profile1.png",
+          "height": 165,
+          "width": 144,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video2.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video3.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video4.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video5.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video6.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video7.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video8.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/video9.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        }
+      ],
+      "profile": "/resources/individuals/9e9f1aee-0956-49a1-8fe6-aa820bb79d4d/profile1.png",
+      "military": {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "branch": "Marines",
+        "rank": "Private",
+        "start": "",
+        "end": "",
+        "description": "Joined in preperation for the war, which ended before deployment",
+        "awards": "rifle_qualification.png",
+        "theater": "Korean War"
+      }
+    },
+    "_id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+    "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+    "Firstname": "David",
+    "Middlename": "Ammon",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1930s",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "Father": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "Spouse": "4ca66359-925d-4b59-accf-44523b32c716",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Carolyn Sherwood Kerr",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+        "relType": "blood"
+      },
+      {
+        "id": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      },
+      {
+        "id": "28998cf8-1315-4920-8d4a-8cc7f9c76cbf",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "4ca66359-925d-4b59-accf-44523b32c716",
+      "resources": [
+        {
+          "url": "/resources/individuals/4ca66359-925d-4b59-accf-44523b32c716/profile.png",
+          "height": 603,
+          "width": 482,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/4ca66359-925d-4b59-accf-44523b32c716/profile1.png",
+          "height": 209,
+          "width": 155,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/4ca66359-925d-4b59-accf-44523b32c716/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/4ca66359-925d-4b59-accf-44523b32c716/video2.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/4ca66359-925d-4b59-accf-44523b32c716/video3.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/4ca66359-925d-4b59-accf-44523b32c716/video4.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        }
+      ],
+      "profile": "/resources/individuals/4ca66359-925d-4b59-accf-44523b32c716/profile1.png"
+    },
+    "_id": "4ca66359-925d-4b59-accf-44523b32c716",
+    "id": "4ca66359-925d-4b59-accf-44523b32c716",
+    "Firstname": "Carolyn",
+    "Middlename": "Sherwood",
+    "Lastname": "Kerr",
+    "Gender": "F",
+    "DOB": "1940s",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+    "Father": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+    "Spouse": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Karis Joy Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      },
+      {
+        "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      },
+      {
+        "id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "6414d0bd-c340-4ed8-bb23-c4a0471e3b7e",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+      "resources": [
+        {
+          "url": "/resources/individuals/48b76466-0643-4eb7-87a8-0e34b39b67a3/older.png",
+          "height": 198,
+          "width": 173,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/48b76466-0643-4eb7-87a8-0e34b39b67a3/profile1.png",
+          "height": 234,
+          "width": 164,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/48b76466-0643-4eb7-87a8-0e34b39b67a3/profile1.png"
+    },
+    "_id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "Firstname": "Karis",
+    "Middlename": "Joy",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "1980s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "Father": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "Spouse": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Ammon Ado Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      },
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+        "relType": "blood"
+      },
+      {
+        "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+        "relType": "blood"
+      },
+      {
+        "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+        "relType": "blood"
+      },
+      {
+        "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+        "relType": "blood"
+      },
+      {
+        "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+        "relType": "blood"
+      },
+      {
+        "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+        "relType": "blood"
+      },
+      {
+        "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+      "resources": [
+        {
+          "url": "/resources/individuals/7e4764cd-f9f1-4a5b-ae73-a381445752f0/profile.png",
+          "height": 398,
+          "width": 434,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/7e4764cd-f9f1-4a5b-ae73-a381445752f0/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/7e4764cd-f9f1-4a5b-ae73-a381445752f0/video2.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/7e4764cd-f9f1-4a5b-ae73-a381445752f0/video3.mp4",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - Christmas"
+        },
+        {
+          "url": "/resources/individuals/7e4764cd-f9f1-4a5b-ae73-a381445752f0/video4.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        }
+      ],
+      "profile": "/resources/individuals/7e4764cd-f9f1-4a5b-ae73-a381445752f0/profile.png"
+    },
+    "_id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "Firstname": "Ammon",
+    "Middlename": "Ado",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "05/24/1905",
+    "Birthplace": "Wray, CO",
+    "BirthplaceCoords": "40.07794,-102.224462",
+    "Death": "11/25/1990",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Father": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Spouse": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Robert Edwin Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "6d336512-b995-4c84-b202-64741760940d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "divorced"
+      }
+    ],
+    "children": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+        "relType": "blood"
+      },
+      {
+        "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+        "relType": "blood"
+      },
+      {
+        "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+        "relType": "blood"
+      },
+      {
+        "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+        "relType": "blood"
+      },
+      {
+        "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Firstname": "Robert",
+    "Middlename": "Edwin",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "03/21/1876",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "1959",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "6d336512-b995-4c84-b202-64741760940d",
+    "Father": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+    "Spouse": null,
+    "Divorced": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Description": null
+  },
+  {
+    "name": "James Huston Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "6d336512-b995-4c84-b202-64741760940d",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+      "resources": [
+        {
+          "url": "/resources/individuals/feb49296-d16e-4487-b44d-c5b4f09e5a5d/artifact1.png",
+          "height": 1932,
+          "width": 1792,
+          "type": "artifact",
+          "description": "1880 Census of James' family"
+        }
+      ],
+      "profile": ""
+    },
+    "_id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+    "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+    "Firstname": "James",
+    "Middlename": "Huston",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "10/26/1838",
+    "Birthplace": "Westmoreland, PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "03/03/1924",
+    "Deathplace": "Glendale, Los Angeles, CA",
+    "DeathplaceCoords": "34.146361,-118.248235",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": "6d336512-b995-4c84-b202-64741760940d",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Bertha Adele Zimmerman",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "divorced"
+      },
+      {
+        "id": "85dfd542-0590-4e5c-8e65-b8a8e1432b90",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+        "relType": "blood"
+      },
+      {
+        "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+        "relType": "blood"
+      },
+      {
+        "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+        "relType": "blood"
+      },
+      {
+        "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+        "relType": "blood"
+      },
+      {
+        "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "8a783f16-9ff4-448e-8234-9221aa196e89",
+      "resources": [
+        {
+          "url": "/resources/individuals/8a783f16-9ff4-448e-8234-9221aa196e89/artifact1.jpg",
+          "height": 280,
+          "width": 280,
+          "type": "artifact",
+          "description": "Newspaper Obituary"
+        },
+        {
+          "url": "/resources/individuals/8a783f16-9ff4-448e-8234-9221aa196e89/artifact2.jpg",
+          "height": 522,
+          "width": 760,
+          "type": "artifact",
+          "description": "Marriage Record to Robert Edwin Crawford"
+        },
+        {
+          "url": "/resources/individuals/8a783f16-9ff4-448e-8234-9221aa196e89/profile.png",
+          "height": 366,
+          "width": 291,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/8a783f16-9ff4-448e-8234-9221aa196e89/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/8a783f16-9ff4-448e-8234-9221aa196e89/video2.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - With second husband David Harness"
+        },
+        {
+          "url": "/resources/individuals/8a783f16-9ff4-448e-8234-9221aa196e89/video3.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - Christmas with Crawford Family"
+        }
+      ],
+      "profile": "/resources/individuals/8a783f16-9ff4-448e-8234-9221aa196e89/profile.png"
+    },
+    "_id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Firstname": "Bertha",
+    "Middlename": "Adele",
+    "Lastname": "Zimmerman",
+    "Gender": "F",
+    "DOB": "06/14/1880",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "04/09/1963",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "85dfd542-0590-4e5c-8e65-b8a8e1432b90",
+    "Divorced": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Description": null
+  },
+  {
+    "name": "David Anderson Harness",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "85dfd542-0590-4e5c-8e65-b8a8e1432b90",
+      "resources": [
+        {
+          "url": "/resources/individuals/85dfd542-0590-4e5c-8e65-b8a8e1432b90/profile.png",
+          "height": 382,
+          "width": 257,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/85dfd542-0590-4e5c-8e65-b8a8e1432b90/profile.png"
+    },
+    "_id": "85dfd542-0590-4e5c-8e65-b8a8e1432b90",
+    "id": "85dfd542-0590-4e5c-8e65-b8a8e1432b90",
+    "Firstname": "David",
+    "Middlename": "Anderson",
+    "Lastname": "Harness",
+    "Gender": "M",
+    "DOB": "1876",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "1974",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Irene Marguerite Mosher",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+        "relType": "blood"
+      },
+      {
+        "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+        "relType": "blood"
+      },
+      {
+        "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+      "resources": [
+        {
+          "url": "/resources/individuals/7bda590a-1bf4-4bdd-8a28-8c7c9b818bac/profile.png",
+          "height": 417,
+          "width": 319,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/7bda590a-1bf4-4bdd-8a28-8c7c9b818bac/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/7bda590a-1bf4-4bdd-8a28-8c7c9b818bac/video2.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/7bda590a-1bf4-4bdd-8a28-8c7c9b818bac/video3.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        },
+        {
+          "url": "/resources/individuals/7bda590a-1bf4-4bdd-8a28-8c7c9b818bac/video4.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s"
+        }
+      ],
+      "profile": "/resources/individuals/7bda590a-1bf4-4bdd-8a28-8c7c9b818bac/profile.png"
+    },
+    "_id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "Firstname": "Irene",
+    "Middlename": "Marguerite",
+    "Lastname": "Mosher",
+    "Gender": "F",
+    "DOB": "1908",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "1994",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Wilnetta Julia Coon",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "6d336512-b995-4c84-b202-64741760940d",
+    "id": "6d336512-b995-4c84-b202-64741760940d",
+    "Firstname": "Wilnetta",
+    "Middlename": "Julia",
+    "Lastname": "Coon",
+    "Gender": "F",
+    "DOB": "01/10/1848",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "01/18/1890",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Robert null Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+        "relType": "blood"
+      },
+      {
+        "id": "1f318c18-018e-42f9-ba75-90bbe85a3307",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+      "resources": [
+        {
+          "url": "/resources/individuals/46b9914d-3b7a-467a-886f-1ddd35f0279b/profile.png",
+          "height": 280,
+          "width": 180,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/46b9914d-3b7a-467a-886f-1ddd35f0279b/profile.png"
+    },
+    "_id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Firstname": "Robert",
+    "Middlename": null,
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "03/11/1806",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "12/24/1878",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "1f318c18-018e-42f9-ba75-90bbe85a3307",
+    "Father": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+    "Spouse": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Elizabeth null Hall",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+      "resources": [
+        {
+          "url": "/resources/individuals/00c70b8a-4da4-4af6-bfc5-b27a32e0d41d/profile.png",
+          "height": 280,
+          "width": 185,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/00c70b8a-4da4-4af6-bfc5-b27a32e0d41d/profile.png"
+    },
+    "_id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Firstname": "Elizabeth",
+    "Middlename": null,
+    "Lastname": "Hall",
+    "Gender": "F",
+    "DOB": "07/04/1806",
+    "Birthplace": "Dunningsville, Washington, PA",
+    "BirthplaceCoords": "39.742160,-77.551430",
+    "Death": "11/04/1891",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Nathaniel null Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+        "relType": "blood"
+      },
+      {
+        "id": "bd215ae9-b796-4007-a7ef-715058d94612",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "1f318c18-018e-42f9-ba75-90bbe85a3307",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+      "resources": [
+        {
+          "url": "/resources/individuals/10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b/artifact1.png",
+          "height": 476,
+          "width": 1330,
+          "type": "artifact",
+          "description": "Notice of Death"
+        }
+      ],
+      "profile": "",
+      "military": {
+        "id": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+        "branch": "Army",
+        "rank": "",
+        "start": "",
+        "end": "",
+        "description": "",
+        "awards": "",
+        "theater": "War of 1812"
+      }
+    },
+    "_id": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+    "id": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+    "Firstname": "Nathaniel",
+    "Middlename": null,
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1782",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "1850",
+    "Deathplace": "PA",
+    "DeathplaceCoords": "40.3110682,-79.4666879",
+    "Mother": "bd215ae9-b796-4007-a7ef-715058d94612",
+    "Father": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+    "Spouse": "1f318c18-018e-42f9-ba75-90bbe85a3307",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mary Kirkpatrick McElhaney",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "1f318c18-018e-42f9-ba75-90bbe85a3307",
+    "id": "1f318c18-018e-42f9-ba75-90bbe85a3307",
+    "Firstname": "Mary",
+    "Middlename": "Kirkpatrick",
+    "Lastname": "McElhaney",
+    "Gender": "F",
+    "DOB": "1780",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "03/08/1869",
+    "Deathplace": "PA",
+    "DeathplaceCoords": "40.3110682,-79.4666879",
+    "Mother": null,
+    "Father": null,
+    "Spouse": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Benjamin null Crawford",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "bd215ae9-b796-4007-a7ef-715058d94612",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+      "resources": [
+        {
+          "url": "/resources/individuals/672418b7-1163-4ad7-bcbc-83269fb9f4f4/artifact1.png",
+          "height": 795,
+          "width": 491,
+          "type": "artifact",
+          "description": "Promotion to Sergeant during the Revolutionary War - Pennsylvania in the War of the Revolution: battalions and line, 1775-1783, page 241"
+        }
+      ],
+      "profile": "",
+      "military": {
+        "id": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+        "branch": "Army",
+        "rank": "Sergeant",
+        "start": "",
+        "end": "",
+        "description": "Served in the Pennsylvania State Rifle Regiment under Colonel Samuel Miles",
+        "awards": "",
+        "theater": "Revolutionary War"
+      }
+    },
+    "_id": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+    "id": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+    "Firstname": "Benjamin",
+    "Middlename": null,
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1755",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "1836",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "bd215ae9-b796-4007-a7ef-715058d94612",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mary Teeney Anderson",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "10f22aa9-d7bf-4cd2-be40-a4ef1e3ead0b",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "bd215ae9-b796-4007-a7ef-715058d94612",
+    "id": "bd215ae9-b796-4007-a7ef-715058d94612",
+    "Firstname": "Mary",
+    "Middlename": "Teeney",
+    "Lastname": "Anderson",
+    "Gender": "F",
+    "DOB": "1760",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "1818",
+    "Deathplace": "PA",
+    "DeathplaceCoords": "40.3110682,-79.4666879",
+    "Mother": null,
+    "Father": null,
+    "Spouse": "672418b7-1163-4ad7-bcbc-83269fb9f4f4",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Benjamin Wood Crawford",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "e49e15f9-ff4a-440e-8592-8d9825debc90",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "65073ef2-0d48-4b8a-8bc4-bd0134878cd5",
+    "id": "65073ef2-0d48-4b8a-8bc4-bd0134878cd5",
+    "Firstname": "Benjamin",
+    "Middlename": "Wood",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1725",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "1800",
+    "Deathplace": "PA",
+    "DeathplaceCoords": "40.3110682,-79.4666879",
+    "Mother": null,
+    "Father": null,
+    "Spouse": "e49e15f9-ff4a-440e-8592-8d9825debc90",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mary null Armorer",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "65073ef2-0d48-4b8a-8bc4-bd0134878cd5",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "e49e15f9-ff4a-440e-8592-8d9825debc90",
+    "id": "e49e15f9-ff4a-440e-8592-8d9825debc90",
+    "Firstname": "Mary",
+    "Middlename": null,
+    "Lastname": "Armorer",
+    "Gender": "F",
+    "DOB": "1730",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "65073ef2-0d48-4b8a-8bc4-bd0134878cd5",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "William Chambers Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "681f9ee4-6166-4d25-b8ec-16d28a689518",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+      "resources": [
+        {
+          "url": "/resources/individuals/45ed1f17-5409-4b0e-914f-a2da85d39f78/profile.png",
+          "height": 196,
+          "width": 169,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/45ed1f17-5409-4b0e-914f-a2da85d39f78/profile.png",
+      "military": {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "branch": "Army",
+        "rank": "Private",
+        "start": "",
+        "end": "",
+        "description": "",
+        "awards": "",
+        "theater": "Civil War"
+      }
+    },
+    "_id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+    "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+    "Firstname": "William",
+    "Middlename": "Chambers",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "09/28/1844",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "02/11/1922",
+    "Deathplace": "Toledo Township, Tama, IA",
+    "DeathplaceCoords": "41.990910,-92.581710",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": "681f9ee4-6166-4d25-b8ec-16d28a689518",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Elizabeth Lundy Patterson",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "681f9ee4-6166-4d25-b8ec-16d28a689518",
+      "resources": [
+        {
+          "url": "/resources/individuals/681f9ee4-6166-4d25-b8ec-16d28a689518/profile.png",
+          "height": 184,
+          "width": 162,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/681f9ee4-6166-4d25-b8ec-16d28a689518/profile.png"
+    },
+    "_id": "681f9ee4-6166-4d25-b8ec-16d28a689518",
+    "id": "681f9ee4-6166-4d25-b8ec-16d28a689518",
+    "Firstname": "Elizabeth",
+    "Middlename": "Lundy",
+    "Lastname": "Patterson",
+    "Gender": "F",
+    "DOB": "07/10/1847",
+    "Birthplace": "Washington, Armstrong, PA",
+    "BirthplaceCoords": "40.894010,-79.534520",
+    "Death": "08/18/1922",
+    "Deathplace": "Toledo Township, Tama, IA",
+    "DeathplaceCoords": "41.990910,-92.581710",
+    "Mother": null,
+    "Father": null,
+    "Spouse": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Robert R Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "9afc0a83-718a-4d2b-abf4-315ff998c4a0",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "0a80171d-956c-4e68-8875-2574a5130f5f",
+      "resources": [
+        {
+          "url": "/resources/individuals/0a80171d-956c-4e68-8875-2574a5130f5f/profile.png",
+          "height": 280,
+          "width": 210,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/0a80171d-956c-4e68-8875-2574a5130f5f/profile.png"
+    },
+    "_id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+    "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+    "Firstname": "Robert",
+    "Middlename": "R",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "06/07/1833",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "03/31/1885",
+    "Deathplace": "Garrison, Butler, NE",
+    "DeathplaceCoords": "41.175980,-97.164180",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": "9afc0a83-718a-4d2b-abf4-315ff998c4a0",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Isabelle A Wylie",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "9afc0a83-718a-4d2b-abf4-315ff998c4a0",
+      "resources": [
+        {
+          "url": "/resources/individuals/9afc0a83-718a-4d2b-abf4-315ff998c4a0/profile.png",
+          "height": 280,
+          "width": 210,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/9afc0a83-718a-4d2b-abf4-315ff998c4a0/profile.png"
+    },
+    "_id": "9afc0a83-718a-4d2b-abf4-315ff998c4a0",
+    "id": "9afc0a83-718a-4d2b-abf4-315ff998c4a0",
+    "Firstname": "Isabelle",
+    "Middlename": "A",
+    "Lastname": "Wylie",
+    "Gender": "F",
+    "DOB": "01/07/1838",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "03/04/1906",
+    "Deathplace": "Toledo Township, Tama, IA",
+    "DeathplaceCoords": "41.990910,-92.581710",
+    "Mother": null,
+    "Father": null,
+    "Spouse": "0a80171d-956c-4e68-8875-2574a5130f5f",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Eliza Jane Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+    "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+    "Firstname": "Eliza",
+    "Middlename": "Jane",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "07/15/1830",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "06/01/1903",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Rebecca null Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "112711df-69fe-4743-ab42-d2cd683af743",
+    "id": "112711df-69fe-4743-ab42-d2cd683af743",
+    "Firstname": "Rebecca",
+    "Middlename": null,
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "1831",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "04/10/1911",
+    "Deathplace": "Mt. Vernon, Linn, IA",
+    "DeathplaceCoords": "41.924520,-91.420980",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Isabell null Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+    "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+    "Firstname": "Isabell",
+    "Middlename": null,
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "05/02/1835",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "12/01/1885",
+    "Deathplace": "Toledo Township, Tama, IA",
+    "DeathplaceCoords": "41.990910,-92.581710",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "William null Gallagher",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
+      "resources": [
+        {
+          "url": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.jpg",
+          "height": 1011,
+          "width": 815,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.jpg"
+    },
+    "_id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
+    "id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
+    "Firstname": "William",
+    "Middlename": null,
+    "Lastname": "Gallagher",
+    "Gender": "M",
+    "DOB": "12/23/1833",
+    "Birthplace": "Chester County, PA",
+    "BirthplaceCoords": null,
+    "Death": "1872",
+    "Deathplace": "Colorado",
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mary Anderson Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+      "resources": [
+        {
+          "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile.png",
+          "height": 678,
+          "width": 860,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile.png"
+    },
+    "_id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+    "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+    "Firstname": "Mary",
+    "Middlename": "Anderson",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "12/31/1836",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "02/27/1929",
+    "Deathplace": "Toledo Township, Tama, IA",
+    "DeathplaceCoords": "41.990910,-92.581710",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "John K Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+    "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+    "Firstname": "John",
+    "Middlename": "K",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "08/30/1840",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "08/13/1916",
+    "Deathplace": "Dillon, Dickinson, KS",
+    "DeathplaceCoords": "38.6936161,-97.1469645",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Samuel null Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+    "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+    "Firstname": "Samuel",
+    "Middlename": null,
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1847",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "11/13/1935",
+    "Deathplace": "Central City, Merrick, NE",
+    "DeathplaceCoords": "41.115138,-98.000039",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Martha C Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+        "relType": "blood"
+      },
+      {
+        "id": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
+        "relType": "blood"
+      },
+      {
+        "id": "45ed1f17-5409-4b0e-914f-a2da85d39f78",
+        "relType": "blood"
+      },
+      {
+        "id": "0a80171d-956c-4e68-8875-2574a5130f5f",
+        "relType": "blood"
+      },
+      {
+        "id": "817b4ea9-16c0-4cdd-9976-aeae9f28c0d2",
+        "relType": "blood"
+      },
+      {
+        "id": "112711df-69fe-4743-ab42-d2cd683af743",
+        "relType": "blood"
+      },
+      {
+        "id": "0471589b-e005-4969-92bd-8ffff57fe1a6",
+        "relType": "blood"
+      },
+      {
+        "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
+        "relType": "blood"
+      },
+      {
+        "id": "0773bcef-bb8e-4eb4-816c-51e8a087ed0f",
+        "relType": "blood"
+      },
+      {
+        "id": "1a0e4b66-b8ae-4254-a884-df5fd6076f1d",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+    "id": "695f5ec9-a835-4007-a152-0c4aaff5a070",
+    "Firstname": "Martha",
+    "Middlename": "C",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "05/24/1848",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "01/28/1911",
+    "Deathplace": "Lenox, Taylor, IA",
+    "DeathplaceCoords": "40.882654,-94.5618906",
+    "Mother": "00c70b8a-4da4-4af6-bfc5-b27a32e0d41d",
+    "Father": "46b9914d-3b7a-467a-886f-1ddd35f0279b",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Inez Ione Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      },
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+        "relType": "blood"
+      },
+      {
+        "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+        "relType": "blood"
+      },
+      {
+        "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+        "relType": "blood"
+      },
+      {
+        "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+      "resources": [
+        {
+          "url": "/resources/individuals/72f82fb8-2144-4cae-a1f5-f61f2d4a034e/artifact1.jpg",
+          "height": 399,
+          "width": 397,
+          "type": "artifact",
+          "description": "Newspaper Obituary"
+        }
+      ],
+      "profile": ""
+    },
+    "_id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+    "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+    "Firstname": "Inez",
+    "Middlename": "Ione",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "04/29/1898",
+    "Birthplace": "Wray, CO",
+    "BirthplaceCoords": "40.07794,-102.224462",
+    "Death": "02/05/1974",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Father": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Lorin Lonzo Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      },
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+        "relType": "blood"
+      },
+      {
+        "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+        "relType": "blood"
+      },
+      {
+        "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+        "relType": "blood"
+      },
+      {
+        "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+      "resources": [
+        {
+          "url": "/resources/individuals/5999039a-efb7-4cb7-b1f9-6d04804b9aba/profile.png",
+          "height": 545,
+          "width": 532,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/5999039a-efb7-4cb7-b1f9-6d04804b9aba/profile.png"
+    },
+    "_id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+    "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+    "Firstname": "Lorin",
+    "Middlename": "Lonzo",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "03/30/1900",
+    "Birthplace": "Wray, CO",
+    "BirthplaceCoords": "40.07794,-102.224462",
+    "Death": "11/16/1969",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Father": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Freeman Fenner Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      },
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+        "relType": "blood"
+      },
+      {
+        "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+        "relType": "blood"
+      },
+      {
+        "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+        "relType": "blood"
+      },
+      {
+        "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+    "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+    "Firstname": "Freeman",
+    "Middlename": "Fenner",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "01/08/1907",
+    "Birthplace": "Wray, CO",
+    "BirthplaceCoords": "40.07794,-102.224462",
+    "Death": "06/09/1973",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Father": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Rosa Ruth Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      },
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+        "relType": "blood"
+      },
+      {
+        "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+        "relType": "blood"
+      },
+      {
+        "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+        "relType": "blood"
+      },
+      {
+        "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+    "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+    "Firstname": "Rosa",
+    "Middlename": "Ruth",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "08/26/1908",
+    "Birthplace": "Wray, CO",
+    "BirthplaceCoords": "40.07794,-102.224462",
+    "Death": "11/10/1970",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Father": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Orta Orleans Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+        "relType": "blood"
+      },
+      {
+        "id": "8a783f16-9ff4-448e-8234-9221aa196e89",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "72f82fb8-2144-4cae-a1f5-f61f2d4a034e",
+        "relType": "blood"
+      },
+      {
+        "id": "5999039a-efb7-4cb7-b1f9-6d04804b9aba",
+        "relType": "blood"
+      },
+      {
+        "id": "b5ba03f1-0b47-454c-9749-b731f4c6ac5b",
+        "relType": "blood"
+      },
+      {
+        "id": "329d6875-bc08-4170-b02d-38678e40dc5d",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+      "resources": [
+        {
+          "url": "/resources/individuals/413cd19e-bf8d-49c4-9d1e-a635408ad05f/artifact1.jpg",
+          "height": 397,
+          "width": 370,
+          "type": "artifact",
+          "description": "Newspaper Obituary"
+        }
+      ],
+      "profile": ""
+    },
+    "_id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+    "id": "413cd19e-bf8d-49c4-9d1e-a635408ad05f",
+    "Firstname": "Orta",
+    "Middlename": "Orleans",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "08/13/1910",
+    "Birthplace": "Wray, CO",
+    "BirthplaceCoords": "40.07794,-102.224462",
+    "Death": "1989",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "8a783f16-9ff4-448e-8234-9221aa196e89",
+    "Father": "0e2f186b-55b7-496f-8541-2a10b40f2863",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mara Lynn Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      },
+      {
+        "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+        "relType": "blood"
+      },
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      },
+      {
+        "id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+        "relType": "blood"
+      },
+      {
+        "id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+        "relType": "blood"
+      },
+      {
+        "id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+        "relType": "blood"
+      },
+      {
+        "id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+        "relType": "blood"
+      },
+      {
+        "id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+      "resources": [
+        {
+          "url": "/resources/individuals/efc9ae22-e77d-4891-98b3-cecd8202281d/profile.png",
+          "height": 293,
+          "width": 241,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/efc9ae22-e77d-4891-98b3-cecd8202281d/profile.png"
+    },
+    "_id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "Firstname": "Mara",
+    "Middlename": "Lynn",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "1990s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "Father": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "Spouse": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Alyssa Ann Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      },
+      {
+        "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+        "relType": "blood"
+      },
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      },
+      {
+        "id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+        "relType": "blood"
+      },
+      {
+        "id": "bb8c3a61-5df3-47d0-aa37-5a3303224def",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "270312fd-5466-4a15-8a29-b80c73136773",
+      "resources": [
+        {
+          "url": "/resources/individuals/270312fd-5466-4a15-8a29-b80c73136773/profile.png",
+          "height": 181,
+          "width": 150,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/270312fd-5466-4a15-8a29-b80c73136773/profile.png"
+    },
+    "_id": "270312fd-5466-4a15-8a29-b80c73136773",
+    "id": "270312fd-5466-4a15-8a29-b80c73136773",
+    "Firstname": "Alyssa",
+    "Middlename": "Ann",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "1990s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "Father": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "Spouse": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Elizabeth Carolyn Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      },
+      {
+        "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+        "relType": "blood"
+      },
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+    "id": "28dd6f66-1c50-4f8f-8f05-917fa465b3cd",
+    "Firstname": "Elizabeth",
+    "Middlename": "Carolyn",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "05/27/1993",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": "05/27/1993",
+    "Deathplace": "Grand Rapids, MI",
+    "DeathplaceCoords": "42.9691175,-85.6701092",
+    "Mother": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "Father": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Matthew null Olson",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+        "relType": "blood"
+      },
+      {
+        "id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+        "relType": "blood"
+      },
+      {
+        "id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+        "relType": "blood"
+      },
+      {
+        "id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+        "relType": "blood"
+      },
+      {
+        "id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+      "resources": [
+        {
+          "url": "/resources/individuals/75b4dc7f-fd05-443e-875f-375bd6353f9e/profile.png",
+          "height": 305,
+          "width": 238,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/75b4dc7f-fd05-443e-875f-375bd6353f9e/profile.png"
+    },
+    "_id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "Firstname": "Matthew",
+    "Middlename": null,
+    "Lastname": "Olson",
+    "Gender": "M",
+    "DOB": "1980s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Lydia null Olson",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+        "relType": "blood"
+      },
+      {
+        "id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+        "relType": "blood"
+      },
+      {
+        "id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+        "relType": "blood"
+      },
+      {
+        "id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+      "resources": [
+        {
+          "url": "/resources/individuals/8d5a5315-da4d-464c-aab5-d64ca73272e9/profile.png",
+          "height": 276,
+          "width": 234,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/8d5a5315-da4d-464c-aab5-d64ca73272e9/profile.png"
+    },
+    "_id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+    "id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+    "Firstname": "Lydia",
+    "Middlename": null,
+    "Lastname": "Olson",
+    "Gender": "F",
+    "DOB": "2010s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "Father": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Anna Grace Olson",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+        "relType": "blood"
+      },
+      {
+        "id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+        "relType": "blood"
+      },
+      {
+        "id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+        "relType": "blood"
+      },
+      {
+        "id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+      "resources": [
+        {
+          "url": "/resources/individuals/dbc41388-5eb7-4048-8c98-36aa447ff52a/profile.png",
+          "height": 305,
+          "width": 232,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/dbc41388-5eb7-4048-8c98-36aa447ff52a/profile.png"
+    },
+    "_id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+    "id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+    "Firstname": "Anna",
+    "Middlename": "Grace",
+    "Lastname": "Olson",
+    "Gender": "F",
+    "DOB": "2010s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "Father": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Abigail null Olson",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+        "relType": "blood"
+      },
+      {
+        "id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+        "relType": "blood"
+      },
+      {
+        "id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+        "relType": "blood"
+      },
+      {
+        "id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+      "resources": [
+        {
+          "url": "/resources/individuals/669da787-77a7-40d7-a1c0-5f958397c6ff/profile.png",
+          "height": 267,
+          "width": 211,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/669da787-77a7-40d7-a1c0-5f958397c6ff/profile.png"
+    },
+    "_id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+    "id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+    "Firstname": "Abigail",
+    "Middlename": null,
+    "Lastname": "Olson",
+    "Gender": "F",
+    "DOB": "2010s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "Father": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Ethan null Olson",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+        "relType": "blood"
+      },
+      {
+        "id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+        "relType": "blood"
+      },
+      {
+        "id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+        "relType": "blood"
+      },
+      {
+        "id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+      "resources": [
+        {
+          "url": "/resources/individuals/445d238c-6bea-4337-b47b-b642ccbb1c21/profile.png",
+          "height": 265,
+          "width": 203,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/445d238c-6bea-4337-b47b-b642ccbb1c21/profile.png"
+    },
+    "_id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+    "id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+    "Firstname": "Ethan",
+    "Middlename": null,
+    "Lastname": "Olson",
+    "Gender": "M",
+    "DOB": "2010s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "Father": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Timothy null Olson",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+        "relType": "blood"
+      },
+      {
+        "id": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+        "relType": "blood"
+      },
+      {
+        "id": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+        "relType": "blood"
+      },
+      {
+        "id": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+        "relType": "blood"
+      },
+      {
+        "id": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+      "resources": [
+        {
+          "url": "/resources/individuals/cc504946-ec37-4981-92ce-deb1cb68ae79/profile.png",
+          "height": 273,
+          "width": 211,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/cc504946-ec37-4981-92ce-deb1cb68ae79/profile.png"
+    },
+    "_id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+    "id": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+    "Firstname": "Timothy",
+    "Middlename": null,
+    "Lastname": "Olson",
+    "Gender": "M",
+    "DOB": "2010s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "Father": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Nathan null Terpstra",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+        "relType": "blood"
+      },
+      {
+        "id": "bb8c3a61-5df3-47d0-aa37-5a3303224def",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+      "resources": [
+        {
+          "url": "/resources/individuals/5947604f-f6b9-4e83-afab-b2677d9cf7a3/profile.png",
+          "height": 179,
+          "width": 140,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/5947604f-f6b9-4e83-afab-b2677d9cf7a3/profile.png"
+    },
+    "_id": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+    "id": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+    "Firstname": "Nathan",
+    "Middlename": null,
+    "Lastname": "Terpstra",
+    "Gender": "M",
+    "DOB": "1980s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "270312fd-5466-4a15-8a29-b80c73136773",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Callie null Terpstra",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "bb8c3a61-5df3-47d0-aa37-5a3303224def",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+      "resources": [
+        {
+          "url": "/resources/individuals/f308363f-5e41-4c8e-8a6b-efa67ac96d05/profile.png",
+          "height": 213,
+          "width": 199,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/f308363f-5e41-4c8e-8a6b-efa67ac96d05/profile.png"
+    },
+    "_id": "f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+    "id": "f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+    "Firstname": "Callie",
+    "Middlename": null,
+    "Lastname": "Terpstra",
+    "Gender": "F",
+    "DOB": "2010s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "270312fd-5466-4a15-8a29-b80c73136773",
+    "Father": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Brooke null Terpstra",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+        "relType": "blood"
+      },
+      {
+        "id": "270312fd-5466-4a15-8a29-b80c73136773",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "bb8c3a61-5df3-47d0-aa37-5a3303224def",
+      "resources": [
+        {
+          "url": "/resources/individuals/bb8c3a61-5df3-47d0-aa37-5a3303224def/profile.png",
+          "height": 201,
+          "width": 183,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/bb8c3a61-5df3-47d0-aa37-5a3303224def/profile.png"
+    },
+    "_id": "bb8c3a61-5df3-47d0-aa37-5a3303224def",
+    "id": "bb8c3a61-5df3-47d0-aa37-5a3303224def",
+    "Firstname": "Brooke",
+    "Middlename": null,
+    "Lastname": "Terpstra",
+    "Gender": "F",
+    "DOB": "2010s",
+    "Birthplace": "Grand Rapids, MI",
+    "BirthplaceCoords": "42.9691175,-85.6701092",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "270312fd-5466-4a15-8a29-b80c73136773",
+    "Father": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Andreas null Zeller",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "6414d0bd-c340-4ed8-bb23-c4a0471e3b7e",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+      "resources": [
+        {
+          "url": "/resources/individuals/973f4141-ac88-4bfb-aaf5-fc49b44a15ad/profile.png",
+          "height": 382,
+          "width": 276,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/973f4141-ac88-4bfb-aaf5-fc49b44a15ad/profile.png"
+    },
+    "_id": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+    "id": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+    "Firstname": "Andreas",
+    "Middlename": null,
+    "Lastname": "Zeller",
+    "Gender": "M",
+    "DOB": "1980s",
+    "Birthplace": "New York, NY",
+    "BirthplaceCoords": "40.7129822,-74.007205",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Aurelie null Zeller",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+        "relType": "blood"
+      },
+      {
+        "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "6414d0bd-c340-4ed8-bb23-c4a0471e3b7e",
+      "resources": [
+        {
+          "url": "/resources/individuals/6414d0bd-c340-4ed8-bb23-c4a0471e3b7e/profile.png",
+          "height": 425,
+          "width": 373,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/6414d0bd-c340-4ed8-bb23-c4a0471e3b7e/profile.png"
+    },
+    "_id": "6414d0bd-c340-4ed8-bb23-c4a0471e3b7e",
+    "id": "6414d0bd-c340-4ed8-bb23-c4a0471e3b7e",
+    "Firstname": "Aurelie",
+    "Middlename": null,
+    "Lastname": "Zeller",
+    "Gender": "F",
+    "DOB": "2020s",
+    "Birthplace": "Berlin, Germany",
+    "BirthplaceCoords": "52.5187416,13.4080224",
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "Father": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Deborah Lynn Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "4ca66359-925d-4b59-accf-44523b32c716",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "28998cf8-1315-4920-8d4a-8cc7f9c76cbf",
+      "resources": [
+        {
+          "url": "/resources/individuals/28998cf8-1315-4920-8d4a-8cc7f9c76cbf/gallery1.png",
+          "height": 946,
+          "width": 962,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/28998cf8-1315-4920-8d4a-8cc7f9c76cbf/profile.png",
+          "height": 239,
+          "width": 164,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/28998cf8-1315-4920-8d4a-8cc7f9c76cbf/profile.png"
+    },
+    "_id": "28998cf8-1315-4920-8d4a-8cc7f9c76cbf",
+    "id": "28998cf8-1315-4920-8d4a-8cc7f9c76cbf",
+    "Firstname": "Deborah",
+    "Middlename": "Lynn",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "1963",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "2022",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "4ca66359-925d-4b59-accf-44523b32c716",
+    "Father": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "William Darrell Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+        "relType": "blood"
+      },
+      {
+        "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+        "relType": "blood"
+      },
+      {
+        "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "c605b959-ff70-48f5-9842-a29851d26177",
+        "relType": "blood"
+      },
+      {
+        "id": "0e681b7e-a58a-4d61-9895-0038daeacef2",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "f8019091-a0e3-4fe9-93fd-49559be47888",
+      "resources": [
+        {
+          "url": "/resources/individuals/f8019091-a0e3-4fe9-93fd-49559be47888/profile.png",
+          "height": 339,
+          "width": 290,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/f8019091-a0e3-4fe9-93fd-49559be47888/video1.mp4",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - Christmas"
+        }
+      ],
+      "profile": "/resources/individuals/f8019091-a0e3-4fe9-93fd-49559be47888/profile.png"
+    },
+    "_id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+    "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+    "Firstname": "William",
+    "Middlename": "Darrell",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "1940s",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "Father": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "Spouse": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mary Jane Sanfelpo",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "c605b959-ff70-48f5-9842-a29851d26177",
+        "relType": "blood"
+      },
+      {
+        "id": "0e681b7e-a58a-4d61-9895-0038daeacef2",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+      "resources": [
+        {
+          "url": "/resources/individuals/82df6f4f-2cde-4acc-8716-0f548e9f08ee/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - At wedding to husband William"
+        },
+        {
+          "url": "/resources/individuals/82df6f4f-2cde-4acc-8716-0f548e9f08ee/video2.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - At wedding to husband William"
+        }
+      ],
+      "profile": ""
+    },
+    "_id": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+    "id": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+    "Firstname": "Mary",
+    "Middlename": "Jane",
+    "Lastname": "Sanfelpo",
+    "Gender": "F",
+    "DOB": "02/15/1940",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "f8019091-a0e3-4fe9-93fd-49559be47888",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Velma Irene Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+        "relType": "blood"
+      },
+      {
+        "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "202d37fa-bf7c-4615-b791-3f074227059a",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+    "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+    "Firstname": "Velma",
+    "Middlename": "Irene",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "09/28/1929",
+    "Birthplace": "Detroit, MI",
+    "BirthplaceCoords": null,
+    "Death": "02/26/2012",
+    "Deathplace": "Houghton Lake, Roscommon, MI",
+    "DeathplaceCoords": null,
+    "Mother": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "Father": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "Spouse": "202d37fa-bf7c-4615-b791-3f074227059a",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Glenn Allen Lear",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "202d37fa-bf7c-4615-b791-3f074227059a",
+    "id": "202d37fa-bf7c-4615-b791-3f074227059a",
+    "Firstname": "Glenn",
+    "Middlename": "Allen",
+    "Lastname": "Lear",
+    "Gender": "M",
+    "DOB": "06/05/1932",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Vera Adele Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+        "relType": "blood"
+      },
+      {
+        "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "db4d314d-beea-4cf7-b4b4-b5aa50b6acb5",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+    "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+    "Firstname": "Vera",
+    "Middlename": "Adele",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "11/27/1930",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "Father": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "Spouse": "db4d314d-beea-4cf7-b4b4-b5aa50b6acb5",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "William Floyd Wolfe",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "db4d314d-beea-4cf7-b4b4-b5aa50b6acb5",
+    "id": "db4d314d-beea-4cf7-b4b4-b5aa50b6acb5",
+    "Firstname": "William",
+    "Middlename": "Floyd",
+    "Lastname": "Wolfe",
+    "Gender": "M",
+    "DOB": "08/30/1932",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Helen Vineta Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+        "relType": "blood"
+      },
+      {
+        "id": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "9e9f1aee-0956-49a1-8fe6-aa820bb79d4d",
+        "relType": "blood"
+      },
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "ac86cd18-87dc-42c0-8c54-e6564ef476ef",
+        "relType": "blood"
+      },
+      {
+        "id": "00addc9f-630e-4ea3-8e51-9e222c38bcb2",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [
+      {
+        "id": "9f524c9a-326b-4119-9c98-ffd3cd61117d",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+    "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+    "Firstname": "Helen",
+    "Middlename": "Vineta",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "09/29/1928",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "7bda590a-1bf4-4bdd-8a28-8c7c9b818bac",
+    "Father": "7e4764cd-f9f1-4a5b-ae73-a381445752f0",
+    "Spouse": "9f524c9a-326b-4119-9c98-ffd3cd61117d",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mark Helm Vandine",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "94d8dc62-b992-47d0-b20f-54294fc38496",
+        "relType": "married"
+      }
+    ],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "9f524c9a-326b-4119-9c98-ffd3cd61117d",
+    "id": "9f524c9a-326b-4119-9c98-ffd3cd61117d",
+    "Firstname": "Mark",
+    "Middlename": "Helm",
+    "Lastname": "Vandine",
+    "Gender": "M",
+    "DOB": "11/16/1923",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "94d8dc62-b992-47d0-b20f-54294fc38496",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Daniel Mark Crawford",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "0e681b7e-a58a-4d61-9895-0038daeacef2",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "c605b959-ff70-48f5-9842-a29851d26177",
+    "id": "c605b959-ff70-48f5-9842-a29851d26177",
+    "Firstname": "Daniel",
+    "Middlename": "Mark",
+    "Lastname": "Crawford",
+    "Gender": "M",
+    "DOB": "07/04/1963",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+    "Father": "f8019091-a0e3-4fe9-93fd-49559be47888",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Dawn Michelle Crawford",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "f8019091-a0e3-4fe9-93fd-49559be47888",
+        "relType": "blood"
+      },
+      {
+        "id": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "c605b959-ff70-48f5-9842-a29851d26177",
+        "relType": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "0e681b7e-a58a-4d61-9895-0038daeacef2",
+    "id": "0e681b7e-a58a-4d61-9895-0038daeacef2",
+    "Firstname": "Dawn",
+    "Middlename": "Michelle",
+    "Lastname": "Crawford",
+    "Gender": "F",
+    "DOB": "08/21/1965",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "82df6f4f-2cde-4acc-8716-0f548e9f08ee",
+    "Father": "f8019091-a0e3-4fe9-93fd-49559be47888",
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Clara Virginia Sudduth",
+    "gender": "female",
+    "parents": [
+      {
+        "id": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+        "relType": "blood"
+      },
+      {
+        "id": "8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "4ca66359-925d-4b59-accf-44523b32c716",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+      "resources": [
+        {
+          "url": "/resources/individuals/ea725483-3dbf-48ef-9e89-2195a3537e7d/profile.png",
+          "height": 320,
+          "width": 208,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/ea725483-3dbf-48ef-9e89-2195a3537e7d/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - Dancing with husband Walter at daughter Carolyn's wedding"
+        }
+      ],
+      "profile": "/resources/individuals/ea725483-3dbf-48ef-9e89-2195a3537e7d/profile.png"
+    },
+    "_id": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+    "id": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+    "Firstname": "Clara",
+    "Middlename": "Virginia",
+    "Lastname": "Sudduth",
+    "Gender": "F",
+    "DOB": "02/23/1918",
+    "Birthplace": "Chauncey, OH",
+    "BirthplaceCoords": "39.401960,-82.128560",
+    "Death": "03/13/2011",
+    "Deathplace": "Wyandotte, MI",
+    "DeathplaceCoords": "36.921589,-94.827820",
+    "Mother": "8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0",
+    "Father": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+    "Spouse": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Walter Eugene Kerr",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+        "relType": "blood"
+      },
+      {
+        "id": "e87b5ba1-3f84-4531-ba77-f63359233c4c",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "4ca66359-925d-4b59-accf-44523b32c716",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+      "resources": [
+        {
+          "url": "/resources/individuals/fac76d9c-c72c-40ca-b9f0-96e1deec23cc/artifact1.png",
+          "height": 1336,
+          "width": 1684,
+          "type": "artifact",
+          "description": "Newspaper article"
+        },
+        {
+          "url": "/resources/individuals/fac76d9c-c72c-40ca-b9f0-96e1deec23cc/artifact2.png",
+          "height": 1212,
+          "width": 1190,
+          "type": "artifact",
+          "description": "July 18, 1919 Certification of Baptism at the First Evangelical Lutheran Church"
+        },
+        {
+          "url": "/resources/individuals/fac76d9c-c72c-40ca-b9f0-96e1deec23cc/profile.png",
+          "height": 204,
+          "width": 138,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/fac76d9c-c72c-40ca-b9f0-96e1deec23cc/video1.m4v",
+          "height": 0,
+          "width": 0,
+          "type": "video",
+          "description": "1950s - At daughter Carolyn's wedding"
+        }
+      ],
+      "profile": "/resources/individuals/fac76d9c-c72c-40ca-b9f0-96e1deec23cc/profile.png"
+    },
+    "_id": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+    "id": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+    "Firstname": "Walter",
+    "Middlename": "Eugene",
+    "Lastname": "Kerr",
+    "Gender": "M",
+    "DOB": "03/24/1917",
+    "Birthplace": "PA",
+    "BirthplaceCoords": "40.3110682,-79.4666879",
+    "Death": "02/26/1987",
+    "Deathplace": "Wyandotte, MI",
+    "DeathplaceCoords": "36.921589,-94.827820",
+    "Mother": "e87b5ba1-3f84-4531-ba77-f63359233c4c",
+    "Father": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+    "Spouse": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "James Ellsworth Sudduth",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+        "relType": "blood"
+      },
+      {
+        "id": "15d38cbb-ba8f-4e69-817d-d9d57de6fe25",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+      "resources": [
+        {
+          "url": "/resources/individuals/caf10fc9-0e93-402f-832f-17064df5dbb7/profile.png",
+          "height": 800,
+          "width": 526,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/caf10fc9-0e93-402f-832f-17064df5dbb7/profile.png"
+    },
+    "_id": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+    "id": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+    "Firstname": "James",
+    "Middlename": "Ellsworth",
+    "Lastname": "Sudduth",
+    "Gender": "M",
+    "DOB": "02/15/1867",
+    "Birthplace": "Pagetown, OH",
+    "BirthplaceCoords": null,
+    "Death": "01/27/1924",
+    "Deathplace": "Chauncey, OH",
+    "DeathplaceCoords": "39.401960,-82.128560",
+    "Mother": "15d38cbb-ba8f-4e69-817d-d9d57de6fe25",
+    "Father": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+    "Spouse": "8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Minnie May Warner",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "ea725483-3dbf-48ef-9e89-2195a3537e7d",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0",
+      "resources": [
+        {
+          "url": "/resources/individuals/8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0/artifact1.png",
+          "height": 1388,
+          "width": 1818,
+          "type": "artifact",
+          "description": "1906 2nd Grade Teaching Certificate"
+        },
+        {
+          "url": "/resources/individuals/8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0/profile.png",
+          "height": 726,
+          "width": 532,
+          "type": "photo",
+          "description": ""
+        }
+      ],
+      "profile": "/resources/individuals/8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0/profile.png"
+    },
+    "_id": "8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0",
+    "id": "8f4b1bcf-cd33-4d6d-a77d-44c2b73495d0",
+    "Firstname": "Minnie",
+    "Middlename": "May",
+    "Lastname": "Warner",
+    "Gender": "F",
+    "DOB": "05/12/1876",
+    "Birthplace": "Cottageville, WV",
+    "BirthplaceCoords": null,
+    "Death": "03/18/1922",
+    "Deathplace": "Chauncey, OH",
+    "DeathplaceCoords": "39.401960,-82.128560",
+    "Mother": null,
+    "Father": null,
+    "Spouse": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Lester K Kerr",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "9828c059-8ab0-4387-b9d4-f7e40e880331",
+        "relType": "blood"
+      },
+      {
+        "id": "65302aba-b1ac-47a2-8bd2-4a086f466493",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "e87b5ba1-3f84-4531-ba77-f63359233c4c",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+    "id": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+    "Firstname": "Lester",
+    "Middlename": "K",
+    "Lastname": "Kerr",
+    "Gender": "M",
+    "DOB": "1896",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "65302aba-b1ac-47a2-8bd2-4a086f466493",
+    "Father": "9828c059-8ab0-4387-b9d4-f7e40e880331",
+    "Spouse": "e87b5ba1-3f84-4531-ba77-f63359233c4c",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Mabel P McGraw",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "fac76d9c-c72c-40ca-b9f0-96e1deec23cc",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "e87b5ba1-3f84-4531-ba77-f63359233c4c",
+    "id": "e87b5ba1-3f84-4531-ba77-f63359233c4c",
+    "Firstname": "Mabel",
+    "Middlename": "P",
+    "Lastname": "McGraw",
+    "Gender": "F",
+    "DOB": "1897",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "James Ira Kerr",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "be70db9d-b280-4681-8acf-be41b1e6505d",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "65302aba-b1ac-47a2-8bd2-4a086f466493",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "9828c059-8ab0-4387-b9d4-f7e40e880331",
+    "id": "9828c059-8ab0-4387-b9d4-f7e40e880331",
+    "Firstname": "James",
+    "Middlename": "Ira",
+    "Lastname": "Kerr",
+    "Gender": "M",
+    "DOB": null,
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": "be70db9d-b280-4681-8acf-be41b1e6505d",
+    "Spouse": "65302aba-b1ac-47a2-8bd2-4a086f466493",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Sophie E Cramer",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "9828c059-8ab0-4387-b9d4-f7e40e880331",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "6c28c161-02e6-4a13-9604-4082a1fd1d16",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "65302aba-b1ac-47a2-8bd2-4a086f466493",
+    "id": "65302aba-b1ac-47a2-8bd2-4a086f466493",
+    "Firstname": "Sophie",
+    "Middlename": "E",
+    "Lastname": "Cramer",
+    "Gender": "F",
+    "DOB": null,
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "9828c059-8ab0-4387-b9d4-f7e40e880331",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Valentine null Kerr",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "9828c059-8ab0-4387-b9d4-f7e40e880331",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "be70db9d-b280-4681-8acf-be41b1e6505d",
+    "id": "be70db9d-b280-4681-8acf-be41b1e6505d",
+    "Firstname": "Valentine",
+    "Middlename": null,
+    "Lastname": "Kerr",
+    "Gender": "M",
+    "DOB": "09/21/1873",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "12/20/1957",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": null,
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "William Ellsworth Sudduth",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+        "relType": "blood"
+      },
+      {
+        "id": "ec729764-e5ad-4b69-b02d-ca8cd4b7bee1",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "15d38cbb-ba8f-4e69-817d-d9d57de6fe25",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+      "resources": [
+        {
+          "url": "/resources/individuals/8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd/artifact1.png",
+          "height": 1184,
+          "width": 1838,
+          "type": "artifact",
+          "description": "Civil War Pension"
+        }
+      ],
+      "profile": "",
+      "military": {
+        "id": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+        "branch": "Army",
+        "rank": "",
+        "start": "",
+        "end": "",
+        "description": "",
+        "awards": "",
+        "theater": "Civil War"
+      }
+    },
+    "_id": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+    "id": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+    "Firstname": "William",
+    "Middlename": "Ellsworth",
+    "Lastname": "Sudduth",
+    "Gender": "M",
+    "DOB": "08/24/1832",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "1910",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "ec729764-e5ad-4b69-b02d-ca8cd4b7bee1",
+    "Father": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+    "Spouse": "15d38cbb-ba8f-4e69-817d-d9d57de6fe25",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Martha Jane Henson",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "caf10fc9-0e93-402f-832f-17064df5dbb7",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "15d38cbb-ba8f-4e69-817d-d9d57de6fe25",
+    "id": "15d38cbb-ba8f-4e69-817d-d9d57de6fe25",
+    "Firstname": "Martha",
+    "Middlename": "Jane",
+    "Lastname": "Henson",
+    "Gender": "F",
+    "DOB": "1823",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": "1903",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "John null Sudduth",
+    "gender": "male",
+    "parents": [
+      {
+        "id": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+        "relType": "blood"
+      },
+      {
+        "id": "c0d87c27-28e6-4e33-bca7-2254e23a9cee",
+        "relType": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "ec729764-e5ad-4b69-b02d-ca8cd4b7bee1",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+    "id": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+    "Firstname": "John",
+    "Middlename": null,
+    "Lastname": "Sudduth",
+    "Gender": "M",
+    "DOB": "1785",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": "c0d87c27-28e6-4e33-bca7-2254e23a9cee",
+    "Father": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+    "Spouse": "ec729764-e5ad-4b69-b02d-ca8cd4b7bee1",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Jane null Williams",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "8b0a9b93-8cbc-488a-a9b2-5c1a2458d7fd",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "ec729764-e5ad-4b69-b02d-ca8cd4b7bee1",
+    "id": "ec729764-e5ad-4b69-b02d-ca8cd4b7bee1",
+    "Firstname": "Jane",
+    "Middlename": null,
+    "Lastname": "Williams",
+    "Gender": "F",
+    "DOB": "1785",
+    "Birthplace": null,
+    "BirthplaceCoords": null,
+    "Death": null,
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Isaac null Sudduth",
+    "gender": "male",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "c0d87c27-28e6-4e33-bca7-2254e23a9cee",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+      "resources": [
+        {
+          "url": "/resources/individuals/0c3d7385-071a-44b7-b7ee-d3bbfc263f8e/artifact1.png",
+          "height": 738,
+          "width": 1090,
+          "type": "artifact",
+          "description": "Grave Registration Card"
+        }
+      ],
+      "profile": "",
+      "military": {
+        "id": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+        "branch": "Army",
+        "rank": "",
+        "start": "",
+        "end": "",
+        "description": "DAR ID - A110746",
+        "awards": "",
+        "theater": "Revolutionary War"
+      }
+    },
+    "_id": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+    "id": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+    "Firstname": "Isaac",
+    "Middlename": null,
+    "Lastname": "Sudduth",
+    "Gender": "M",
+    "DOB": "1755",
+    "Birthplace": "VA",
+    "BirthplaceCoords": null,
+    "Death": "11/27/1854",
+    "Deathplace": "IN",
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "c0d87c27-28e6-4e33-bca7-2254e23a9cee",
+    "Divorced": null,
+    "Description": null
+  },
+  {
+    "name": "Agnes Lee Williams",
+    "gender": "female",
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+        "relType": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "fe5e359f-d9d0-4aac-9a90-fee5491585ee",
+        "relType": "blood"
+      }
+    ],
+    "metadata": {
+      "guid": "",
+      "profile": "",
+      "resources": []
+    },
+    "_id": "c0d87c27-28e6-4e33-bca7-2254e23a9cee",
+    "id": "c0d87c27-28e6-4e33-bca7-2254e23a9cee",
+    "Firstname": "Agnes",
+    "Middlename": "Lee",
+    "Lastname": "Williams",
+    "Gender": "F",
+    "DOB": "12/16/1830",
+    "Birthplace": "Fauquier, VA",
+    "BirthplaceCoords": null,
+    "Death": "1830",
+    "Deathplace": null,
+    "DeathplaceCoords": null,
+    "Mother": null,
+    "Father": null,
+    "Spouse": "0c3d7385-071a-44b7-b7ee-d3bbfc263f8e",
+    "Divorced": null,
+    "Description": null
+  }
+]
