@@ -32,12 +32,12 @@ export interface NormalizedFamilyTree extends APIFamilyTree {
   metadata: MetaData;
 }
 
-export const enum Gender {
+export enum Gender {
   male = 'male',
   female = 'female',
 }
 
-export const enum RelType {
+export enum RelType {
   blood = 'blood',
   married = 'married',
   divorced = 'divorced',
