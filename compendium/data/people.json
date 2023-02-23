@@ -1281,8 +1281,8 @@
         },
         {
           "url": "/resources/individuals/46b9914d-3b7a-467a-886f-1ddd35f0279b/profile.png",
-          "height": 599,
-          "width": 357,
+          "height": 520,
+          "width": 338,
           "type": "photo",
           "description": ""
         }
@@ -2247,14 +2247,14 @@
       "guid": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
       "resources": [
         {
-          "url": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.jpg",
-          "height": 1011,
-          "width": 815,
+          "url": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.png",
+          "height": 560,
+          "width": 451,
           "type": "photo",
           "description": ""
         }
       ],
-      "profile": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.jpg"
+      "profile": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.png"
     },
     "_id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
     "id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
@@ -2337,13 +2337,20 @@
       "resources": [
         {
           "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile.png",
+          "height": 522,
+          "width": 663,
+          "type": "photo",
+          "description": ""
+        },
+        {
+          "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile1.png",
           "height": 678,
           "width": 860,
           "type": "photo",
           "description": ""
         }
       ],
-      "profile": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile.png"
+      "profile": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile1.png"
     },
     "_id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
     "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
