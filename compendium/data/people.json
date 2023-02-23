@@ -1824,8 +1824,8 @@
       "resources": [
         {
           "url": "/resources/individuals/681f9ee4-6166-4d25-b8ec-16d28a689518/gallery1.png",
-          "height": 184,
-          "width": 162,
+          "height": 270,
+          "width": 225,
           "type": "photo",
           "description": "Original portrait"
         },
@@ -2247,6 +2247,13 @@
       "guid": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
       "resources": [
         {
+          "url": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/gallery1.png",
+          "height": 629,
+          "width": 507,
+          "type": "photo",
+          "description": "Original portrait"
+        },
+        {
           "url": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.png",
           "height": 560,
           "width": 451,
@@ -2336,21 +2343,21 @@
       "guid": "780d97d4-62c1-471c-bdef-6dc937db56cf",
       "resources": [
         {
+          "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/gallery1.png",
+          "height": 678,
+          "width": 860,
+          "type": "photo",
+          "description": "Original portrait"
+        },
+        {
           "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile.png",
           "height": 522,
           "width": 663,
           "type": "photo",
           "description": ""
-        },
-        {
-          "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile1.png",
-          "height": 678,
-          "width": 860,
-          "type": "photo",
-          "description": ""
         }
       ],
-      "profile": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile1.png"
+      "profile": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/profile.png"
     },
     "_id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
     "id": "780d97d4-62c1-471c-bdef-6dc937db56cf",
