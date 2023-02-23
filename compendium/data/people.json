@@ -2247,6 +2247,13 @@
       "guid": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
       "resources": [
         {
+          "url": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/artifact1.png",
+          "height": 666,
+          "width": 987,
+          "type": "artifact",
+          "description": "Civil War Pension"
+        },
+        {
           "url": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/gallery1.png",
           "height": 629,
           "width": 507,
@@ -2261,7 +2268,17 @@
           "description": ""
         }
       ],
-      "profile": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.png"
+      "profile": "/resources/individuals/2ffc9c80-f14b-44e3-9593-a9b867f118f4/profile.png",
+      "military": {
+        "id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
+        "branch": "Army",
+        "rank": "Captain",
+        "start": "November 4, 1861",
+        "end": "January 25, 1864",
+        "description": "14th Infantry, Iowa. 1862-04-06 Missing, (Shiloh, TN). Captured and paroled in a Confederate prison.",
+        "awards": "",
+        "theater": "Civil War"
+      }
     },
     "_id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
     "id": "2ffc9c80-f14b-44e3-9593-a9b867f118f4",
@@ -2342,6 +2359,13 @@
     "metadata": {
       "guid": "780d97d4-62c1-471c-bdef-6dc937db56cf",
       "resources": [
+        {
+          "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/artifact1.jpg",
+          "height": 339,
+          "width": 545,
+          "type": "artifact",
+          "description": "Obituary from the Iowa Cedar Rapids Gazette - March 1, 1929"
+        },
         {
           "url": "/resources/individuals/780d97d4-62c1-471c-bdef-6dc937db56cf/gallery1.png",
           "height": 678,
