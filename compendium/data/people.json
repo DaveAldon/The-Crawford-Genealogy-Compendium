@@ -1742,6 +1742,34 @@
           "description": "Original portrait"
         },
         {
+          "url": "/resources/individuals/45ed1f17-5409-4b0e-914f-a2da85d39f78/gallery2.png",
+          "height": 555,
+          "width": 374,
+          "type": "photo",
+          "description": "William in Civil Ware Uniform (colorized)"
+        },
+        {
+          "url": "/resources/individuals/45ed1f17-5409-4b0e-914f-a2da85d39f78/gallery3.jpg",
+          "height": 409,
+          "width": 602,
+          "type": "photo",
+          "description": "William with wife Elizabeth (colorized)"
+        },
+        {
+          "url": "/resources/individuals/45ed1f17-5409-4b0e-914f-a2da85d39f78/gallery4.jpg",
+          "height": 407,
+          "width": 615,
+          "type": "photo",
+          "description": "Front, left to right - William, Elizabeth, Daniel. Back, left to right - Inez, Anna, Eva Belle (colorized)"
+        },
+        {
+          "url": "/resources/individuals/45ed1f17-5409-4b0e-914f-a2da85d39f78/gallery5.jpg",
+          "height": 607,
+          "width": 412,
+          "type": "photo",
+          "description": "Front, left to right - Daniel, William, Elizabeth. Back, left to right - Anna, Eva Belle, and Inez (colorized)"
+        },
+        {
           "url": "/resources/individuals/45ed1f17-5409-4b0e-914f-a2da85d39f78/profile.png",
           "height": 587,
           "width": 511,
@@ -1891,9 +1919,16 @@
       "guid": "0a80171d-956c-4e68-8875-2574a5130f5f",
       "resources": [
         {
-          "url": "/resources/individuals/0a80171d-956c-4e68-8875-2574a5130f5f/profile.png",
+          "url": "/resources/individuals/0a80171d-956c-4e68-8875-2574a5130f5f/gallery1.png",
           "height": 280,
           "width": 210,
+          "type": "photo",
+          "description": "Original portrait"
+        },
+        {
+          "url": "/resources/individuals/0a80171d-956c-4e68-8875-2574a5130f5f/profile.png",
+          "height": 600,
+          "width": 447,
           "type": "photo",
           "description": ""
         }
@@ -1934,9 +1969,16 @@
       "guid": "9afc0a83-718a-4d2b-abf4-315ff998c4a0",
       "resources": [
         {
-          "url": "/resources/individuals/9afc0a83-718a-4d2b-abf4-315ff998c4a0/profile.png",
+          "url": "/resources/individuals/9afc0a83-718a-4d2b-abf4-315ff998c4a0/gallery1.png",
           "height": 280,
           "width": 210,
+          "type": "photo",
+          "description": "Original portrait"
+        },
+        {
+          "url": "/resources/individuals/9afc0a83-718a-4d2b-abf4-315ff998c4a0/profile.png",
+          "height": 600,
+          "width": 447,
           "type": "photo",
           "description": ""
         }
