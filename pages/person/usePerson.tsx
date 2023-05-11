@@ -1,14 +1,11 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FamilyLinkButton } from '../../components/Buttons/TableButton';
-import { Table, TableData } from '../../components/Table/Table';
+import { TableData } from '../../components/Table/Table';
 import { getMilitaryImage } from '../../lib/resources/resources';
-import {
-  APIArtifact,
-  APIFamilyTree,
-  NormalizedFamilyTree,
-} from '../../types/genealogy';
+import { APIFamilyTree, NormalizedFamilyTree } from '../../types/genealogy';
 import { camelCase } from '../../utils/capitalize';
+import { Artifact } from '../../types/artifacts.d';
 
 export const usePerson = ({
   id,
@@ -27,9 +24,9 @@ export const usePerson = ({
   const [children, setChildren] = useState<NormalizedFamilyTree[]>([]);
   const [siblings, setSiblings] = useState<NormalizedFamilyTree[]>([]);
   const [divorced, setDivorced] = useState<NormalizedFamilyTree | null>();
-  const [photos, setPhotos] = useState<APIArtifact[]>();
-  const [movies, setMovies] = useState<APIArtifact[]>();
-  const [artifacts, setArtifacts] = useState<APIArtifact[]>();
+  const [photos, setPhotos] = useState<Artifact[]>();
+  const [movies, setMovies] = useState<Artifact[]>();
+  const [artifacts, setArtifacts] = useState<Artifact[]>();
 
   const [demographicsTable, setDemographicsTable] = useState<TableData[]>([]);
   const [parentsTable, setParentsTable] = useState<TableData[]>([]);
@@ -98,23 +95,9 @@ export const usePerson = ({
     } else {
       setDivorced(null);
     }
-
-    setPhotos([
-      ...person.metadata.resources.filter(
-        (p: APIArtifact) => p.type === 'photo' && !p.url.includes('profile'),
-      ),
-    ]);
-
-    const tmpMovies = person.metadata.resources.filter(
-      (p: APIArtifact) => p.type === 'video',
-    );
-    setMovies([...tmpMovies]);
-
-    setArtifacts([
-      ...person.metadata.resources.filter(
-        (p: APIArtifact) => p.type === 'artifact',
-      ),
-    ]);
+    setPhotos([...person.metadata.photos]);
+    setMovies([...person.metadata.videos]);
+    setArtifacts([...person.metadata.artifacts]);
 
     window.history.pushState(null, '', `/person/${person.id}`);
   }, [person]);
@@ -127,31 +110,31 @@ export const usePerson = ({
     const tmpSiblingsTable: TableData[] = [];
     const tmpMilitaryTable: TableData[] = [];
 
-    if (person.metadata.military) {
+    if (person.military) {
       tmpMilitaryTable.push({
         label: 'Branch',
-        value: person.metadata.military.branch,
+        value: person.military.branch,
       });
-      person.metadata.military.rank &&
+      person.military.rank &&
         tmpMilitaryTable.push({
           label: 'Rank',
-          value: person.metadata.military.rank,
+          value: person.military.rank,
         });
-      person.metadata.military.start &&
+      person.military.start &&
         tmpMilitaryTable.push({
           label: 'Start Date',
-          value: person.metadata.military.start,
+          value: person.military.start,
         });
-      person.metadata.military.end &&
+      person.military.end &&
         tmpMilitaryTable.push({
           label: 'Discharge Date',
-          value: person.metadata.military.end,
+          value: person.military.end,
         });
       if (
-        person.metadata.military.awards !== '' &&
-        person.metadata.military.awards !== undefined
+        person.military.awards !== '' &&
+        person.military.awards !== undefined
       ) {
-        person.metadata.military.awards.split(',').forEach(award => {
+        person.military.awards.split(',').forEach(award => {
           tmpMilitaryTable.push({
             label: `Awarded - ${camelCase(
               award.replaceAll('_', ' ').split('.')[0],

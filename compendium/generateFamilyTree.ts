@@ -1,21 +1,24 @@
-import { MetaData } from '../types/metadata';
+import { FallbackResources } from '../lib/resources/resources.enum';
+import { Artifacts } from '../types/artifacts';
 import { Gender, NormalizedFamilyTree, RelType } from '../types/tree.d';
 import { getFamilyTree } from './familytree';
-import { generateArtifacts } from './generateArtifacts';
+import { getMilitaryData } from './lib/googlesheets';
 import { getArtifacts } from './metadata';
 
-const emptyMetadata: MetaData = {
-  guid: '',
-  profile: '',
-  resources: [],
+const emptyMetadata: Artifacts = {
+  videos: [],
+  photos: [],
+  artifacts: [],
+  military: [],
+  miscellaneous: [],
+  profile: [],
 };
 
 export const generateFamilyTree = async () => {
   const { people: familyTreeData } = await getFamilyTree();
-
+  const military = await getMilitaryData();
   const artifacts = await getArtifacts();
 
-  const metadata = await generateArtifacts();
   const newNodes: NormalizedFamilyTree[] = familyTreeData.map(person => {
     const parents = [];
     if (person.Father)
@@ -44,8 +47,34 @@ export const generateFamilyTree = async () => {
       });
     }
 
-    const metadata_v2 = artifacts.find(a => a.ownerId === person.id);
-    delete metadata_v2?.ownerId;
+    const metadata = artifacts.find(a => a.ownerId === person.id) || {
+      ...emptyMetadata,
+    };
+
+    metadata.profile =
+      metadata.profile.length === 0
+        ? [
+            {
+              mimeType: '',
+              thumbnailLink: `${
+                person.Gender === 'M'
+                  ? FallbackResources.profileMale
+                  : FallbackResources.profileFemale
+              }`,
+              link: `${
+                person.Gender === 'M'
+                  ? FallbackResources.profileMale
+                  : FallbackResources.profileFemale
+              }`,
+              name: '',
+              id: '',
+              description: '',
+              imageMediaMetadata: {},
+            },
+          ]
+        : metadata.profile;
+
+    delete metadata?.ownerId;
 
     return {
       name: `${person.Firstname} ${person.Middlename} ${person.Lastname}`,
@@ -54,8 +83,8 @@ export const generateFamilyTree = async () => {
       siblings: [],
       spouses,
       children: [],
-      metadata: metadata.find(m => m.guid === person.id) || emptyMetadata,
-      metadata_v2,
+      metadata: metadata,
+      military: military.find(m => m.id === person.id),
       ...person,
     };
   });

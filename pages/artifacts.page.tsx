@@ -74,18 +74,16 @@ export const getServerSideProps = async (_context: any) => {
   const data = await getTreeData();
   const images: CustomImage[] = [];
   data.forEach(item => {
-    if (!item.metadata.resources) return;
-    item.metadata.resources.forEach(resource => {
-      if (resource.type !== 'video') {
-        images.push({
-          src: resource.url,
-          width: resource.width,
-          height: resource.height,
-          description: resource.description,
-          guid: item.id,
-          name: item.name,
-        });
-      }
+    if (!item.metadata.photos) return;
+    item.metadata.photos.forEach(resource => {
+      images.push({
+        src: resource.thumbnailLink,
+        width: resource.imageMediaMetadata.width,
+        height: resource.imageMediaMetadata.height,
+        description: resource.description,
+        guid: item.id,
+        name: item.name,
+      });
     });
   });
 

@@ -24,15 +24,9 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
       x: '-100%',
     },
   };
-  const photos = activeNode.metadata.resources.filter(
-    photos => photos.type === 'photo' && !photos.url.includes('profile'),
-  );
-  const movies = activeNode.metadata.resources.filter(
-    movies => movies.type === 'video',
-  );
-  const artifacts = activeNode.metadata.resources.filter(
-    artifacts => artifacts.type === 'artifact',
-  );
+  const photos = activeNode.metadata.photos;
+  const movies = activeNode.metadata.videos;
+  const artifacts = activeNode.metadata.artifacts;
 
   const CloseButton = () => (
     <button

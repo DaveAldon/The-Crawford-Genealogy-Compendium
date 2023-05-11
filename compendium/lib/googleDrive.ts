@@ -30,7 +30,7 @@ export const getDriveData = async (): Promise<drive_v3.Schema$File[]> => {
         pageToken: nextPageToken,
         pageSize: 1000,
         fields:
-          'nextPageToken, files(id, name, parents, thumbnailLink, mimeType, description)',
+          'nextPageToken, files(id, name, parents, thumbnailLink, mimeType, description, imageMediaMetadata)',
       });
       return res;
     };

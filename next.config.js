@@ -4,11 +4,11 @@ const nextConfig = {
   swcMinify: true,
   pageExtensions: ['page.tsx', 'api.ts'],
   images: {
-    domains: [
-      'github.com',
-      'i.pravatar.cc',
-      'raw.githubusercontent.com',
-      'images.pexels.com',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
   webpack: (config, { isServer }) => {

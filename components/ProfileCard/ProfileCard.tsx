@@ -2,7 +2,6 @@ import { hext } from '@davealdon/hext';
 import Image from 'next/image';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { getAge } from '../../utils/age';
-import { getProfilePicture } from '../../utils/profilePicture';
 
 interface Props {
   activeNode: NormalizedFamilyTree;
@@ -11,9 +10,9 @@ export const ProfileCard = (props: Props) => {
   const { activeNode } = props;
   const name = `${activeNode.Firstname} ${activeNode.Middlename} ${activeNode.Lastname}`;
   const { DOB, Death } = activeNode;
-  const profilePicture = getProfilePicture(activeNode);
-  const militaryService = activeNode.metadata.military
-    ? `${activeNode.metadata.military.branch}`
+  const profilePicture = activeNode.metadata.profile[0].thumbnailLink;
+  const militaryService = activeNode.military
+    ? `${activeNode.military?.branch}`
     : '';
 
   return (

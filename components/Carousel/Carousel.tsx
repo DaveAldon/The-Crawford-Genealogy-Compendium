@@ -1,4 +1,5 @@
-import { APIArtifact, APIFamilyTree } from '../../types/genealogy';
+import { Artifact } from '../../types/artifacts.d';
+import { APIFamilyTree } from '../../types/genealogy';
 import { Photo } from './Photo';
 import { useCarousel } from './useCarousel';
 import { Video } from './Video';
@@ -10,7 +11,7 @@ export enum CarouselType {
 }
 interface Props {
   activeNode: APIFamilyTree;
-  activeArtifact: APIArtifact[];
+  activeArtifact: Artifact[];
   type: CarouselType;
 }
 export const Carousel = (props: Props) => {

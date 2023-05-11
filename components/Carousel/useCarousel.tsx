@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { APIArtifact, APIFamilyTree } from '../../types/genealogy';
+import { APIFamilyTree } from '../../types/genealogy';
 import { CarouselType } from './Carousel';
+import { Artifact } from '../../types/artifacts.d';
 
 interface SourceData {
   src: string;
@@ -12,7 +13,7 @@ export const useCarousel = ({
   type,
 }: {
   activeNode: APIFamilyTree;
-  activeArtifact: APIArtifact[];
+  activeArtifact: Artifact[];
   type: CarouselType;
 }) => {
   const [srcs, setSrcs] = useState<SourceData[]>([]);
@@ -22,7 +23,7 @@ export const useCarousel = ({
       if (activeArtifact) {
         for (let i = 1; i <= activeArtifact.length; i++) {
           tmpSrcs.push({
-            src: activeArtifact[i - 1].url,
+            src: activeArtifact[i - 1].link,
             title: activeArtifact[i - 1].description,
           });
         }
@@ -32,7 +33,7 @@ export const useCarousel = ({
       if (activeArtifact) {
         for (let i = 1; i <= activeArtifact.length; i++) {
           tmpSrcs.push({
-            src: activeArtifact[i - 1].url,
+            src: activeArtifact[i - 1].link,
             title: activeArtifact[i - 1].description,
           });
         }
@@ -42,7 +43,7 @@ export const useCarousel = ({
       if (activeArtifact) {
         for (let i = 1; i <= activeArtifact.length; i++) {
           tmpSrcs.push({
-            src: activeArtifact[i - 1].url,
+            src: activeArtifact[i - 1].link,
             title: activeArtifact[i - 1].description,
           });
         }

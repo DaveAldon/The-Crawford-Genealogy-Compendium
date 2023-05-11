@@ -25,9 +25,11 @@ export const defaultAPIFamilyTree: NormalizedFamilyTree = {
   siblings: [],
   spouses: [],
   metadata: {
-    guid: '',
-    name: '',
-    profile: '',
-    resources: [],
+    profile: [],
+    artifacts: [],
+    videos: [],
+    military: [],
+    photos: [],
+    miscellaneous: [],
   },
 };

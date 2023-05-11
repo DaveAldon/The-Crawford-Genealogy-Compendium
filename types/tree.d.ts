@@ -1,4 +1,5 @@
 import { MetaData } from './metadata';
+import { Artifacts } from './artifacts';
 
 export interface APIFamilyTree {
   _id: string;
@@ -29,7 +30,8 @@ export interface NormalizedFamilyTree extends APIFamilyTree {
   siblings: Relation[];
   spouses: Relation[];
   placeholder?: boolean;
-  metadata: MetaData;
+  metadata: Artifacts;
+  military?: Military;
 }
 
 export enum Gender {

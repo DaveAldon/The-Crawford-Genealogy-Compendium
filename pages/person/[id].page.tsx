@@ -33,14 +33,7 @@ const Person = ({
     peopleResult: people,
   });
 
-  const imageSrc =
-    person.metadata.profile === ''
-      ? `${
-          person.Gender === 'M'
-            ? FallbackResources.profileMale
-            : FallbackResources.profileFemale
-        }`
-      : person.metadata.profile;
+  const imageSrc = person.metadata.profile[0].link;
 
   const age = getAge({ DOB: person.DOB, Death: person.Death });
   const [hydrated, setHydrated] = useState(false);

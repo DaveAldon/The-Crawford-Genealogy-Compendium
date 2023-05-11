@@ -111,18 +111,10 @@ export const Tree: React.FC<ITree> = props => {
                   ? ` - ${nodeReference?.Death.split('/').pop()}`
                   : '';
 
-                const photos = nodeReference?.metadata.resources.filter(
-                  photos =>
-                    photos.type === 'photo' && !photos.url.includes('profile'),
-                );
-                const movies = nodeReference?.metadata.resources.filter(
-                  movies => movies.type === 'video',
-                );
-                const artifacts = nodeReference?.metadata.resources.filter(
-                  artifacts => artifacts.type === 'artifact',
-                );
-
-                const military = nodeReference?.metadata.military !== undefined;
+                const photos = nodeReference?.metadata.photos || [];
+                const movies = nodeReference?.metadata.videos || [];
+                const artifacts = nodeReference?.metadata.videos || [];
+                const military = nodeReference.military;
 
                 return (
                   <FamilyNode
@@ -134,12 +126,9 @@ export const Tree: React.FC<ITree> = props => {
                     onSubClick={setRootId}
                     name={node.name.replace(' null', ' ')}
                     person={nodeReference}
-                    hasMovies={movies !== undefined && movies.length > 0}
-                    hasPhotos={
-                      (photos !== undefined && photos.length > 0) ||
-                      (artifacts !== undefined && artifacts.length > 0)
-                    }
-                    hasMilitary={military}
+                    hasMovies={movies.length > 0}
+                    hasPhotos={photos.length > 0 || artifacts.length > 0}
+                    hasMilitary={military !== undefined}
                     style={{
                       width: WIDTH,
                       height: HEIGHT,

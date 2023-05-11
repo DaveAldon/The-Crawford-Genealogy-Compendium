@@ -1,3 +1,4 @@
+import { Artifacts } from './artifacts';
 import { PathsJSON } from './compendium';
 
 export interface APIFamilyTree {
@@ -20,23 +21,6 @@ export interface APIFamilyTree {
   Description: string;
 }
 
-export interface APIArtifact {
-  id: string;
-  description: string;
-  type: string;
-  url: string;
-  height: number;
-  width: number;
-}
-
-export interface MetaData {
-  guid: string;
-  name: string;
-  profile: string;
-  resources: APIArtifact[];
-  military?: Military;
-}
-
 export interface Military {
   id: string;
   branch: string;
@@ -57,5 +41,6 @@ export interface NormalizedFamilyTree extends APIFamilyTree {
   siblings: Relation[];
   spouses: Relation[];
   placeholder?: boolean;
-  metadata: MetaData;
+  metadata: Artifacts;
+  military?: Military;
 }

@@ -6,7 +6,6 @@ import { ProfilePhoto } from './components/ProfilePhoto/ProfilePhoto';
 import { ProfileInfo } from './components/ProfileInfo/ProfileInfo';
 import { ProfileChips } from './components/ProfileChips/ProfileChips';
 import { NormalizedFamilyTree } from '../../../../types/genealogy';
-import { getProfilePicture } from '../../../../utils/profilePicture';
 
 const EnterIcon = () => (
   <svg
@@ -66,7 +65,10 @@ export default React.memo<Props>(function FamilyNode({
             width: '100%',
           }}>
           <ProfileInfo height={'12%'} title={headerText} fontSize={'.50rem'} />
-          <ProfilePhoto src={getProfilePicture(person)} alt={name} />
+          <ProfilePhoto
+            src={person.metadata.profile[0].thumbnailLink}
+            alt={name}
+          />
           <ProfileInfo height={'22%'} title={name || ''} fontSize={'.40rem'} />
           {person ? (
             <ProfileChips

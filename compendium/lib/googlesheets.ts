@@ -2,14 +2,16 @@ import { google } from 'googleapis';
 import dotenv from 'dotenv';
 
 dotenv.config();
-export const getArtifactData = async (sheetName: 'Movies' | 'Artifacts' | 'Photos') => {
+export const getArtifactData = async (
+  sheetName: 'Movies' | 'Artifacts' | 'Photos',
+) => {
   try {
     const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
     const jwt = new google.auth.JWT(
       process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
       '',
       (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
-      target
+      target,
     );
 
     const sheets = google.sheets({ version: 'v4', auth: jwt });
@@ -41,7 +43,7 @@ export const getMilitaryData = async () => {
       process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
       '',
       (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
-      target
+      target,
     );
 
     const sheets = google.sheets({ version: 'v4', auth: jwt });
@@ -76,7 +78,7 @@ export const getPeopleData = async () => {
       process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
       '',
       (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
-      target
+      target,
     );
 
     const sheets = google.sheets({ version: 'v4', auth: jwt });

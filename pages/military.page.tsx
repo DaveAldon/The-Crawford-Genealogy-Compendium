@@ -2,7 +2,6 @@ import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { getTreeData } from '../lib/treeJson';
 import { NormalizedFamilyTree } from '../types/genealogy';
-import { getProfilePicture } from '../utils/profilePicture';
 import { ProfileInfo } from './FamilyTree/components/FamilyNode/components/ProfileInfo/ProfileInfo';
 import { ProfilePhoto } from './FamilyTree/components/FamilyNode/components/ProfilePhoto/ProfilePhoto';
 
@@ -91,13 +90,12 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
                   className="container px-0 items-center grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 gap-2">
                   <Era eraData={era} />
                   {data
-                    .filter(
-                      person => person.metadata.military?.theater === era.title,
-                    )
+                    .filter(person => person.military?.theater === era.title)
                     .map(person => {
-                      const profileSrc = getProfilePicture(person);
-                      const description = person.metadata.military?.description
-                        ? ` - ${person.metadata.military?.description}`
+                      const profileSrc =
+                        person.metadata.profile[0].thumbnailLink;
+                      const description = person.military?.description
+                        ? ` - ${person.military?.description}`
                         : '';
                       return (
                         <div
@@ -127,7 +125,7 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
                               <ProfilePhoto src={profileSrc} alt={'name'} />
                               <ProfileInfo
                                 height={'22%'}
-                                title={`${person.metadata.military?.branch}${description}`}
+                                title={`${person.military?.branch}${description}`}
                                 fontSize={'.8rem'}
                                 style={{
                                   borderRadius: '0 0 10px 10px',
