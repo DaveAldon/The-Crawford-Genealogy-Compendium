@@ -2,6 +2,7 @@ import { MetaData } from '../types/metadata';
 import { Gender, NormalizedFamilyTree, RelType } from '../types/tree.d';
 import { getFamilyTree } from './familytree';
 import { generateArtifacts } from './generateArtifacts';
+import { getArtifacts } from './metadata';
 
 const emptyMetadata: MetaData = {
   guid: '',
@@ -11,6 +12,9 @@ const emptyMetadata: MetaData = {
 
 export const generateFamilyTree = async () => {
   const { people: familyTreeData } = await getFamilyTree();
+
+  const artifacts = await getArtifacts();
+
   const metadata = await generateArtifacts();
   const newNodes: NormalizedFamilyTree[] = familyTreeData.map(person => {
     const parents = [];
@@ -39,6 +43,10 @@ export const generateFamilyTree = async () => {
         relType: RelType.married,
       });
     }
+
+    const metadata_v2 = artifacts.find(a => a.ownerId === person.id);
+    delete metadata_v2?.ownerId;
+
     return {
       name: `${person.Firstname} ${person.Middlename} ${person.Lastname}`,
       gender: person.Gender === 'M' ? Gender.male : Gender.female,
@@ -47,6 +55,7 @@ export const generateFamilyTree = async () => {
       spouses,
       children: [],
       metadata: metadata.find(m => m.guid === person.id) || emptyMetadata,
+      metadata_v2,
       ...person,
     };
   });

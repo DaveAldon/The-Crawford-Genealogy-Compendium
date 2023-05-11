@@ -32,19 +32,27 @@ const SkillData: ISkillData[] = [
   {
     title: '2023 Q2',
     tasks: [
-      'Add major extended families to tree (namely Olson & Kerr)',
-      'Add integrations with other genealogy services, such as Find A Grave',
-      'Add a query system to find interesting demographics such as "show all military family members" or "show all people born in the 1800s"',
-      'Add connections to William Wallace and William H. Crawford',
-      'Add a Crawford family history writeup, including the Coat of Arms and arrival to the United States',
+      'Convert the family tree to use a more advanced, interactive tree framework',
+      'Convert artifact database from local to cloud hosted',
+      'Add a way to integrate other major families, such as Olson and Dirks',
     ],
     color: SkillType.INCOMPLETE,
   },
   {
     title: '2023 Q3',
     tasks: [
+      'Add integrations with other genealogy services, such as Find A Grave',
+      'Add a query system to find interesting demographics such as "show all military family members" or "show all people born in the 1800s"',
       'Add a way for anyone to request changes to the tree',
       'Add a feed that shows things that happened on the current day in history',
+    ],
+    color: SkillType.INCOMPLETE,
+  },
+  {
+    title: '2023 Q4',
+    tasks: [
+      'Add connections to William Wallace and William H. Crawford',
+      'Add a Crawford family history writeup, including the Coat of Arms and arrival to the United States',
     ],
     color: SkillType.INCOMPLETE,
   },
