@@ -1,5 +1,6 @@
 import { google, drive_v3 } from 'googleapis';
 import dotenv from 'dotenv';
+import { GaxiosResponse } from '../../types/common';
 dotenv.config();
 
 export const getEmbedLink = (fileId: string) => {
@@ -38,7 +39,8 @@ export const getDriveData = async (): Promise<drive_v3.Schema$File[]> => {
     let token = undefined;
 
     do {
-      const req = await generateRequest(token);
+      const req: GaxiosResponse<drive_v3.Schema$FileList> =
+        await generateRequest(token);
 
       data.push(req.data.files);
       token = req.data.nextPageToken;
