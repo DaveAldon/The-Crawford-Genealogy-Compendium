@@ -1,40 +1,6 @@
 import { google } from 'googleapis';
 import dotenv from 'dotenv';
-
 dotenv.config();
-export const getArtifactData = async (
-  sheetName: 'Movies' | 'Artifacts' | 'Photos',
-) => {
-  try {
-    const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-    const jwt = new google.auth.JWT(
-      process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-      '',
-      (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
-      target,
-    );
-
-    const sheets = google.sheets({ version: 'v4', auth: jwt });
-    const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.SPREADSHEET_ID,
-      range: sheetName,
-    });
-
-    const rows = response.data.values;
-    if (rows && rows.length) {
-      return rows.slice(1).map((row: any[]) => ({
-        _id: row[0],
-        id: row[0],
-        artifact_id: row[1],
-        title: row[2],
-        extension: row[3],
-      }));
-    }
-  } catch (err) {
-    console.log(err);
-  }
-  return [];
-};
 
 export const getMilitaryData = async () => {
   try {
