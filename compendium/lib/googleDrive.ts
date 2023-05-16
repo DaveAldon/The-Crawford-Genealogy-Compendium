@@ -5,8 +5,11 @@ dotenv.config();
 
 export const getEmbedLink = (fileId: string) => {
   if (fileId === '') return '';
+  //return `https://drive.google.com/file/d/${fileId}/preview`;
   return `https://drive.google.com/uc?export=view&id=${fileId}`;
 };
+
+//drive.google.com/file/d/1huOG-2y4vY6tBXZOWfyOectJHBazWZNU/preview
 
 export const getDriveData = async (): Promise<drive_v3.Schema$File[]> => {
   try {

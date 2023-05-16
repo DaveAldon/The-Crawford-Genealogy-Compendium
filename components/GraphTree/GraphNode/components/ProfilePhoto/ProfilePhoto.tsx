@@ -16,8 +16,7 @@ export const ProfilePhoto = (props: Props) => {
         position: 'relative',
         overflow: 'hidden',
       }}>
-      <Image
-        priority
+      <img
         alt={alt || ''}
         style={{ objectFit: 'cover' }}
         sizes="100%"
