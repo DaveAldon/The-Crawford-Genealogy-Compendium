@@ -143,8 +143,8 @@ const Person = ({
   );
 };
 
-export const getServerSideProps = async (context: any) => {
-  const people = await getTreeData();
+export const getServerSideProps = (context: any) => {
+  const people = getTreeData();
   const id = context.query.id;
 
   return {

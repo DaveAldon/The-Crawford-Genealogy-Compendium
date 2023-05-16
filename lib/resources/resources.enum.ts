@@ -5,4 +5,5 @@ export enum Endpoints {
 export enum FallbackResources {
   profileMale = '/man.png',
   profileFemale = '/woman.png',
+  union = '/union.png',
 }

@@ -65,10 +65,7 @@ export default React.memo<Props>(function FamilyNode({
             width: '100%',
           }}>
           <ProfileInfo height={'12%'} title={headerText} fontSize={'.50rem'} />
-          <ProfilePhoto
-            src={person.metadata.profile[0].thumbnailLink}
-            alt={name}
-          />
+          <ProfilePhoto src={person.metadata.profile[0].link} alt={name} />
           <ProfileInfo height={'22%'} title={name || ''} fontSize={'.40rem'} />
           {person ? (
             <ProfileChips

@@ -13,6 +13,7 @@ interface SlidingOverlayProps {
   children?: React.ReactNode;
 }
 export const DemographicsOverlay = (props: SlidingOverlayProps) => {
+  if (!props.activeNode) return null;
   const { isOpen, activeNode, setIsOpen } = props;
   const menuVariants = {
     open: {

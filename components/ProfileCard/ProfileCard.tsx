@@ -10,7 +10,7 @@ export const ProfileCard = (props: Props) => {
   const { activeNode } = props;
   const name = `${activeNode.Firstname} ${activeNode.Middlename} ${activeNode.Lastname}`;
   const { DOB, Death } = activeNode;
-  const profilePicture = activeNode.metadata.profile[0].thumbnailLink;
+  const profilePicture = activeNode.metadata.profile[0].link;
   const militaryService = activeNode.military
     ? `${activeNode.military?.branch}`
     : '';

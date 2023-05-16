@@ -92,8 +92,7 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
                   {data
                     .filter(person => person.military?.theater === era.title)
                     .map(person => {
-                      const profileSrc =
-                        person.metadata.profile[0].thumbnailLink;
+                      const profileSrc = person.metadata.profile[0].link;
                       const description = person.military?.description
                         ? ` - ${person.military?.description}`
                         : '';
@@ -148,8 +147,8 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
   );
 }
 
-export const getServerSideProps = async (_context: any) => {
-  const data = await getTreeData();
+export const getServerSideProps = (_context: any) => {
+  const data = getTreeData();
   const filteredData = data.filter(
     person => person.metadata.military !== undefined,
   );

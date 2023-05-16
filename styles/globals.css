@@ -57,4 +57,21 @@ a {
     scrollbar-width: none;
     /* Firefox */
     
-  }
+}
+
+.layoutflow .controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  font-size: 12px;
+}
+
+.layoutflow .controls button:first-child {
+  margin-right: 10px;
+}
+
+.MuiSlider-mark {
+  height: 5px;
+  width: 5px;
+}

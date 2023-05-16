@@ -2,7 +2,6 @@ import { Artifacts } from './artifacts';
 import { PathsJSON } from './compendium';
 
 export interface APIFamilyTree {
-  _id: string;
   id: string;
   Firstname: string;
   Middlename: string;
@@ -30,6 +29,11 @@ export interface Military {
   description: string;
   awards: string;
   theater: string;
+}
+
+export interface Relation {
+  id: string;
+  relType: string;
 }
 
 export interface NormalizedFamilyTree extends APIFamilyTree {

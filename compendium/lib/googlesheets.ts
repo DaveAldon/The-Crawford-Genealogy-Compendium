@@ -56,23 +56,22 @@ export const getPeopleData = async () => {
     const rows = response.data.values;
     if (rows && rows.length) {
       return rows.slice(1).map(row => ({
-        _id: row[0],
         id: row[0],
-        Firstname: row[1] || null,
-        Middlename: row[2] || null,
-        Lastname: row[3] || null,
-        Gender: row[4] || null,
-        DOB: row[5] || null,
-        Birthplace: row[6] || null,
-        BirthplaceCoords: row[7] || null,
-        Death: row[8] || null,
-        Deathplace: row[9] || null,
-        DeathplaceCoords: row[10] || null,
-        Mother: row[11] || null,
-        Father: row[12] || null,
-        Spouse: row[13] || null,
-        Divorced: row[14] || null,
-        Description: row[15] || null,
+        Firstname: row[1] || '',
+        Middlename: row[2] || '',
+        Lastname: row[3] || '',
+        Gender: row[4] || '',
+        DOB: row[5] || '',
+        Birthplace: row[6] || '',
+        BirthplaceCoords: row[7] || '',
+        Death: row[8] || '',
+        Deathplace: row[9] || '',
+        DeathplaceCoords: row[10] || '',
+        Mother: row[11] || '',
+        Father: row[12] || '',
+        Spouse: row[13] || '',
+        Divorced: row[14] || '',
+        Description: row[15] || '',
       }));
     }
   } catch (err) {

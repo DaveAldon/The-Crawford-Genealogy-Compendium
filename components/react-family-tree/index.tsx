@@ -2,9 +2,10 @@ import React from 'react';
 import calcTree from '../relatives-tree';
 import { Node, ExtNode } from '../relatives-tree/types';
 import Connector from './connector';
+import { NormalizedFamilyTree } from '../../types/genealogy';
 
 interface Props {
-  nodes: ReadonlyArray<Node>;
+  nodes: NormalizedFamilyTree[];
   rootId: string;
   width: number;
   height: number;
@@ -14,7 +15,7 @@ interface Props {
 }
 
 export default React.memo<Props>(function ReactFamilyTree(props) {
-  const data = calcTree(props.nodes, {
+  const data = calcTree(props.nodes as unknown as Node[], {
     rootId: props.rootId,
     placeholders: props.placeholders,
   });

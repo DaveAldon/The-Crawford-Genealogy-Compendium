@@ -1,6 +1,7 @@
 import { FallbackResources } from '../lib/resources/resources.enum';
 import { Artifacts } from '../types/artifacts';
-import { Gender, NormalizedFamilyTree, RelType } from '../types/tree.d';
+import { NormalizedFamilyTree, Relation } from '../types/genealogy';
+import { Gender, RelType } from '../types/tree.d';
 import { getFamilyTree } from './familytree';
 import { getMilitaryData } from './lib/googlesheets';
 import { getArtifacts } from './metadata';
@@ -14,19 +15,84 @@ const emptyMetadata: Artifacts = {
   profile: [],
 };
 
+const emptyNode: NormalizedFamilyTree = {
+  name: '',
+  id: '',
+  gender: '',
+  parents: [],
+  children: [],
+  siblings: [],
+  spouses: [],
+  metadata: { ...emptyMetadata },
+  Firstname: '',
+  Middlename: '',
+  Lastname: '',
+  Gender: '',
+  DOB: '',
+  Birthplace: '',
+  BirthplaceCoords: '',
+  Death: '',
+  Deathplace: '',
+  DeathplaceCoords: '',
+  Mother: '',
+  Father: '',
+  Spouse: '',
+  Divorced: '',
+  Description: '',
+};
+
+const getSpouseNodes = (
+  familyTreeData: NormalizedFamilyTree[],
+): NormalizedFamilyTree[] => {
+  const spouseNodes: NormalizedFamilyTree[] = [];
+
+  familyTreeData.forEach(person => {
+    person.spouses.forEach(spouse => {
+      const spouseNode: NormalizedFamilyTree = { ...emptyNode };
+      const spouseRef = familyTreeData.find(p => p.id === spouse.id);
+      if (spouseRef) {
+        const husbandNode = spouseRef.Gender === 'M' ? spouseRef : person;
+        const wifeNode = spouseRef.Gender === 'F' ? spouseRef : person;
+
+        const spouseId = `marriage-node~${husbandNode.id}~${wifeNode.id}`;
+        if (!spouseNodes.find(n => n.id === spouseId)) {
+          spouseNode.id = spouseId;
+          spouseNode.metadata.profile[0] = {
+            mimeType: '',
+            thumbnailLink: FallbackResources.union,
+            link: FallbackResources.union,
+            name: '',
+            id: '',
+            description: '',
+            imageMediaMetadata: {
+              width: 100,
+              height: 100,
+            },
+          };
+          spouseNode.name = `${husbandNode.Firstname} & ${wifeNode.Firstname}`;
+          spouseNodes.push(spouseNode);
+        }
+      }
+    });
+  });
+  return spouseNodes;
+};
+
+const position = { x: 0, y: 0 };
+
 export const generateFamilyTree = async () => {
   const { people: familyTreeData } = await getFamilyTree();
   const military = await getMilitaryData();
   const artifacts = await getArtifacts();
 
   const newNodes: NormalizedFamilyTree[] = familyTreeData.map(person => {
-    const parents = [];
+    const parents: Relation[] = [];
     if (person.Father)
       parents.push({ id: person.Father, relType: RelType.blood });
     if (person.Mother)
       parents.push({ id: person.Mother, relType: RelType.blood });
 
-    const spouses = [];
+    const spouses: Relation[] = [];
     if (person.Divorced) {
       const divorced = person.Divorced.split(',').map(
         (divorcedSpouseId: string) => {
@@ -38,7 +104,7 @@ export const generateFamilyTree = async () => {
           }
         },
       );
-      spouses.push(...divorced);
+      spouses.push(...(divorced as Relation[]));
     }
     if (person.Spouse) {
       spouses.push({
@@ -77,15 +143,16 @@ export const generateFamilyTree = async () => {
     delete metadata?.ownerId;
 
     return {
+      ...person,
       name: `${person.Firstname} ${person.Middlename} ${person.Lastname}`,
       gender: person.Gender === 'M' ? Gender.male : Gender.female,
       parents,
       siblings: [],
       spouses,
       children: [],
-      metadata: metadata,
+      metadata: { ...metadata },
       military: military.find(m => m.id === person.id),
-      ...person,
+      position,
     };
   });
 
@@ -122,5 +189,7 @@ export const generateFamilyTree = async () => {
     });
   });
 
-  return JSON.parse(JSON.stringify(newNodes)) as NormalizedFamilyTree[];
+  return JSON.parse(
+    JSON.stringify([...newNodes, ...getSpouseNodes(newNodes)]),
+  ) as NormalizedFamilyTree[];
 };

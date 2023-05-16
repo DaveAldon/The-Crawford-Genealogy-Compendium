@@ -1,37 +1,24 @@
 import { MetaData } from './metadata';
 import { Artifacts } from './artifacts';
+import { NormalizedFamilyTree } from './genealogy';
+import { Edge } from 'reactflow';
 
-export interface APIFamilyTree {
-  _id: string;
-  id: string;
-  Firstname: string;
-  Middlename: string;
-  Lastname: string;
-  Gender: string;
-  DOB: string;
-  Birthplace: string;
-  BirthplaceCoords: string;
-  Death: string;
-  Deathplace: string;
-  DeathplaceCoords: string;
-  Mother: string;
-  Father: string;
-  Spouse: string;
-  Divorced: string;
-  Description: string;
+export interface Tree {
+  nodes: PersonNode[];
+  edges: Edge[];
 }
 
-export interface NormalizedFamilyTree extends APIFamilyTree {
+export interface PersonNode {
   id: string;
-  name: string;
-  gender: Gender;
-  parents: Relation[];
-  children: Relation[];
-  siblings: Relation[];
-  spouses: Relation[];
-  placeholder?: boolean;
-  metadata: Artifacts;
-  military?: Military;
+  data: NormalizedFamilyTree;
+  position: {
+    x: number;
+    y: number;
+  };
+  style?: {
+    [key: string]: string;
+  };
+  filterStyle: boolean;
 }
 
 export enum Gender {

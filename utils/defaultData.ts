@@ -1,7 +1,6 @@
 import { NormalizedFamilyTree } from '../types/genealogy';
 
 export const defaultAPIFamilyTree: NormalizedFamilyTree = {
-  _id: '',
   id: '',
   Firstname: '',
   Middlename: '',

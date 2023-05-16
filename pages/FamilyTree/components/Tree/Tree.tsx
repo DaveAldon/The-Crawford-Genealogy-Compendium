@@ -13,7 +13,7 @@ const WIDTH = 90;
 const HEIGHT = 140;
 
 interface ITree {
-  nodes: Node[];
+  nodes: NormalizedFamilyTree[];
   rootId: string;
   setRootId: (id: string) => void;
   onClickNode: (id: string) => void;

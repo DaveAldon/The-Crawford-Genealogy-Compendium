@@ -70,14 +70,14 @@ export default function Artifacts({ images }: { images: CustomImage[] }) {
   );
 }
 
-export const getServerSideProps = async (_context: any) => {
-  const data = await getTreeData();
+export const getServerSideProps = (_context: any) => {
+  const data = getTreeData();
   const images: CustomImage[] = [];
   data.forEach(item => {
     if (!item.metadata.photos) return;
     item.metadata.photos.forEach(resource => {
       images.push({
-        src: resource.thumbnailLink,
+        src: resource.link,
         width: resource.imageMediaMetadata.width,
         height: resource.imageMediaMetadata.height,
         description: resource.description,

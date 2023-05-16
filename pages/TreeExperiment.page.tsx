@@ -7,8 +7,9 @@ import { Heights } from '../styles/constants.enum';
 import { DemographicsOverlay } from '../components/DemographicsOverlay/DemographicsOverlay';
 import { Header } from '../components/Header/Header';
 import { getTreeData } from '../lib/treeJson';
+import { GraphTree } from '../components/GraphTree/GraphTree';
 
-const FamilyTree = ({ data }: { data: NormalizedFamilyTree[] }) => {
+const TreeExperiment = ({ data }: { data: NormalizedFamilyTree[] }) => {
   const {
     nodes,
     rootId,
@@ -37,16 +38,7 @@ const FamilyTree = ({ data }: { data: NormalizedFamilyTree[] }) => {
           top: 54,
           width: '100%',
         }}>
-        {nodes.length > 0 && (
-          <Tree
-            data={data}
-            nodes={nodes}
-            rootId={rootId}
-            setRootId={setRootId}
-            onClickNode={onClickNode}
-            setPanelState={setPanelState}
-          />
-        )}
+        <GraphTree sliderValue={10} fitViewToggle={true} filterName="" />
       </div>
     </div>
   );
@@ -62,4 +54,4 @@ export const getServerSideProps = (_context: any) => {
   };
 };
 
-export default FamilyTree;
+export default TreeExperiment;

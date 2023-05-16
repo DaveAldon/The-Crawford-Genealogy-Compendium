@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { APIFamilyTree, NormalizedFamilyTree } from '../../../types/genealogy';
+import { NormalizedFamilyTree } from '../../../types/genealogy';
 import { Node } from '../../../components/relatives-tree/types';
-import { getTreeData } from '../../../lib/treeJson';
 
 type Source = Array<Node>;
 const DEFAULT_SOURCE = 'crawford-line.json';
@@ -11,7 +10,7 @@ const sources: { [key: string]: Source } = {
 
 export const useFamilyTree = ({ data }: { data: NormalizedFamilyTree[] }) => {
   const [source, setSource] = useState<string>(DEFAULT_SOURCE);
-  const [nodes, setNodes] = useState<Source>([]);
+  const [nodes, setNodes] = useState<NormalizedFamilyTree[]>([]);
   const [myId, setMyId] = useState<string>('');
   const [rootId, setRootId] = useState<string>('');
   const [activeNode, setActiveNode] = useState<string>('');
