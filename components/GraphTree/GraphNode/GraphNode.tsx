@@ -55,10 +55,6 @@ export default React.memo(function GraphNode(
 
       <Handle type="target" id="tt" position={Position.Top} />
       <Handle type="source" id="bs" position={Position.Bottom} />
-      <Handle type="source" id="ls" position={Position.Left} />
-      <Handle type="source" id="rs" position={Position.Right} />
-      <Handle type="target" id="lt" position={Position.Left} />
-      <Handle type="target" id="rt" position={Position.Right} />
     </div>
   );
 });

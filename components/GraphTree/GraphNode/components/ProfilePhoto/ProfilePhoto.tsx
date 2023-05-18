@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 interface Props {
   src: string;
   onError?: () => void;
@@ -23,7 +21,6 @@ export const ProfilePhoto = (props: Props) => {
         height={100}
         width={100}
         src={src}
-        onError={onError}
       />
     </div>
   );

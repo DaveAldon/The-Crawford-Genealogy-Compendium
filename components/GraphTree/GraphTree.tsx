@@ -16,9 +16,11 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 import { DemographicsOverlay } from '../DemographicsOverlay/DemographicsOverlay';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import GraphNode from './GraphNode/GraphNode';
+import GraphMarriageNode from './GraphNode/GraphMarriageNode';
 
 const nodeTypes = {
   activeGraphNode: GraphNode,
+  marriageGraphNode: GraphMarriageNode,
 };
 
 interface GraphTreeProps {
