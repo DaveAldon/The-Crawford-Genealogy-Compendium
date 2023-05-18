@@ -48,7 +48,10 @@ const getSpouseNodes = (
 
   familyTreeData.forEach(person => {
     person.spouses.forEach(spouse => {
-      const spouseNode: NormalizedFamilyTree = { ...emptyNode };
+      const spouseNode: NormalizedFamilyTree = {
+        ...emptyNode,
+        Description: 'marriage-node',
+      };
       const spouseRef = familyTreeData.find(p => p.id === spouse.id);
       if (spouseRef) {
         const husbandNode = spouseRef.Gender === 'M' ? spouseRef : person;

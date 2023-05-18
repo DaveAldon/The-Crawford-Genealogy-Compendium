@@ -75,3 +75,7 @@ a {
   height: 5px;
   width: 5px;
 }
+
+.react-flow__handle {
+  opacity: 0;
+}

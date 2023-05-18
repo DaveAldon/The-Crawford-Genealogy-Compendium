@@ -1,5 +1,6 @@
 import Elk, { ElkNode, ElkExtendedEdge } from 'elkjs';
 import { Node, Edge } from 'react-flow-renderer';
+import { PersonNode } from '../../../types/tree';
 
 /* From https://github.com/wbkd/react-flow/issues/5#issuecomment-954001434 */
 /* 
@@ -7,9 +8,10 @@ Get a sense of the parameters at:
 https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2FnodesEdges 
 */
 
-const DEFAULT_WIDTH = 250;
-const DEFAULT_HEIGHT = 250;
-const DEFAULT_WIDTH_FOR_ROOT = 250;
+const PERSON_NODE_WIDTH = 125;
+const PERSON_NODE_HEIGHT = 225;
+const MARRIAGE_NODE_WIDTH = 125;
+const MARRIAGE_NODE_HEIGHT = 225;
 
 const elk = new Elk({
   defaultLayoutOptions: {
@@ -28,7 +30,7 @@ const elk = new Elk({
 });
 
 export const createGraphLayout = async (
-  nodes: Array<Node>,
+  nodes: Array<PersonNode>,
   edges: Array<Edge>,
 ): Promise<Array<Node>> => {
   const elkNodes: ElkNode[] = [];
@@ -38,10 +40,13 @@ export const createGraphLayout = async (
     elkNodes.push({
       id: flowNode.id,
       width:
-        flowNode.id === '0'
-          ? DEFAULT_WIDTH_FOR_ROOT
-          : flowNode.width ?? DEFAULT_WIDTH,
-      height: flowNode.height ?? DEFAULT_HEIGHT,
+        flowNode.data.Description === 'marriage-node'
+          ? MARRIAGE_NODE_WIDTH
+          : PERSON_NODE_WIDTH,
+      height:
+        flowNode.data.Description === 'marriage-node'
+          ? MARRIAGE_NODE_HEIGHT
+          : PERSON_NODE_HEIGHT,
     });
   });
   edges.forEach(flowEdge => {

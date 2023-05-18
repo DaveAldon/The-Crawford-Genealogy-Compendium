@@ -22,7 +22,10 @@ const getInitialNodes = () => {
       id: node.id,
       data: { ...node, label: node.name },
       position,
-      type: 'activeGraphNode',
+      type:
+        node.Description === 'marriage-node'
+          ? 'marriageGraphNode'
+          : 'activeGraphNode',
       //sourcePosition: 'right',
       //targetPosition: 'left',
     };

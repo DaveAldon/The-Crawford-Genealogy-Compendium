@@ -16,8 +16,8 @@ export default React.memo(function GraphMarriageNode(
         width: '100%',
       }}>
       <ProfilePhoto src={node.metadata.profile[0].link} alt={node.Firstname} />
-      <Handle type="target" id="tt" position={Position.Top} hidden />
-      <Handle type="source" id="bs" position={Position.Bottom} hidden />
+      <Handle type="target" id="tt" position={Position.Top} />
+      <Handle type="source" id="bs" position={Position.Bottom} />
     </div>
   );
 });
