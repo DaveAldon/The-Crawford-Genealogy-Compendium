@@ -22,7 +22,6 @@ export const Header = () => {
     //{ href: '/artifacts', children: 'Artifacts' },
     { href: '/military', children: 'Military' },
     { href: '/about', children: 'About' },
-    { href: '/TreeExperiment', children: 'Experiment' },
   ];
 
   return (

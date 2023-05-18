@@ -75,7 +75,7 @@ export const usePerson = ({
         (p: APIFamilyTree) => p.Father === person.id || p.Mother === person.id,
       ),
     );
-    if (person.Father !== null && person.Mother !== null) {
+    if (person.Father !== '' && person.Mother !== '') {
       const tmpSibling = people.filter(
         (p: NormalizedFamilyTree) =>
           p.Father === person.Father &&

@@ -55,7 +55,6 @@ export const useGraphTree = (props: UseGraphTreeProps) => {
     (async () => {
       const elkNodes = await createGraphLayout(layoutedNodes, layoutedEdges);
       setNodes([...elkNodes]);
-      console.log('elkNodes', elkNodes.length);
     })();
   }, []);
 
@@ -78,7 +77,6 @@ export const useGraphTree = (props: UseGraphTreeProps) => {
 
       setNodes([...dirLayoutedNodes]);
       setEdges([...dirLayoutedEdges]);
-      console.log('elkNodes1');
     },
     [nodes, edges, setNodes, setEdges],
   );

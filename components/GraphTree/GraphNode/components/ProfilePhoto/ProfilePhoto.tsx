@@ -2,10 +2,10 @@ interface Props {
   src: string;
   onError?: () => void;
   alt?: string;
+  height?: string | number;
+  width?: string | number;
 }
 export const ProfilePhoto = (props: Props) => {
-  const { src, onError, alt } = props;
-
   return (
     <div
       style={{
@@ -16,14 +16,14 @@ export const ProfilePhoto = (props: Props) => {
         objectFit: 'cover',
       }}>
       <img
-        alt={alt || ''}
+        alt={props.alt || ''}
         style={{
           objectFit: 'cover',
-          height: 125,
-          width: 100,
+          height: props.height || 125,
+          width: props.width || 100,
           overflow: 'hidden',
         }}
-        src={src}
+        src={props.src}
       />
     </div>
   );

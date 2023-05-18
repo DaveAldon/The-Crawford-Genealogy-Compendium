@@ -1,9 +1,9 @@
 import { Footer } from '../components/Footer/Footer';
+import { ProfileInfo } from '../components/GraphTree/GraphNode/components/ProfileInfo/ProfileInfo';
+import { ProfilePhoto } from '../components/GraphTree/GraphNode/components/ProfilePhoto/ProfilePhoto';
 import { Header } from '../components/Header/Header';
 import { getTreeData } from '../lib/treeJson';
 import { NormalizedFamilyTree } from '../types/genealogy';
-import { ProfileInfo } from './FamilyTree/components/FamilyNode/components/ProfileInfo/ProfileInfo';
-import { ProfilePhoto } from './FamilyTree/components/FamilyNode/components/ProfilePhoto/ProfilePhoto';
 
 interface EraData {
   title: string;
@@ -55,7 +55,12 @@ const Era = ({ eraData }: { eraData: EraData }) => {
         overflow: 'hidden',
       }}>
       <ProfileInfo height={'12%'} title={eraData.title} fontSize={'.8rem'} />
-      <ProfilePhoto src={eraData.src} alt={'name'} />
+      <ProfilePhoto
+        src={eraData.src}
+        alt={'name'}
+        height={'100%'}
+        width={'100%'}
+      />
       <ProfileInfo
         height={'22%'}
         title={eraData.description}
@@ -121,7 +126,12 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
                                 title={person.name.replace(' null', '') || ''}
                                 fontSize={'.8rem'}
                               />
-                              <ProfilePhoto src={profileSrc} alt={'name'} />
+                              <ProfilePhoto
+                                src={profileSrc}
+                                alt={'name'}
+                                height={'100%'}
+                                width={'100%'}
+                              />
                               <ProfileInfo
                                 height={'22%'}
                                 title={`${person.military?.branch}${description}`}

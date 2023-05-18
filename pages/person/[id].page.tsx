@@ -3,7 +3,6 @@ import { Carousel, CarouselType } from '../../components/Carousel/Carousel';
 import { Header } from '../../components/Header/Header';
 import { MapCard } from '../../components/MapCard/MapCard';
 import { Table } from '../../components/Table/Table';
-import { FallbackResources } from '../../lib/resources/resources.enum';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { getAge } from '../../utils/age';
 import { usePerson } from './usePerson';
