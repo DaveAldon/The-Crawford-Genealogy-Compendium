@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback } from 'react';
 import ReactFlow, {
   ConnectionLineType,
   ConnectionMode,
@@ -33,9 +33,9 @@ const Flow = (props: GraphTreeProps) => {
   const [width, height] = useWindowSize();
   const graphTree = useGraphTree(props);
 
-  const fitView = () => {
+  const fitView = useCallback(() => {
     reactFlowInstance.fitView({ padding: 1 });
-  };
+  }, [reactFlowInstance]);
 
   const widthSelector = (state: { width: any }) => state.width;
   const heightSelector = (state: { height: any }) => state.height;
@@ -46,8 +46,15 @@ const Flow = (props: GraphTreeProps) => {
     if (!props.fitViewToggle) return;
     setTimeout(() => {
       fitView();
-    }, 100);
-  }, [reactFlowWidth, reactFlowHeight, reactFlowInstance, props.sliderValue]);
+    }, 500);
+  }, [
+    reactFlowWidth,
+    reactFlowHeight,
+    reactFlowInstance,
+    props.sliderValue,
+    props.fitViewToggle,
+    fitView,
+  ]);
 
   if (
     graphTree.nodes === null ||
@@ -74,19 +81,14 @@ const Flow = (props: GraphTreeProps) => {
         connectionMode={ConnectionMode.Strict}
         nodeTypes={nodeTypes}
         connectionLineType={ConnectionLineType.Straight}
-        minZoom={0.2}
+        minZoom={0.175}
         onNodeClick={(_event, node) => {
-          if (graphTree.selectedNode?.id !== node.id) {
+          if (
+            graphTree.selectedNode?.id !== node.id &&
+            !node.id.includes('marriage-node')
+          ) {
             graphTree.onNodeClickEvent(node.data as NormalizedFamilyTree);
           }
-        }}
-        /* onPaneClick={() => {
-          graphTree.resetNodes();
-        }} */
-        onInit={() => {
-          setTimeout(() => {
-            fitView();
-          }, 1);
         }}>
         <MiniMap
           style={{

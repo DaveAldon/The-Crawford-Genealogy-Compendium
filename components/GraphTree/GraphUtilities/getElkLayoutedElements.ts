@@ -2,12 +2,6 @@ import Elk, { ElkNode, ElkExtendedEdge } from 'elkjs';
 import { Node, Edge } from 'react-flow-renderer';
 import { PersonNode } from '../../../types/tree';
 
-/* From https://github.com/wbkd/react-flow/issues/5#issuecomment-954001434 */
-/* 
-Get a sense of the parameters at:
-https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2FnodesEdges 
-*/
-
 const PERSON_NODE_WIDTH = 125;
 const PERSON_NODE_HEIGHT = 225;
 const MARRIAGE_NODE_WIDTH = 125;
@@ -30,9 +24,9 @@ const elk = new Elk({
 });
 
 export const createGraphLayout = async (
-  nodes: Array<PersonNode>,
-  edges: Array<Edge>,
-): Promise<Array<Node>> => {
+  nodes: PersonNode[],
+  edges: Edge[],
+): Promise<Node[]> => {
   const elkNodes: ElkNode[] = [];
   const elkEdges: ElkExtendedEdge[] = [];
 

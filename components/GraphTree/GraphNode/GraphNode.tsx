@@ -32,14 +32,17 @@ export default React.memo(function GraphNode(
           display: 'flex',
           flexDirection: 'column',
           width: '100%',
+          borderRadius: '10px',
+          overflow: 'hidden',
+          backgroundColor: '#1e2124',
         }}>
-        <ProfileInfo height={'12%'} title={`${node.DOB}`} fontSize={'.50rem'} />
+        <ProfileInfo height={25} title={`${node.DOB}`} fontSize={'.65rem'} />
         <ProfilePhoto
           src={node.metadata.profile[0].link}
           alt={node.Firstname}
         />
         <ProfileInfo
-          height={'22%'}
+          height={15}
           title={`${node.Firstname} ${node.Middlename} ${node.Lastname}`}
           fontSize={'.40rem'}
         />
@@ -48,7 +51,7 @@ export default React.memo(function GraphNode(
             hasMovies={node.metadata.videos.length > 0}
             hasPhotos={node.metadata.photos.length > 0}
             hasMilitary={node.military !== undefined}
-            height={'10%'}
+            height={20}
           />
         ) : null}
       </div>

@@ -2,7 +2,7 @@ interface Props {
   hasMovies: boolean;
   hasPhotos: boolean;
   hasMilitary: boolean;
-  height: string;
+  height: string | number;
 }
 const SIZE = 12;
 
@@ -53,7 +53,6 @@ export const ProfileChips = (props: Props) => {
         display: 'flex',
         justifyContent: 'left',
         alignItems: 'center',
-        backgroundColor: '#1e2124',
       }}>
       <Photo active={hasPhotos} />
       <div style={{ width: '10px' }} />

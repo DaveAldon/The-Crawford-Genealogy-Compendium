@@ -7,17 +7,18 @@ import {
   Edge,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
-//import './index.css';
 import initialNodes from '../../compendium/data/people.json';
 import initialEdges from '../../compendium/data/edges.json';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { getLayoutedElements } from './GraphUtilities/getLayoutedElements';
 import { createGraphLayout } from './GraphUtilities/getElkLayoutedElements';
+import { PersonNode } from '../../types/tree';
 
 const position = { x: 0, y: 0 };
 const edgeType = 'smoothstep';
-const getInitialNodes = () => {
-  return initialNodes.map(node => {
+
+const getInitialNodes = (): PersonNode[] => {
+  return initialNodes.map((node: NormalizedFamilyTree) => {
     return {
       id: node.id,
       data: { ...node, label: node.name },
@@ -26,8 +27,6 @@ const getInitialNodes = () => {
         node.Description === 'marriage-node'
           ? 'marriageGraphNode'
           : 'activeGraphNode',
-      //sourcePosition: 'right',
-      //targetPosition: 'left',
     };
   });
 };
@@ -37,11 +36,8 @@ const getInitialEdges = () => {
   });
 };
 
-/* const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-  getInitialNodes(),
-  getInitialEdges(),
-); */
 const layoutedEdges = getInitialEdges();
+const layoutedNodes = getInitialNodes();
 
 interface UseGraphTreeProps {
   sliderValue: number;
@@ -50,33 +46,30 @@ interface UseGraphTreeProps {
 export const useGraphTree = (props: UseGraphTreeProps) => {
   const [selectedNode, setSelectedNode] =
     React.useState<NormalizedFamilyTree | null>(null);
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
+  const [nodes, setNodes, _onNodesChange] = useNodesState([]);
+  const [edges, setEdges, _onEdgesChange] = useEdgesState(layoutedEdges);
   const [modalVisible, setModalVisible] = React.useState(false);
   const options = { hideAttribution: true };
 
   useEffect(() => {
     (async () => {
-      const layoutedNodes = await createGraphLayout(
-        getInitialNodes(),
-        getInitialEdges(),
-      );
-      setNodes([...layoutedNodes]);
-      //console.log('nodes', nodes);
+      const elkNodes = await createGraphLayout(layoutedNodes, layoutedEdges);
+      setNodes([...elkNodes]);
+      console.log('elkNodes', elkNodes.length);
     })();
   }, []);
 
   const onNodeClickEvent = useCallback(
     (node: NormalizedFamilyTree) => {
       setSelectedNode(node as NormalizedFamilyTree);
-      //setModalVisible(true)
+      setModalVisible(true);
     },
     [setSelectedNode],
   );
 
   const onConnect = useCallback(
     (params: Edge | Connection) => setEdges(eds => addEdge(params, eds)),
-    [],
+    [setEdges],
   );
   const onLayout = useCallback(
     (direction: string | undefined) => {
@@ -85,8 +78,9 @@ export const useGraphTree = (props: UseGraphTreeProps) => {
 
       setNodes([...dirLayoutedNodes]);
       setEdges([...dirLayoutedEdges]);
+      console.log('elkNodes1');
     },
-    [nodes, edges],
+    [nodes, edges, setNodes, setEdges],
   );
 
   return {

@@ -18,7 +18,6 @@ export interface PersonNode {
   style?: {
     [key: string]: string;
   };
-  filterStyle: boolean;
 }
 
 export enum Gender {
