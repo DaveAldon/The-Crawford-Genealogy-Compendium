@@ -18,7 +18,7 @@ export const Photo = ({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img alt="" src={src} className="object-contain h-full w-full" />
       </div>
-      <InfoOverlay title="" description={title} />
+      {title !== '' ? <InfoOverlay title="" description={title} /> : null}
     </div>
   );
 };

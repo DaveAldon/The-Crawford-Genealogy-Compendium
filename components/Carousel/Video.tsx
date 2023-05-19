@@ -25,8 +25,8 @@ export const Video = ({
           playsInline>
           <source src={src} type="video/mp4" />
         </video>
+        {title !== '' ? <InfoOverlay title="" description={title} /> : null}
       </div>
-      <InfoOverlay title="" description={title} />
     </div>
   );
 };

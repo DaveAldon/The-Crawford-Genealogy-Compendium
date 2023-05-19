@@ -42,19 +42,15 @@ const Flow = (props: GraphTreeProps) => {
   const reactFlowWidth = useStore(widthSelector);
   const reactFlowHeight = useStore(heightSelector);
 
+  const [initialResize, setInitialResize] = React.useState(false);
+
   React.useEffect(() => {
-    if (!props.fitViewToggle) return;
+    if (initialResize) return;
     setTimeout(() => {
       fitView();
+      setInitialResize(true);
     }, 500);
-  }, [
-    reactFlowWidth,
-    reactFlowHeight,
-    reactFlowInstance,
-    props.sliderValue,
-    props.fitViewToggle,
-    fitView,
-  ]);
+  }, [reactFlowWidth, reactFlowHeight, fitView, initialResize]);
 
   if (
     graphTree.nodes === null ||
