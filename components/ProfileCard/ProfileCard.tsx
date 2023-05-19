@@ -21,22 +21,22 @@ export const ProfileCard = (props: Props) => {
         backgroundColor: hext('#FFFFFF', 10),
         height: 350,
       }}
-      className="mb-3 rounded-lg shadow-lg relative">
+      className="mb-3 rounded-lg shadow-lg relative flex justify-center">
       <div className="rounded-md overflow-hidden absolute left-0 h-56 w-full">
-        <Image
-          alt="Home"
-          width={640}
-          height={480}
+        <img
+          alt=""
+          style={{
+            height: '100%',
+            width: '100%',
+          }}
+          className="rounded-md object-cover blur-md"
           src={profilePicture}
-          className="h-56 rounded-md object-cover blur-md"
         />
       </div>
-      <Image
-        alt="Home"
-        width={640}
-        height={480}
+      <img
+        alt="Profile picture"
+        className="h-56 object-contain absolute"
         src={profilePicture}
-        className="h-56 w-full object-contain absolute"
       />
       <div className="p-3 absolute bottom-0">
         <dl>

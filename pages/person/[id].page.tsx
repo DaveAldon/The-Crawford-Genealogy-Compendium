@@ -6,7 +6,6 @@ import { Table } from '../../components/Table/Table';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { getAge } from '../../utils/age';
 import { usePerson } from './usePerson';
-import Image from 'next/image';
 import { getTreeData } from '../../lib/treeJson';
 
 const Person = ({
@@ -16,25 +15,11 @@ const Person = ({
   people: NormalizedFamilyTree[];
   id: string;
 }) => {
-  const {
-    person,
-    photos,
-    movies,
-    artifacts,
-    demographicsTable,
-    parentsTable,
-    childrenTable,
-    siblingsTable,
-    divorcedTable,
-    militaryTable,
-  } = usePerson({
-    id,
-    peopleResult: people,
-  });
+  const data = usePerson({ id, peopleResult: people });
 
-  const imageSrc = person.metadata.profile[0].link;
+  const imageSrc = data.person.metadata.profile[0].link;
 
-  const age = getAge({ DOB: person.DOB, Death: person.Death });
+  const age = getAge({ DOB: data.person.DOB, Death: data.person.Death });
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
@@ -55,83 +40,90 @@ const Person = ({
               <div className="rounded-md shadow-xl mx-auto -mt-16 h-64 w-full bg-cover bg-center overflow-hidden mb-5">
                 <div className="relative w-full">
                   <div className="rounded-md overflow-hidden absolute h-64 w-full">
-                    <Image
-                      alt="Home"
-                      width={640}
-                      height={480}
+                    <img
                       src={imageSrc}
+                      alt=""
+                      style={{
+                        height: 480,
+                        width: '100%',
+                        objectFit: 'cover',
+                      }}
                       className="h-64 w-full rounded-md object-cover blur-md"
                     />
                   </div>
-                  <Image
-                    alt="Home"
-                    width={640}
-                    height={480}
+
+                  <img
                     src={imageSrc}
+                    alt="profile picture"
+                    style={{
+                      width: '100%',
+                    }}
                     className="h-64 w-full object-contain absolute"
                   />
                 </div>
               </div>
               <h1 className="text-3xl font-bold pt-8 lg:pt-0">
-                {person.Firstname}
+                {data.person.Firstname}
                 {` ${
-                  person.Middlename !== null ? person.Middlename + ' ' : ''
+                  data.person.Middlename !== null
+                    ? data.person.Middlename + ' '
+                    : ''
                 }`}{' '}
-                {person.Lastname} - {age}
+                {data.person.Lastname} - {age}
               </h1>
               <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-indigo-500" />
-              <p className="pt-4 text-md mb-4">{person.Description}</p>
-              {militaryTable.length > 0 ? (
+              <p className="pt-4 text-md mb-4">{data.person.Description}</p>
+              {data.militaryTable.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-1">
-                  <Table title={'Military'} data={militaryTable} />
+                  <Table title={'Military'} data={data.militaryTable} />
                 </div>
               ) : null}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {demographicsTable.length > 0 ? (
-                  <Table title={'Demographics'} data={demographicsTable} />
+                {data.demographicsTable.length > 0 ? (
+                  <Table title={'Demographics'} data={data.demographicsTable} />
                 ) : null}
-                {parentsTable.length > 0 ? (
-                  <Table raw title={'Parents'} data={parentsTable} />
+                {data.parentsTable.length > 0 ? (
+                  <Table raw title={'Parents'} data={data.parentsTable} />
                 ) : null}
-                {childrenTable.length > 0 ? (
-                  <Table raw title={'Children'} data={childrenTable} />
+                {data.childrenTable.length > 0 ? (
+                  <Table raw title={'Children'} data={data.childrenTable} />
                 ) : null}
-                {siblingsTable.length > 0 ? (
-                  <Table raw title={'Siblings'} data={siblingsTable} />
+                {data.siblingsTable.length > 0 ? (
+                  <Table raw title={'Siblings'} data={data.siblingsTable} />
                 ) : null}
-                {divorcedTable.length > 0 ? (
-                  <Table raw title={'Divorced'} data={divorcedTable} />
+                {data.divorcedTable.length > 0 ? (
+                  <Table raw title={'Divorced'} data={data.divorcedTable} />
                 ) : null}
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {photos && photos.length > 0 ? (
+                {data.photos && data.photos.length > 0 ? (
                   <Carousel
                     type={CarouselType.photo}
-                    activeNode={person}
-                    activeArtifact={photos}
+                    activeNode={data.person}
+                    activeArtifact={data.photos}
                   />
                 ) : null}
-                {movies && movies.length > 0 ? (
+                {data.movies && data.movies.length > 0 ? (
                   <Carousel
                     type={CarouselType.video}
-                    activeNode={person}
-                    activeArtifact={movies}
+                    activeNode={data.person}
+                    activeArtifact={data.movies}
                   />
                 ) : null}
-                {artifacts && artifacts.length > 0 ? (
+                {data.artifacts && data.artifacts.length > 0 ? (
                   <Carousel
                     type={CarouselType.artifact}
-                    activeNode={person}
-                    activeArtifact={artifacts}
+                    activeNode={data.person}
+                    activeArtifact={data.artifacts}
                   />
                 ) : null}
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {person.BirthplaceCoords ? (
-                  <MapCard activeNode={person} birthplace />
+                {data.person.BirthplaceCoords ? (
+                  <MapCard activeNode={data.person} birthplace />
                 ) : null}
-                {person.DeathplaceCoords ? (
-                  <MapCard activeNode={person} />
+                {data.person.DeathplaceCoords ? (
+                  <MapCard activeNode={data.person} />
                 ) : null}
               </div>
             </div>

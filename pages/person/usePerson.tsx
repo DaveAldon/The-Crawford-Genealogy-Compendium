@@ -130,26 +130,32 @@ export const usePerson = ({
           label: 'Discharge Date',
           value: person.military.end,
         });
-      if (
-        person.military.awards !== '' &&
-        person.military.awards !== undefined
-      ) {
-        person.military.awards.split(',').forEach(award => {
-          tmpMilitaryTable.push({
-            label: `Awarded - ${camelCase(
-              award.replaceAll('_', ' ').split('.')[0],
-            )}`,
-            value: (
-              <Image
-                width={200}
-                height={0}
-                src={getMilitaryImage(award)}
-                alt={award}
-              />
-            ),
-          });
+
+      const awards: TableData[] = [];
+      person.metadata.military.forEach(award => {
+        awards.push({
+          label: award.description,
+          value: (
+            <Image
+              width={200}
+              height={0}
+              src={award.link}
+              alt={award.description}
+            />
+          ),
         });
-      }
+      });
+      // sort awards by label
+      awards.sort((a, b) => {
+        if (a.label < b.label) {
+          return -1;
+        }
+        if (a.label > b.label) {
+          return 1;
+        }
+        return 0;
+      });
+      tmpMilitaryTable.push(...awards);
 
       setMilitaryTable([...tmpMilitaryTable]);
     } else {

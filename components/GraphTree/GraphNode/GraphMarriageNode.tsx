@@ -15,7 +15,12 @@ export default React.memo(function GraphMarriageNode(
         flexDirection: 'column',
         width: '100%',
       }}>
-      <ProfilePhoto src={node.metadata.profile[0].link} alt={node.Firstname} />
+      <ProfilePhoto
+        src={node.metadata.profile[0].link}
+        alt={node.Firstname}
+        height={100}
+        width={100}
+      />
       <Handle type="target" id="tt" position={Position.Top} />
       <Handle type="source" id="bs" position={Position.Bottom} />
     </div>

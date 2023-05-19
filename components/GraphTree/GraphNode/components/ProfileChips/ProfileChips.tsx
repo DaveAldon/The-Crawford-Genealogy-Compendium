@@ -48,16 +48,16 @@ export const ProfileChips = (props: Props) => {
     <div
       style={{
         height: height,
-        padding: '0px 10px',
+        padding: '0px 5px',
         marginBottom: '2px',
         display: 'flex',
-        justifyContent: 'left',
+        justifyContent: 'center',
         alignItems: 'center',
       }}>
       <Photo active={hasPhotos} />
-      <div style={{ width: '10px' }} />
+      <div style={{ width: '15px' }} />
       <Video active={hasMovies} />
-      <div style={{ width: '10px' }} />
+      <div style={{ width: '15px' }} />
       <Military active={hasMilitary} />
     </div>
   );
