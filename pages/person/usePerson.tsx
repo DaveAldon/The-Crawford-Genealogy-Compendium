@@ -1,10 +1,7 @@
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FamilyLinkButton } from '../../components/Buttons/TableButton';
 import { TableData } from '../../components/Table/Table';
-import { getMilitaryImage } from '../../lib/resources/resources';
 import { APIFamilyTree, NormalizedFamilyTree } from '../../types/genealogy';
-import { camelCase } from '../../utils/capitalize';
 import { Artifact } from '../../types/artifacts.d';
 
 export const usePerson = ({
@@ -136,16 +133,14 @@ export const usePerson = ({
         awards.push({
           label: award.description,
           value: (
-            <Image
-              width={200}
-              height={0}
-              src={award.link}
+            <img
               alt={award.description}
+              src={award.link}
+              style={{ width: '200px' }}
             />
           ),
         });
       });
-      // sort awards by label
       awards.sort((a, b) => {
         if (a.label < b.label) {
           return -1;

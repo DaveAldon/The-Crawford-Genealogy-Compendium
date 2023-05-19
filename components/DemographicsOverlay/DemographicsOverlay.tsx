@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Heights } from '../../styles/constants.enum';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { AdvancedViewButton } from '../Buttons/AdvancedViewButton';
-import { Carousel, CarouselType } from '../Carousel/Carousel';
+import { ArtifactCarousel, CarouselType } from '../Carousel/Carousel';
 import { MapCard } from '../MapCard/MapCard';
 import { ProfileCard } from '../ProfileCard/ProfileCard';
 
@@ -70,21 +70,21 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
         <div className="h-5" />
         <ProfileCard activeNode={activeNode} />
         {photos.length > 0 ? (
-          <Carousel
+          <ArtifactCarousel
             type={CarouselType.photo}
             activeNode={activeNode}
             activeArtifact={photos}
           />
         ) : null}
         {movies.length > 0 ? (
-          <Carousel
+          <ArtifactCarousel
             type={CarouselType.video}
             activeNode={activeNode}
             activeArtifact={movies}
           />
         ) : null}
         {artifacts.length > 0 ? (
-          <Carousel
+          <ArtifactCarousel
             type={CarouselType.artifact}
             activeNode={activeNode}
             activeArtifact={artifacts}

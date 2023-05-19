@@ -5,9 +5,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './layouts/**/*.{js,ts,jsx,tsx}',
     './node_modules/tw-elements/dist/js/**/*.js',
+    './node_modules/flowbite-react/**/*.js',
   ],
   theme: {
     extend: {},
   },
-  plugins: [require('tw-elements/dist/plugin')],
+  plugins: [require('tw-elements/dist/plugin'), require('flowbite/plugin')],
 };

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Carousel, CarouselType } from '../../components/Carousel/Carousel';
+import {
+  ArtifactCarousel,
+  CarouselType,
+} from '../../components/Carousel/Carousel';
 import { Header } from '../../components/Header/Header';
 import { MapCard } from '../../components/MapCard/MapCard';
 import { Table } from '../../components/Table/Table';
@@ -97,21 +100,21 @@ const Person = ({
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {data.photos && data.photos.length > 0 ? (
-                  <Carousel
+                  <ArtifactCarousel
                     type={CarouselType.photo}
                     activeNode={data.person}
                     activeArtifact={data.photos}
                   />
                 ) : null}
                 {data.movies && data.movies.length > 0 ? (
-                  <Carousel
+                  <ArtifactCarousel
                     type={CarouselType.video}
                     activeNode={data.person}
                     activeArtifact={data.movies}
                   />
                 ) : null}
                 {data.artifacts && data.artifacts.length > 0 ? (
-                  <Carousel
+                  <ArtifactCarousel
                     type={CarouselType.artifact}
                     activeNode={data.person}
                     activeArtifact={data.artifacts}
