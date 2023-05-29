@@ -27,11 +27,11 @@ export default function Home() {
                 href="/FamilyTree">
                 <span className="justify-center">See the Family Tree</span>
               </Link>
-              <Link
+              {/*               <Link
                 className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
                 href="/artifacts">
                 <span className="justify-center">View all Family Photos</span>
-              </Link>
+              </Link> */}
               <Link
                 className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
                 href="/military">
