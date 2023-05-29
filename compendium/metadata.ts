@@ -46,7 +46,7 @@ export const getArtifacts = async (): Promise<Artifacts[]> => {
           files?.forEach(file => {
             artifactFiles.push({
               mimeType: file.mimeType || '',
-              thumbnailLink: file.thumbnailLink || '',
+              thumbnailLink: '', // file.thumbnailLink || '',
               link: getEmbedLink(file.id || ''),
               name: file.name || '',
               id: file.id || '',

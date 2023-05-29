@@ -560,9 +560,86 @@
     "targetHandle": "tt"
   },
   {
+    "id": "c605b959-ff70-48f5-9842-a29851d26177~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~9bfc564d-94ce-4035-9ac0-a041fd004347",
+    "source": "c605b959-ff70-48f5-9842-a29851d26177",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~9bfc564d-94ce-4035-9ac0-a041fd004347",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "c605b959-ff70-48f5-9842-a29851d26177~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~18090655-a869-4842-8731-dbb81389020a",
+    "source": "c605b959-ff70-48f5-9842-a29851d26177",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~18090655-a869-4842-8731-dbb81389020a",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "c605b959-ff70-48f5-9842-a29851d26177~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~a91b2ef5-718e-49dc-a3f5-d07a313436da",
+    "source": "c605b959-ff70-48f5-9842-a29851d26177",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~a91b2ef5-718e-49dc-a3f5-d07a313436da",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "c605b959-ff70-48f5-9842-a29851d26177~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~0547308e-bb83-4730-9c8c-ed727655f857",
+    "source": "c605b959-ff70-48f5-9842-a29851d26177",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~0547308e-bb83-4730-9c8c-ed727655f857",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
     "id": "marriage-node~f8019091-a0e3-4fe9-93fd-49559be47888~82df6f4f-2cde-4acc-8716-0f548e9f08ee~c605b959-ff70-48f5-9842-a29851d26177",
     "source": "marriage-node~f8019091-a0e3-4fe9-93fd-49559be47888~82df6f4f-2cde-4acc-8716-0f548e9f08ee",
     "target": "c605b959-ff70-48f5-9842-a29851d26177",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "9bfc564d-94ce-4035-9ac0-a041fd004347~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~9bfc564d-94ce-4035-9ac0-a041fd004347",
+    "source": "9bfc564d-94ce-4035-9ac0-a041fd004347",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~9bfc564d-94ce-4035-9ac0-a041fd004347",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "18090655-a869-4842-8731-dbb81389020a~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~18090655-a869-4842-8731-dbb81389020a",
+    "source": "18090655-a869-4842-8731-dbb81389020a",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~18090655-a869-4842-8731-dbb81389020a",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "a91b2ef5-718e-49dc-a3f5-d07a313436da~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~a91b2ef5-718e-49dc-a3f5-d07a313436da",
+    "source": "a91b2ef5-718e-49dc-a3f5-d07a313436da",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~a91b2ef5-718e-49dc-a3f5-d07a313436da",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "0547308e-bb83-4730-9c8c-ed727655f857~marriage-node~c605b959-ff70-48f5-9842-a29851d26177~0547308e-bb83-4730-9c8c-ed727655f857",
+    "source": "0547308e-bb83-4730-9c8c-ed727655f857",
+    "target": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~0547308e-bb83-4730-9c8c-ed727655f857",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~9bfc564d-94ce-4035-9ac0-a041fd004347~e72fffbb-cf70-4928-b4b8-cf2ec82885e4",
+    "source": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~9bfc564d-94ce-4035-9ac0-a041fd004347",
+    "target": "e72fffbb-cf70-4928-b4b8-cf2ec82885e4",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~18090655-a869-4842-8731-dbb81389020a~1b9e59e4-26c3-4e7b-bd43-39bed8fffafa",
+    "source": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~18090655-a869-4842-8731-dbb81389020a",
+    "target": "1b9e59e4-26c3-4e7b-bd43-39bed8fffafa",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~a91b2ef5-718e-49dc-a3f5-d07a313436da~833fe20d-87b8-4b75-b1dc-b72617701701",
+    "source": "marriage-node~c605b959-ff70-48f5-9842-a29851d26177~a91b2ef5-718e-49dc-a3f5-d07a313436da",
+    "target": "833fe20d-87b8-4b75-b1dc-b72617701701",
     "sourceHandle": "bs",
     "targetHandle": "tt"
   },
