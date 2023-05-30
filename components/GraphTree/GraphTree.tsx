@@ -87,6 +87,8 @@ const Flow = (props: GraphTreeProps) => {
           }
         }}>
         <MiniMap
+          zoomable
+          pannable
           style={{
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
