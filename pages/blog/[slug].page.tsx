@@ -12,6 +12,10 @@ export default function Blog({ frontmatter, markdownBody, siteTitle }: any) {
   return (
     <div className="text-black flex flex-col h-screen justify-between bg-black">
       <Header />
+      <meta
+        property="og:image"
+        content="https://xaconi.dev/api/social-image/como-crear-thumbnails-dinamicos-en-next-js.jpg"
+      />
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
