@@ -3,6 +3,7 @@ import { Heights } from '../../styles/constants.enum';
 import { CircleLogo } from '../Logos/CircleLogo';
 import Layout from '../layout';
 import MobileMenu from './MobileMenu';
+import { useRouter } from 'next/router';
 
 const HeaderLink = ({ href, children }: { href: string; children: string }) => (
   <li>
@@ -18,8 +19,11 @@ interface HeaderProps {
   title?: string;
   description?: string;
   image?: string;
+  slug?: string;
 }
 export const Header = (props: HeaderProps) => {
+  const router = useRouter();
+
   const links = [
     { href: '/', children: 'Home' },
     { href: '/FamilyTree', children: 'Family Tree' },
@@ -31,6 +35,7 @@ export const Header = (props: HeaderProps) => {
 
   const meta = {
     title: props.title || 'Crawford Lineage',
+    slug: (props.slug && `/blog/${props.slug}`) || '',
     description: props.description || 'Learn about the Crawford family history',
     image:
       props.image ||
@@ -49,6 +54,10 @@ export const Header = (props: HeaderProps) => {
       <meta property="og:site_name" content={meta.title} />
       <meta property="og:description" content={meta.description} />
       <meta property="og:title" content={meta.title} />
+      <meta
+        property="og:url"
+        content={`https://crawfordlineage.com/${props.slug}`}
+      />
       <meta name="image" property="og:image" content={meta.image} />
       <meta name="author" content="David Crawford" />
       <meta name="twitter:card" content="summary_large_image" />

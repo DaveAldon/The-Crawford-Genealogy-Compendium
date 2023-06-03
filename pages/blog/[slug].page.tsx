@@ -7,7 +7,7 @@ import Image from 'next/image';
 import dayjs from 'dayjs';
 import { Footer } from '../../components/Footer/Footer';
 
-export default function Blog({ frontmatter, markdownBody, siteTitle }: any) {
+export default function Blog({ frontmatter, markdownBody, slug }: any) {
   //const post = allPostsData.find(post => post.id === id) as PostData;
   return (
     <div className="text-black flex flex-col h-screen justify-between bg-black">
@@ -15,6 +15,7 @@ export default function Blog({ frontmatter, markdownBody, siteTitle }: any) {
         title={frontmatter.title}
         image={frontmatter.photoSrc}
         description={`Published ${frontmatter.date}`}
+        slug={slug}
       />
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
@@ -77,6 +78,7 @@ export async function getStaticProps(context: { params: { slug: any } }) {
       siteTitle: 'config.title',
       frontmatter: data.data,
       markdownBody: data.content,
+      slug,
     },
   };
 }
