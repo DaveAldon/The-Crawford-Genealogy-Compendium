@@ -45,39 +45,42 @@ export const Header = (props: HeaderProps) => {
   };
 
   return (
-    <Head aria-label="Site Header">
-      {/*       <!-- HTML Meta Tags -->
-       */}
-      <title>{meta.title}</title>
-      <meta name="description" content={meta.description} />
+    <div
+      aria-label="Site Header"
+      className="font-sans antialiased bg-[#212224] fixed w-full z-50">
+      <Head>
+        {/*       <!-- HTML Meta Tags -->
+         */}
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
 
-      {/* <!-- Google / Search Engine Tags -->
-       */}
-      <meta itemProp="name" content={meta.title} />
-      <meta itemProp="description" content={meta.description} />
-      <meta itemProp="image" content={meta.image} />
+        {/* <!-- Google / Search Engine Tags -->
+         */}
+        <meta itemProp="name" content={meta.title} />
+        <meta itemProp="description" content={meta.description} />
+        <meta itemProp="image" content={meta.image} />
 
-      {/* <!-- Facebook Meta Tags -->
-       */}
-      <meta
-        property="og:url"
-        content={`https://crawfordlineage.com${meta.slug}`}
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={meta.title} />
-      <meta property="og:description" content={meta.description} />
-      <meta property="og:image" content={meta.image} />
+        {/* <!-- Facebook Meta Tags -->
+         */}
+        <meta
+          property="og:url"
+          content={`https://crawfordlineage.com${meta.slug}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
 
-      {/* <!-- Twitter Meta Tags -->
-       */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:title"
-        content="AI can never tell you your great-great-grandfather's story"
-      />
-      <meta name="twitter:description" content="Published 2023-06-03" />
-      <meta name="twitter:image" content={meta.image} />
-
+        {/* <!-- Twitter Meta Tags -->
+         */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="AI can never tell you your great-great-grandfather's story"
+        />
+        <meta name="twitter:description" content="Published 2023-06-03" />
+        <meta name="twitter:image" content={meta.image} />
+      </Head>
       <Layout />
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div
@@ -107,6 +110,6 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </div>
-    </Head>
+    </div>
   );
 };
