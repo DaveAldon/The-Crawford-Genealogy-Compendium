@@ -4,6 +4,7 @@ import { CircleLogo } from '../Logos/CircleLogo';
 import Layout from '../layout';
 import MobileMenu from './MobileMenu';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const HeaderLink = ({ href, children }: { href: string; children: string }) => (
   <li>
@@ -44,9 +45,7 @@ export const Header = (props: HeaderProps) => {
   };
 
   return (
-    <header
-      aria-label="Site Header"
-      className="font-sans antialiased bg-[#212224] fixed w-full z-50">
+    <Head aria-label="Site Header">
       {/*       <!-- HTML Meta Tags -->
        */}
       <title>{meta.title}</title>
@@ -108,6 +107,6 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </div>
-    </header>
+    </Head>
   );
 };
