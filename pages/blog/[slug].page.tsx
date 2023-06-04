@@ -17,7 +17,7 @@ export default function Blog({ frontmatter, markdownBody, slug }: any) {
         description={`Published ${frontmatter.date}`}
         slug={slug}
       />
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font bg-black">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <div className="text-white mx-auto">

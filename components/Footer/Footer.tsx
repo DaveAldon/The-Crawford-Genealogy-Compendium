@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 
 export const Footer = () => {
   return (
-    <footer className="text-gray-600 body-font w-full">
+    <footer className="text-gray-600 body-font w-full bg-black">
       <div className="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
         <CircleLogo />
         <span className="ml-3 text-xl text-gray-400">
