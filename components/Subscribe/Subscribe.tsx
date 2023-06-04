@@ -1,7 +1,5 @@
 import { useState, useRef } from 'react';
-import Link from 'next/link';
 import useSWR from 'swr';
-
 import { Form, FormState, Subscribers } from '../../types/subscribe.d';
 import SuccessMessage from './SuccessMessage';
 import ErrorMessage from './ErrorMessage';
@@ -76,7 +74,7 @@ export default function Subscribe() {
       ) : (
         <p className="text-sm text-gray-200">
           {`${
-            subscriberCount > 0 ? subscriberCount.toLocaleString() : '-'
+            subscriberCount !== 0 ? subscriberCount.toLocaleString() : '-'
           } subscriber${subscriberCount.toLocaleString() === '1' ? '' : 's'}`}
         </p>
       )}

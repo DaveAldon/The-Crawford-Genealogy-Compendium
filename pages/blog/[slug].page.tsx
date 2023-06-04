@@ -18,7 +18,7 @@ export default function Blog({ frontmatter, markdownBody, slug }: any) {
         slug={slug}
       />
       <section className="text-gray-600 body-font bg-black">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <div className="text-white mx-auto">
               <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
@@ -46,7 +46,7 @@ export default function Blog({ frontmatter, markdownBody, slug }: any) {
                     </p>
                   </div>
                 </div>
-                <div className="w-full mt-4 prose-dark max-w-none text-left">
+                <div className="w-full mt-4 prose-dark text-left">
                   <ReactMarkdown className={style.reactMarkDown}>
                     {markdownBody}
                   </ReactMarkdown>

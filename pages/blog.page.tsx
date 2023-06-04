@@ -6,10 +6,10 @@ import Subscribe from '../components/Subscribe/Subscribe';
 
 export default function Blog({ allBlogs }: any) {
   return (
-    <div className="text-black flex flex-col justify-between bg-black">
+    <div className="text-black flex flex-col bg-black">
       <Header />
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+      <section className="text-gray-600 body-font px-4 flex flex-col justify-center">
+        <div className="py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="text-2xl font-medium title-font mb-4 text-white tracking-widest">
               The Crawford Genealogy Blog
@@ -18,10 +18,10 @@ export default function Blog({ allBlogs }: any) {
               Here you can find the latest updates and news surrounding our
               discoveries and explorations into genealogy.
             </p>
-            <div className="lg:w-2/3 mx-auto">
+            <div className="mx-auto">
               <Subscribe />
             </div>
-            <div className="lg:w-1/2 w-full grid grid-cols-1 gap-4 items-center justify-center mx-auto">
+            <div className="lg:w-1/2 w-full flex flex-col gap-4 items-center justify-center mx-auto">
               {allBlogs &&
                 allBlogs.length > 0 &&
                 allBlogs.map(({ slug, frontmatter }: any) => (
@@ -34,11 +34,11 @@ export default function Blog({ allBlogs }: any) {
                     />
 
                     <div className="relative p-4 items-center justify-center">
-                      <h3 className="text-base md:text-xl font-medium text-white">
+                      <h3 className="text-base font-medium text-white">
                         {frontmatter.title}
                       </h3>
 
-                      <p className="mt-4 text-base md:text-lg text-white">
+                      <p className="mt-4 text-base text-white">
                         {dayjs(frontmatter.date).format('MMMM D, YYYY')}
                       </p>
                       <a
