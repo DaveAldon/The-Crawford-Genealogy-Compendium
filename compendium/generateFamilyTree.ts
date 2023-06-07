@@ -46,7 +46,7 @@ const getSpouseNodes = (
 ): NormalizedFamilyTree[] => {
   const spouseNodes: NormalizedFamilyTree[] = [];
 
-  familyTreeData.forEach(person => {
+  [...familyTreeData].forEach(person => {
     person.spouses.forEach(spouse => {
       const spouseNode: NormalizedFamilyTree = {
         ...emptyNode,
@@ -83,8 +83,8 @@ const getSpouseNodes = (
 
 const position = { x: 0, y: 0 };
 
-export const generateFamilyTree = async () => {
-  const { people: familyTreeData } = await getFamilyTree();
+export const generateFamilyTree = async (familySheet: string) => {
+  const { people: familyTreeData } = await getFamilyTree(familySheet);
   const military = await getMilitaryData();
   const artifacts = await getArtifacts();
 
@@ -120,28 +120,31 @@ export const generateFamilyTree = async () => {
       ...emptyMetadata,
     };
 
-    metadata.profile =
-      metadata.profile.length === 0
-        ? [
-            {
-              mimeType: '',
-              thumbnailLink: `${
-                person.Gender === 'M'
-                  ? FallbackResources.profileMale
-                  : FallbackResources.profileFemale
-              }`,
-              link: `${
-                person.Gender === 'M'
-                  ? FallbackResources.profileMale
-                  : FallbackResources.profileFemale
-              }`,
-              name: '',
-              id: '',
-              description: '',
-              imageMediaMetadata: {},
-            },
-          ]
-        : metadata.profile;
+    if (
+      !person.id.includes('~') &&
+      (metadata.profile[0] === undefined ||
+        metadata.profile[0].link === '/union.png')
+    ) {
+      metadata.profile = [
+        {
+          mimeType: '',
+          thumbnailLink: `${
+            person.Gender === 'M'
+              ? FallbackResources.profileMale
+              : FallbackResources.profileFemale
+          }`,
+          link: `${
+            person.Gender === 'M'
+              ? FallbackResources.profileMale
+              : FallbackResources.profileFemale
+          }`,
+          name: '',
+          id: '',
+          description: '',
+          imageMediaMetadata: {},
+        },
+      ];
+    }
 
     delete metadata?.ownerId;
 

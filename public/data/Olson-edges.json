@@ -1,0 +1,163 @@
+[
+  {
+    "id": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac~marriage-node~b14745c4-3d98-4bc3-a4d0-7e973c8a88ac~ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "source": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+    "target": "marriage-node~b14745c4-3d98-4bc3-a4d0-7e973c8a88ac~ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037~b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+    "source": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "target": "b14745c4-3d98-4bc3-a4d0-7e973c8a88ac",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "ddc82712-fb58-4d90-9f2f-e5ab63f27895~marriage-node~b14745c4-3d98-4bc3-a4d0-7e973c8a88ac~ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "source": "ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "target": "marriage-node~b14745c4-3d98-4bc3-a4d0-7e973c8a88ac~ddc82712-fb58-4d90-9f2f-e5ab63f27895",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "d1c589c3-d35c-48f0-af1f-0040da00a53f~marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "source": "d1c589c3-d35c-48f0-af1f-0040da00a53f",
+    "target": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "9a5a268a-0733-4b3d-b161-7fcb20ab1037~marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "source": "9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "target": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "48b76466-0643-4eb7-87a8-0e34b39b67a3~marriage-node~973f4141-ac88-4bfb-aaf5-fc49b44a15ad~48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "source": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "target": "marriage-node~973f4141-ac88-4bfb-aaf5-fc49b44a15ad~48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037~48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "source": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "target": "48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "efc9ae22-e77d-4891-98b3-cecd8202281d~marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "source": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "target": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "source": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "target": "efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "270312fd-5466-4a15-8a29-b80c73136773~marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773",
+    "source": "270312fd-5466-4a15-8a29-b80c73136773",
+    "target": "marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037~270312fd-5466-4a15-8a29-b80c73136773",
+    "source": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "target": "270312fd-5466-4a15-8a29-b80c73136773",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037~81a4aa26-fda0-4662-b263-baf5b498270f",
+    "source": "marriage-node~d1c589c3-d35c-48f0-af1f-0040da00a53f~9a5a268a-0733-4b3d-b161-7fcb20ab1037",
+    "target": "81a4aa26-fda0-4662-b263-baf5b498270f",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "75b4dc7f-fd05-443e-875f-375bd6353f9e~marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "source": "75b4dc7f-fd05-443e-875f-375bd6353f9e",
+    "target": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d~8d5a5315-da4d-464c-aab5-d64ca73272e9",
+    "source": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "target": "8d5a5315-da4d-464c-aab5-d64ca73272e9",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d~dbc41388-5eb7-4048-8c98-36aa447ff52a",
+    "source": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "target": "dbc41388-5eb7-4048-8c98-36aa447ff52a",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d~669da787-77a7-40d7-a1c0-5f958397c6ff",
+    "source": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "target": "669da787-77a7-40d7-a1c0-5f958397c6ff",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d~445d238c-6bea-4337-b47b-b642ccbb1c21",
+    "source": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "target": "445d238c-6bea-4337-b47b-b642ccbb1c21",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d~cc504946-ec37-4981-92ce-deb1cb68ae79",
+    "source": "marriage-node~75b4dc7f-fd05-443e-875f-375bd6353f9e~efc9ae22-e77d-4891-98b3-cecd8202281d",
+    "target": "cc504946-ec37-4981-92ce-deb1cb68ae79",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "5947604f-f6b9-4e83-afab-b2677d9cf7a3~marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773",
+    "source": "5947604f-f6b9-4e83-afab-b2677d9cf7a3",
+    "target": "marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773~f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+    "source": "marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773",
+    "target": "f308363f-5e41-4c8e-8a6b-efa67ac96d05",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773~bb8c3a61-5df3-47d0-aa37-5a3303224def",
+    "source": "marriage-node~5947604f-f6b9-4e83-afab-b2677d9cf7a3~270312fd-5466-4a15-8a29-b80c73136773",
+    "target": "bb8c3a61-5df3-47d0-aa37-5a3303224def",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad~marriage-node~973f4141-ac88-4bfb-aaf5-fc49b44a15ad~48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "source": "973f4141-ac88-4bfb-aaf5-fc49b44a15ad",
+    "target": "marriage-node~973f4141-ac88-4bfb-aaf5-fc49b44a15ad~48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  },
+  {
+    "id": "marriage-node~973f4141-ac88-4bfb-aaf5-fc49b44a15ad~48b76466-0643-4eb7-87a8-0e34b39b67a3~6414d0bd-c340-4ed8-bb23-c4a0471e3b7e",
+    "source": "marriage-node~973f4141-ac88-4bfb-aaf5-fc49b44a15ad~48b76466-0643-4eb7-87a8-0e34b39b67a3",
+    "target": "6414d0bd-c340-4ed8-bb23-c4a0471e3b7e",
+    "sourceHandle": "bs",
+    "targetHandle": "tt"
+  }
+]

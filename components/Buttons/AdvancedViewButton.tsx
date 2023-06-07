@@ -1,13 +1,15 @@
 export const AdvancedViewButton = ({
   guid,
   text,
+  family,
 }: {
   guid: string;
   text?: string;
+  family: string;
 }) => (
   <a
     className="group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring"
-    href={`/person/${guid}`}
+    href={`/person/${guid}?family=${family}`}
     target="_blank"
     rel="noreferrer">
     <span className="rounded-md absolute inset-0 border border-indigo-500 group-active:border-indigo-500"></span>

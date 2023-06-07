@@ -11,6 +11,7 @@ interface SlidingOverlayProps {
   setIsOpen: (state: boolean) => void;
   activeNode: NormalizedFamilyTree;
   children?: React.ReactNode;
+  selectedFamily: string;
 }
 export const DemographicsOverlay = (props: SlidingOverlayProps) => {
   if (!props.activeNode) return null;
@@ -64,7 +65,10 @@ export const DemographicsOverlay = (props: SlidingOverlayProps) => {
       }}>
       <div className="">
         <div className="flex flex-row justify-between">
-          <AdvancedViewButton guid={activeNode.id} />
+          <AdvancedViewButton
+            guid={activeNode.id}
+            family={props.selectedFamily}
+          />
           <CloseButton />
         </div>
         <div className="h-5" />

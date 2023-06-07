@@ -36,7 +36,7 @@ const SkillData: ISkillData[] = [
       'Convert artifact database from local to cloud hosted',
       'Add a way to integrate other major families, such as Olson and Dirks',
     ],
-    color: SkillType.INCOMPLETE,
+    color: SkillType.COMPLETED,
   },
   {
     title: '2023 Q3',

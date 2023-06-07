@@ -9,14 +9,16 @@ import { Table } from '../../components/Table/Table';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { getAge } from '../../utils/age';
 import { usePerson } from './usePerson';
-import { getTreeData } from '../../lib/treeJson';
+import { getTreeJson } from '../../lib/getTreeJson';
 
 const Person = ({
   people,
   id,
+  family,
 }: {
   people: NormalizedFamilyTree[];
   id: string;
+  family: string;
 }) => {
   const data = usePerson({ id, peopleResult: people });
 
@@ -138,13 +140,15 @@ const Person = ({
 };
 
 export const getServerSideProps = (context: any) => {
-  const people = getTreeData();
   const id = context.query.id;
+  const family = context.query.family;
+  const people = getTreeJson(family);
 
   return {
     props: {
       id,
       people,
+      family,
     },
   };
 };

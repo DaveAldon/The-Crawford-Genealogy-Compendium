@@ -37,7 +37,7 @@ export const getMilitaryData = async () => {
   return [];
 };
 
-export const getPeopleData = async () => {
+export const getFamilyData = async (sheet: string) => {
   try {
     const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
     const jwt = new google.auth.JWT(
@@ -50,7 +50,7 @@ export const getPeopleData = async () => {
     const sheets = google.sheets({ version: 'v4', auth: jwt });
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: 'People', // sheet name
+      range: sheet, // sheet name
     });
 
     const rows = response.data.values;

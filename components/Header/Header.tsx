@@ -3,7 +3,6 @@ import { Heights } from '../../styles/constants.enum';
 import { CircleLogo } from '../Logos/CircleLogo';
 import Layout from '../layout';
 import MobileMenu from './MobileMenu';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 const HeaderLink = ({ href, children }: { href: string; children: string }) => (
@@ -23,8 +22,6 @@ interface HeaderProps {
   slug?: string;
 }
 export const Header = (props: HeaderProps) => {
-  const router = useRouter();
-
   const links = [
     { href: '/', children: 'Home' },
     { href: '/FamilyTree', children: 'Family Tree' },
@@ -74,11 +71,8 @@ export const Header = (props: HeaderProps) => {
         {/* <!-- Twitter Meta Tags -->
          */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="AI can never tell you your great-great-grandfather's story"
-        />
-        <meta name="twitter:description" content="Published 2023-06-03" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
       <Layout />

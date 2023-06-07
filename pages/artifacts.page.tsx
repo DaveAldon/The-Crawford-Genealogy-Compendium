@@ -8,7 +8,7 @@ import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import { ReactNode } from 'react';
 import { AdvancedViewButton } from '../components/Buttons/AdvancedViewButton';
-import { getTreeData } from '../lib/treeJson';
+import { getTreeJson } from '../lib/getTreeJson';
 
 export interface CustomImage extends Image {
   description: ReactNode;
@@ -28,6 +28,7 @@ export default function Artifacts({ images }: { images: CustomImage[] }) {
         <AdvancedViewButton
           guid={image.guid}
           text={`${image.name} - ${image.description || 'No description'}`}
+          family="Crawford"
         />
       ),
     };
@@ -71,7 +72,7 @@ export default function Artifacts({ images }: { images: CustomImage[] }) {
 }
 
 export const getServerSideProps = (_context: any) => {
-  const data = getTreeData();
+  const data = getTreeJson('Crawford');
   const images: CustomImage[] = [];
   data.forEach(item => {
     if (!item.metadata.photos) return;

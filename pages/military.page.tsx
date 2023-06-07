@@ -1,9 +1,13 @@
+'use client';
+import React from 'react';
+import { families } from '../compendium/lib/families';
 import { Footer } from '../components/Footer/Footer';
 import { ProfileInfo } from '../components/GraphTree/GraphNode/components/ProfileInfo/ProfileInfo';
 import { ProfilePhoto } from '../components/GraphTree/GraphNode/components/ProfilePhoto/ProfilePhoto';
 import { Header } from '../components/Header/Header';
-import { getTreeData } from '../lib/treeJson';
+import { getTreeJson } from '../lib/getTreeJson';
 import { NormalizedFamilyTree } from '../types/genealogy';
+import { SearchFamilies } from '../components/SearchResults/SearchFamilies';
 
 interface EraData {
   title: string;
@@ -71,7 +75,21 @@ const Era = ({ eraData }: { eraData: EraData }) => {
   );
 };
 
-export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
+export default function Military() {
+  const [selectedFamily, setSelectedFamily] = React.useState(families[0]);
+  const [data, setData] = React.useState<NormalizedFamilyTree[]>([]);
+
+  React.useEffect(() => {
+    (async () => {
+      const nodeResponse = await fetch(`data/${selectedFamily}.json`);
+      const nodeData = (await nodeResponse.json()) as NormalizedFamilyTree[];
+      const filteredData = nodeData.filter(
+        person => person.metadata.military !== undefined,
+      );
+      setData([...filteredData]);
+    })();
+  }, [selectedFamily]);
+
   return (
     <div className="text-black flex flex-col justify-between bg-black">
       <Header />
@@ -87,6 +105,12 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
                 Select a profile to see more information about them and their
                 service history.
               </p>
+            </div>
+            <div className="flex justify-center mb-10 bg-[#1f2124] w-fit rounded-md">
+              <SearchFamilies
+                selectedFamily={selectedFamily}
+                setSelectedFamily={setSelectedFamily}
+              />
             </div>
             {eras.map(era => {
               return (
@@ -156,15 +180,3 @@ export default function Military({ data }: { data: NormalizedFamilyTree[] }) {
     </div>
   );
 }
-
-export const getServerSideProps = (_context: any) => {
-  const data = getTreeData();
-  const filteredData = data.filter(
-    person => person.metadata.military !== undefined,
-  );
-  return {
-    props: {
-      data: filteredData,
-    },
-  };
-};

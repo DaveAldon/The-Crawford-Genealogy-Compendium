@@ -1,7 +1,7 @@
 import { APIFamilyTree } from '../types/genealogy';
-import { getPeopleData } from './lib/googlesheets';
+import { getFamilyData } from './lib/googlesheets';
 
-export const getFamilyTree = async () => {
-  const people: APIFamilyTree[] = await getPeopleData();
+export const getFamilyTree = async (familySheet: string) => {
+  const people: APIFamilyTree[] = await getFamilyData(familySheet);
   return { people };
 };

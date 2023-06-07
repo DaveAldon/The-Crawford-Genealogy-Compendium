@@ -1,12 +1,13 @@
 import { Edge } from 'reactflow';
-import json from './data/people.json';
+import { NormalizedFamilyTree } from '../types/genealogy';
+import * as fs from 'fs';
 
-const getGenderFromId = (id: string): string => {
+const getGenderFromId = (id: string, json: NormalizedFamilyTree[]): string => {
   const personNode = json.find(person => person.id === id);
   return personNode?.gender || '';
 };
 
-const getSpouseIds = (id: string): string[] => {
+const getSpouseIds = (id: string, json: NormalizedFamilyTree[]): string[] => {
   const personNode = json.find(person => person.id === id);
   const spouseIds: string[] = [];
   personNode?.spouses.forEach(spouse => {
@@ -21,12 +22,15 @@ const getSpouseIds = (id: string): string[] => {
   return spouseIds;
 };
 
-export const generateEdges = (): Edge[] => {
+export const generateEdges = (path: string): Edge[] => {
+  const jsonString = fs.readFileSync(path, 'utf-8');
+  const json = JSON.parse(jsonString) as NormalizedFamilyTree[];
+
   const edges: Edge[] = [];
 
   json.forEach(person => {
-    const spouseIdNodes = getSpouseIds(person.id);
-    const gender = getGenderFromId(person.id);
+    const spouseIdNodes = getSpouseIds(person.id, json);
+    const gender = getGenderFromId(person.id, json);
 
     spouseIdNodes.forEach(spouseIdNode => {
       const target = spouseIdNode;
