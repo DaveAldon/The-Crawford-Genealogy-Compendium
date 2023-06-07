@@ -103,7 +103,7 @@ const Person = ({ id, family }: { id: string; family: string }) => {
                   <Table raw title={'Divorced'} data={data.divorcedTable} />
                 ) : null}
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
                 {data.photos && data.photos.length > 0 ? (
                   <ArtifactCarousel
                     type={CarouselType.photo}
