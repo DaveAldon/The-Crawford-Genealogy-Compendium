@@ -5,9 +5,9 @@ import { Footer } from '../components/Footer/Footer';
 import { ProfileInfo } from '../components/GraphTree/GraphNode/components/ProfileInfo/ProfileInfo';
 import { ProfilePhoto } from '../components/GraphTree/GraphNode/components/ProfilePhoto/ProfilePhoto';
 import { Header } from '../components/Header/Header';
-import { getTreeJson } from '../lib/getTreeJson';
 import { NormalizedFamilyTree } from '../types/genealogy';
 import { SearchFamilies } from '../components/SearchResults/SearchFamilies';
+import { getTreeJsonClient } from '../lib/getTreeJsonClient';
 
 interface EraData {
   title: string;
@@ -81,8 +81,7 @@ export default function Military() {
 
   React.useEffect(() => {
     (async () => {
-      const nodeResponse = await fetch(`data/${selectedFamily}.json`);
-      const nodeData = (await nodeResponse.json()) as NormalizedFamilyTree[];
+      const nodeData = await getTreeJsonClient(selectedFamily);
       const filteredData = nodeData.filter(
         person => person.metadata.military !== undefined,
       );
@@ -133,7 +132,11 @@ export default function Military() {
                             overflow: 'hidden',
                           }}>
                           <a
-                            href={`/person/${person.id}`}
+                            href={`/person/${person.id}?family=${
+                              selectedFamily === ''
+                                ? 'Crawford'
+                                : selectedFamily
+                            }`}
                             target="_blank"
                             rel="noreferrer">
                             <div

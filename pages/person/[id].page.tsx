@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import {
   ArtifactCarousel,
@@ -9,29 +10,31 @@ import { Table } from '../../components/Table/Table';
 import { NormalizedFamilyTree } from '../../types/genealogy';
 import { getAge } from '../../utils/age';
 import { usePerson } from './usePerson';
-import { getTreeJson } from '../../lib/getTreeJson';
+import { getTreeJsonClient } from '../../lib/getTreeJsonClient';
 
-const Person = ({
-  people,
-  id,
-  family,
-}: {
-  people: NormalizedFamilyTree[];
-  id: string;
-  family: string;
-}) => {
-  const data = usePerson({ id, peopleResult: people });
+const Person = ({ id, family }: { id: string; family: string }) => {
+  const [people, setPeople] = useState<NormalizedFamilyTree[]>([]);
+  const data = usePerson({ id, peopleResult: people, selectedFamily: family });
 
-  const imageSrc = data.person.metadata.profile[0].link;
-
-  const age = getAge({ DOB: data.person.DOB, Death: data.person.Death });
   const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const nodeData = await getTreeJsonClient(family);
+      setPeople([...nodeData]);
+    })();
+  }, [family]);
+
   useEffect(() => {
     setHydrated(true);
   }, []);
-  if (!hydrated) {
+
+  if (!hydrated || !data || !data.person || !data.person.metadata) {
     return null;
   }
+
+  const imageSrc = data.person.metadata.profile[0].link;
+  const age = getAge({ DOB: data.person.DOB, Death: data.person.Death });
 
   return (
     <div className="text-white bg-black">
@@ -142,12 +145,10 @@ const Person = ({
 export const getServerSideProps = (context: any) => {
   const id = context.query.id;
   const family = context.query.family;
-  const people = getTreeJson(family);
 
   return {
     props: {
       id,
-      people,
       family,
     },
   };

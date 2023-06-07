@@ -7,11 +7,13 @@ import { Artifact } from '../../types/artifacts.d';
 export const usePerson = ({
   id,
   peopleResult,
+  selectedFamily,
 }: {
   id: string;
   peopleResult: NormalizedFamilyTree[];
+  selectedFamily: string;
 }) => {
-  const [people, _setPeople] = useState<NormalizedFamilyTree[]>(peopleResult);
+  const [people, setPeople] = useState<NormalizedFamilyTree[]>([]);
   const [person, setPerson] = useState<NormalizedFamilyTree>(
     peopleResult.filter((p: any) => p.id === id)[0] as NormalizedFamilyTree,
   );
@@ -40,6 +42,14 @@ export const usePerson = ({
   };
 
   useEffect(() => {
+    setPeople([...peopleResult]);
+    setPerson(
+      peopleResult.filter((p: any) => p.id === id)[0] as NormalizedFamilyTree,
+    );
+  }, [peopleResult]);
+
+  useEffect(() => {
+    if (people.length === 0) return;
     if (person.Spouse) {
       setSpouse(
         people.find(
@@ -96,10 +106,15 @@ export const usePerson = ({
     setMovies([...person.metadata.videos]);
     setArtifacts([...person.metadata.artifacts]);
 
-    window.history.pushState(null, '', `/person/${person.id}`);
+    window.history.pushState(
+      null,
+      '',
+      `/person/${person.id}?family=${selectedFamily}`,
+    );
   }, [person]);
 
   useEffect(() => {
+    if (people.length === 0) return;
     const tmpDemographicsTable: TableData[] = [];
     const tmpParentsTable: TableData[] = [];
     const tmpDivorcedTable: TableData[] = [];
