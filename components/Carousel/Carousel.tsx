@@ -24,9 +24,7 @@ export const ArtifactCarousel = (props: Props) => {
 
   return (
     <Swiper
-      style={{
-        width: '100%',
-      }}
+      className="w-full my-4"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}

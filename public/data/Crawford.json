@@ -1106,10 +1106,10 @@
     "Lastname": "Crawford",
     "Gender": "M",
     "DOB": "03/21/1876",
-    "Birthplace": "",
+    "Birthplace": "York, NE",
     "BirthplaceCoords": "",
-    "Death": "1959",
-    "Deathplace": "",
+    "Death": "11/25/1959",
+    "Deathplace": "York, NE",
     "DeathplaceCoords": "",
     "Mother": "6d336512-b995-4c84-b202-64741760940d",
     "Father": "feb49296-d16e-4487-b44d-c5b4f09e5a5d",
@@ -1162,11 +1162,36 @@
       }
     ],
     "metadata": {
-      "videos": [],
-      "photos": [],
       "artifacts": [],
+      "photos": [
+        {
+          "mimeType": "image/png",
+          "thumbnailLink": "",
+          "link": "https://drive.google.com/uc?export=view&id=1MTthp4ifjFcG1diY4IxKaiKy-MxcgzSY",
+          "name": "artifact2.jpg",
+          "id": "1MTthp4ifjFcG1diY4IxKaiKy-MxcgzSY",
+          "description": "Marriage certificate for Robert's marriage to Bertha",
+          "imageMediaMetadata": {
+            "width": 760,
+            "height": 522,
+            "rotation": 0
+          }
+        },
+        {
+          "mimeType": "image/jpeg",
+          "thumbnailLink": "",
+          "link": "https://drive.google.com/uc?export=view&id=12Tn6yHQOC45HP62v9uksHAYz8BqkD6-i",
+          "name": "img-1.jpg",
+          "id": "12Tn6yHQOC45HP62v9uksHAYz8BqkD6-i",
+          "description": "Obituary",
+          "imageMediaMetadata": {
+            "width": 686,
+            "height": 765,
+            "rotation": 0
+          }
+        }
+      ],
       "military": [],
-      "miscellaneous": [],
       "profile": [
         {
           "mimeType": "",
@@ -1177,7 +1202,9 @@
           "description": "",
           "imageMediaMetadata": {}
         }
-      ]
+      ],
+      "videos": [],
+      "miscellaneous": []
     },
     "position": {
       "x": 0,
@@ -1291,7 +1318,21 @@
           }
         }
       ],
-      "photos": [],
+      "photos": [
+        {
+          "mimeType": "image/png",
+          "thumbnailLink": "",
+          "link": "https://drive.google.com/uc?export=view&id=12VH2QGsX5d-VxhRU5s1j6w2e5uVWny8b",
+          "name": "obituary.png",
+          "id": "12VH2QGsX5d-VxhRU5s1j6w2e5uVWny8b",
+          "description": "Obituary from the Yuma Pioneer Newspaper",
+          "imageMediaMetadata": {
+            "width": 1042,
+            "height": 1030,
+            "rotation": 0
+          }
+        }
+      ],
       "military": [],
       "videos": []
     },
