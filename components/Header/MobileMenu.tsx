@@ -33,6 +33,7 @@ export default function MobileMenu() {
   const links = [
     { href: '/', children: 'Home' },
     { href: '/FamilyTree', children: 'Family Tree' },
+    //{ href: '/cars', children: 'Cars' },
     { href: '/blog', children: 'Blog' },
     //{ href: '/artifacts', children: 'Artifacts' },
     { href: '/military', children: 'Military' },
