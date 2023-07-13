@@ -14,7 +14,7 @@ export const Letters = () => {
               the chance to meet. And yet, even now they speak to us uniquely
               through genealogies.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6 flex-col lg:flex-row gap-8">
+            <div className="mt-10 flex items-center justify-center flex-col lg:flex-row lg:gap-32">
               <div>
                 <div className="flex flex-row gap-4">
                   <img
