@@ -18,8 +18,8 @@ export const Hero = () => {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              The Crawford Genealogy Compendium
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              The Crawford Genealogy
             </h1>
             <p className="mt-6 text-lg leading-8 text-white italic">
               My God put it into my heart to assemble the nobles, the officials

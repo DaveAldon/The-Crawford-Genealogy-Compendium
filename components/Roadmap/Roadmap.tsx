@@ -103,12 +103,21 @@ const Task = ({ name, color }: { name: string; color: SkillType }) => {
 
 export const Roadmap = () => {
   return (
-    <section className="text-white body-font ">
-      <div className="flex flex-wrap gap-10 w-full justify-center items-start">
-        {SkillData.map((skill, index) => (
-          <Category skill={skill} key={index} />
-        ))}
-      </div>
-    </section>
+    <div id="roadmap" className="mt-16 max-w-7xl mx-auto text-center">
+      <h1 className="mb-8 text-3xl font-semibold text-white">
+        Current Roadmap
+      </h1>
+      <h1 className="mb-8 text-xl text-gray-400 text-center">
+        Our current goals for this project are below, and will continue to
+        expand.
+      </h1>
+      <section className="text-white body-font ">
+        <div className="flex flex-wrap gap-10 w-full justify-center items-start">
+          {SkillData.map((skill, index) => (
+            <Category skill={skill} key={index} />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };

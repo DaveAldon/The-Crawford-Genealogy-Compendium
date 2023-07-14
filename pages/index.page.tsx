@@ -15,16 +15,7 @@ export default function Home() {
         <Hero />
         <Letters />
         <Options />
-        <div id="roadmap" className="mt-16 max-w-7xl mx-auto text-center">
-          <h1 className="mb-8 text-6xl font-semibold text-white">
-            Current Roadmap
-          </h1>
-          <h1 className="mb-8 text-xl text-gray-400 text-center">
-            Our current goals for this project are below, and will continue to
-            expand.
-          </h1>
-          <Roadmap />
-        </div>
+        <Roadmap />
       </section>
       <Footer />
     </div>
