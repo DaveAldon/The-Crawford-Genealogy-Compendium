@@ -9,9 +9,9 @@ import { Options } from '../components/Hero/Options';
 
 export default function Home() {
   return (
-    <div className="text-black bg-black flex flex-col justify-center items-center w-full">
+    <div className="text-black bg-black">
       <Header />
-      <section className="text-gray-600 body-font mx-16">
+      <section className="text-gray-600 body-font mx-0 md:mx-16">
         <Hero />
         <Letters />
         <Options />

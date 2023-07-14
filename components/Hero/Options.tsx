@@ -1,10 +1,34 @@
 import Link from 'next/link';
 
+const Video = () => (
+  <div
+    style={{
+      transform: 'rotate(8deg)',
+      borderRadius: '65% 35% 75% 25% / 29% 32% 68% 71% ',
+      overflow: 'hidden',
+    }}>
+    <video
+      height={500}
+      width={500}
+      autoPlay
+      loop
+      muted
+      playsInline
+      style={{
+        backgroundColor: 'red',
+        scale: '1.4',
+      }}>
+      <source src="/homeVideo.mp4" type="video/mp4" />
+    </video>
+  </div>
+);
+
 export const Options = () => {
   return (
-    <div className="max-w-5xl flex pt-24 lg:flex-row flex-col items-center">
-      <div className="lg:flex-grow md:w-1/2 pt-6 flex flex-col md:items-start md:text-left mb-10 items-center text-center">
-        <p className="mb-4 text-gray-400 text-lg">
+    <div className="max-w-5xl flex pt-24 flex-col items-center">
+      <Video />
+      <div className="lg:flex-grow max-w-xl pt-6 flex flex-col md:items-start md:text-left mb-10 items-center text-center">
+        <p className="mb-4 text-gray-400 text-lg mx-4 md:mx-8">
           The Crawford Genealogy Compendium is an effort to curate the Crawford
           family&apos;s history, documents, and artifacts without any barriers
           or paywalls. We believe that anyone who wants to learn about the
@@ -42,27 +66,6 @@ export const Options = () => {
             <span className="justify-center">Check out our Blog</span>
           </Link>
         </div>
-      </div>
-      <div
-        style={{
-          transform: 'rotate(8deg)',
-          borderRadius: '65% 35% 75% 25% / 29% 32% 68% 71% ',
-
-          overflow: 'hidden',
-        }}>
-        <video
-          height={500}
-          width={400}
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            backgroundColor: 'red',
-            scale: '1.4',
-          }}>
-          <source src="/homeVideo.mp4" type="video/mp4" />
-        </video>
       </div>
     </div>
   );
