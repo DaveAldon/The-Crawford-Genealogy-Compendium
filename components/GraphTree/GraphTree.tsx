@@ -60,7 +60,7 @@ const Flow = (props: GraphTreeProps) => {
       fitView();
       //setInitialResize(true);
     }, 500);
-  }, [reactFlowWidth, reactFlowHeight, fitView, initialResize]);
+  }, [reactFlowHeight, reactFlowWidth, fitView, initialResize]);
 
   if (
     graphTree.nodes === null ||
@@ -72,8 +72,8 @@ const Flow = (props: GraphTreeProps) => {
   }
 
   return (
-    <>
-      <div className="absolute inset-0 flex z-10 h-fit">
+    <div className="h-full">
+      <div className="absolute inset-0 flex z-10 h-fit top-[54px]">
         <GraphControls
           selectedFamily={graphTree.selectedFamily}
           setSelectedFamily={(family: string) => {
@@ -115,17 +115,18 @@ const Flow = (props: GraphTreeProps) => {
         <MiniMap
           zoomable
           pannable
+          className="backdrop-blur-md bg-opacity-30 bg-gray-800 rounded-lg overflow-hidden bg-gray-500/30"
           style={{
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
             backgroundColor: hext('#808080', 30),
-            borderRadius: '10px',
-            overflow: 'hidden',
           }}
           ariaLabel="Mini Map"
           maskColor={hext('#808080', 30)}
         />
-        <Controls onFitView={() => fitView()} showInteractive={false} />
+        <Controls
+          onFitView={() => fitView()}
+          showInteractive={false}
+          className="fill-white"
+        />
         <svg>
           <defs>
             <linearGradient id="edge-gradient">
@@ -153,7 +154,7 @@ const Flow = (props: GraphTreeProps) => {
           </defs>
         </svg>
       </ReactFlow>
-    </>
+    </div>
   );
 };
 
@@ -164,8 +165,7 @@ export const GraphTree = (props: GraphTreeProps) => {
     <ReactFlowProvider>
       <div
         style={{
-          height: height - 56,
-          width,
+          height: height,
         }}>
         <Flow {...props} />
       </div>

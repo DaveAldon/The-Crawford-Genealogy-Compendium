@@ -5,6 +5,7 @@ import { families } from '../../compendium/lib/families';
 interface SearchResultsProps {
   selectedFamily: string;
   setSelectedFamily: (family: string) => void;
+  width: number;
 }
 export const SearchFamilies = (props: SearchResultsProps) => {
   return (
@@ -14,7 +15,7 @@ export const SearchFamilies = (props: SearchResultsProps) => {
         id="combo-box-demo"
         options={families}
         sx={{
-          width: 200,
+          width: props.width < 500 ? 150 : 200,
           '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
             border: '1px solid #eee',
           },
@@ -54,7 +55,12 @@ export const SearchFamilies = (props: SearchResultsProps) => {
         )}
         PaperComponent={({ children }) => (
           <Paper
-            style={{ backgroundColor: '#111111', marginTop: 13, width: 300 }}>
+            style={{
+              backgroundColor: '#111111',
+              marginTop: 13,
+              width: 300,
+              marginLeft: props.width < 600 ? -150 : 0,
+            }}>
             {children}
           </Paper>
         )}

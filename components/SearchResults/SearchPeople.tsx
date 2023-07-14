@@ -11,6 +11,7 @@ interface SearchResultsProps {
   peopleData: Node[];
   person: Node | null;
   setPerson: (people: Node | null) => void;
+  width: number;
 }
 export const SearchPeople = (props: SearchResultsProps) => {
   const menuItems: MenuItem[] = props.peopleData
@@ -33,7 +34,7 @@ export const SearchPeople = (props: SearchResultsProps) => {
         id="combo-box-demo"
         options={menuItems}
         sx={{
-          width: 200,
+          width: props.width < 500 ? 150 : 200,
           '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
             border: '1px solid #eee',
           },
