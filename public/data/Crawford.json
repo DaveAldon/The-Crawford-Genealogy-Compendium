@@ -1162,8 +1162,7 @@
       }
     ],
     "metadata": {
-      "artifacts": [],
-      "photos": [
+      "artifacts": [
         {
           "mimeType": "image/png",
           "thumbnailLink": "",
@@ -1191,16 +1190,21 @@
           }
         }
       ],
+      "photos": [],
       "military": [],
       "profile": [
         {
-          "mimeType": "",
-          "thumbnailLink": "/man.png",
-          "link": "/man.png",
-          "name": "",
-          "id": "",
+          "mimeType": "image/png",
+          "thumbnailLink": "",
+          "link": "https://drive.google.com/uc?export=view&id=1tMWG5MAq5Lb-inwfstIoKZDOFWkow3u2",
+          "name": "profile.png",
+          "id": "1tMWG5MAq5Lb-inwfstIoKZDOFWkow3u2",
           "description": "",
-          "imageMediaMetadata": {}
+          "imageMediaMetadata": {
+            "width": 1326,
+            "height": 1280,
+            "rotation": 0
+          }
         }
       ],
       "videos": [],
@@ -1403,13 +1407,13 @@
         {
           "mimeType": "image/png",
           "thumbnailLink": "",
-          "link": "https://drive.google.com/uc?export=view&id=1cMTAocv_J-geZAX5k0QpuezyUAAyhNQj",
-          "name": "profile.png",
-          "id": "1cMTAocv_J-geZAX5k0QpuezyUAAyhNQj",
+          "link": "https://drive.google.com/uc?export=view&id=1t5dlVq_osr6yP1ofYpgYbxpp1sug0f32",
+          "name": "bertha-headshot.png",
+          "id": "1t5dlVq_osr6yP1ofYpgYbxpp1sug0f32",
           "description": "",
           "imageMediaMetadata": {
-            "width": 291,
-            "height": 366,
+            "width": 438,
+            "height": 570,
             "rotation": 0
           }
         }
@@ -3306,20 +3310,25 @@
     "metadata": {
       "videos": [],
       "photos": [],
-      "artifacts": [],
-      "military": [],
       "miscellaneous": [],
+      "artifacts": [],
       "profile": [
         {
-          "mimeType": "",
-          "thumbnailLink": "/man.png",
-          "link": "/man.png",
-          "name": "",
-          "id": "",
+          "mimeType": "image/png",
+          "thumbnailLink": "",
+          "link": "https://drive.google.com/uc?export=view&id=10-xB_Q_H32NaK2IY751YqhSLlj5o530M",
+          "name": "photo.png",
+          "id": "10-xB_Q_H32NaK2IY751YqhSLlj5o530M",
           "description": "",
-          "imageMediaMetadata": {}
+          "imageMediaMetadata": {
+            "colorSpace": "sRGB",
+            "width": 418,
+            "height": 598,
+            "rotation": 0
+          }
         }
-      ]
+      ],
+      "military": []
     },
     "position": {
       "x": 0,
@@ -3642,22 +3651,26 @@
     "spouses": [],
     "children": [],
     "metadata": {
-      "videos": [],
-      "photos": [],
-      "artifacts": [],
       "military": [],
-      "miscellaneous": [],
+      "artifacts": [],
+      "photos": [],
       "profile": [
         {
-          "mimeType": "",
-          "thumbnailLink": "/man.png",
-          "link": "/man.png",
-          "name": "",
-          "id": "",
+          "mimeType": "image/png",
+          "thumbnailLink": "",
+          "link": "https://drive.google.com/uc?export=view&id=1EjUgn4fouu8C75urBHtlrX7pkGPll7La",
+          "name": "profile.png",
+          "id": "1EjUgn4fouu8C75urBHtlrX7pkGPll7La",
           "description": "",
-          "imageMediaMetadata": {}
+          "imageMediaMetadata": {
+            "width": 282,
+            "height": 392,
+            "rotation": 0
+          }
         }
-      ]
+      ],
+      "miscellaneous": [],
+      "videos": []
     },
     "position": {
       "x": 0,
@@ -3800,13 +3813,17 @@
       "videos": [],
       "profile": [
         {
-          "mimeType": "",
-          "thumbnailLink": "/woman.png",
-          "link": "/woman.png",
-          "name": "",
-          "id": "",
+          "mimeType": "image/png",
+          "thumbnailLink": "",
+          "link": "https://drive.google.com/uc?export=view&id=1dyIgqPGb4mLSyniCvqsEC8rFTx28ityp",
+          "name": "profile.png",
+          "id": "1dyIgqPGb4mLSyniCvqsEC8rFTx28ityp",
           "description": "",
-          "imageMediaMetadata": {}
+          "imageMediaMetadata": {
+            "width": 416,
+            "height": 602,
+            "rotation": 0
+          }
         }
       ],
       "artifacts": [

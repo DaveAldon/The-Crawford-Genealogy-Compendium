@@ -8,6 +8,7 @@ import { Header } from '../components/Header/Header';
 import { NormalizedFamilyTree } from '../types/genealogy';
 import { SearchFamilies } from '../components/SearchResults/SearchFamilies';
 import { getTreeJsonClient } from '../lib/getTreeJsonClient';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 interface EraData {
   title: string;
@@ -78,6 +79,7 @@ const Era = ({ eraData }: { eraData: EraData }) => {
 export default function Military() {
   const [selectedFamily, setSelectedFamily] = React.useState(families[0]);
   const [data, setData] = React.useState<NormalizedFamilyTree[]>([]);
+  const [width] = useWindowSize();
 
   React.useEffect(() => {
     (async () => {
@@ -107,6 +109,7 @@ export default function Military() {
             </div>
             <div className="flex justify-center mb-10 bg-[#1f2124] w-fit rounded-md">
               <SearchFamilies
+                width={width}
                 selectedFamily={selectedFamily}
                 setSelectedFamily={setSelectedFamily}
               />
@@ -132,11 +135,10 @@ export default function Military() {
                             overflow: 'hidden',
                           }}>
                           <a
-                            href={`/person/${person.id}?family=${
-                              selectedFamily === ''
+                            href={`/person/${person.id}?family=${selectedFamily === ''
                                 ? 'Crawford'
                                 : selectedFamily
-                            }`}
+                              }`}
                             target="_blank"
                             rel="noreferrer">
                             <div
