@@ -149,6 +149,7 @@ export const usePerson = ({
           label: award.description,
           value: (
             <img
+              referrerPolicy="no-referrer"
               alt={award.description}
               src={award.link}
               style={{ width: '200px' }}

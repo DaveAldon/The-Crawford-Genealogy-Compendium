@@ -6,7 +6,14 @@ dotenv.config();
 export const getEmbedLink = (fileId: string) => {
   if (fileId === '') return '';
   //return `https://drive.google.com/file/d/${fileId}/preview`;
-  return `https://drive.google.com/uc?export=view&id=${fileId}`;
+  // https://lh3.googleusercontent.com/d/
+  // https://drive.google.com/uc?export=view&id=${fileId}`
+  return `https://lh3.googleusercontent.com/d/${fileId}`;
+};
+
+export const getVideoEmbedLink = (fileId: string) => {
+  if (fileId === '') return '';
+  return `https://drive.google.com/file/d/${fileId}/preview`;
 };
 
 //drive.google.com/file/d/1huOG-2y4vY6tBXZOWfyOectJHBazWZNU/preview

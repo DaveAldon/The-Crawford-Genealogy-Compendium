@@ -1,5 +1,9 @@
 import { Artifact, ArtifactType, Artifacts } from '../types/artifacts.d';
-import { getDriveData, getEmbedLink } from './lib/googleDrive';
+import {
+  getDriveData,
+  getEmbedLink,
+  getVideoEmbedLink,
+} from './lib/googleDrive';
 
 export const getArtifacts = async (): Promise<Artifacts[]> => {
   const artifactsRaw = await getDriveData();
@@ -47,7 +51,10 @@ export const getArtifacts = async (): Promise<Artifacts[]> => {
             artifactFiles.push({
               mimeType: file.mimeType || '',
               thumbnailLink: '', // file.thumbnailLink || '',
-              link: getEmbedLink(file.id || ''),
+              link:
+                file.mimeType === 'video/mp4'
+                  ? getVideoEmbedLink(file.id || '')
+                  : getEmbedLink(file.id || ''),
               name: file.name || '',
               id: file.id || '',
               description: file.description || '',

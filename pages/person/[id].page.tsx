@@ -49,6 +49,7 @@ const Person = ({ id, family }: { id: string; family: string }) => {
                 <div className="relative w-full">
                   <div className="rounded-md overflow-hidden absolute h-64 w-full">
                     <img
+                      referrerPolicy="no-referrer"
                       src={imageSrc}
                       alt=""
                       style={{
@@ -61,6 +62,7 @@ const Person = ({ id, family }: { id: string; family: string }) => {
                   </div>
 
                   <img
+                    referrerPolicy="no-referrer"
                     src={imageSrc}
                     alt="profile picture"
                     style={{

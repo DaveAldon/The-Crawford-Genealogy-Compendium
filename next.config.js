@@ -11,6 +11,21 @@ const nextConfig = {
       },
     ],
   },
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self' https://drive.google.com;",
+          },
+        ],
+      },
+    ];
+  },
+
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.md$/,
@@ -23,7 +38,7 @@ const nextConfig = {
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
+
 module.exports = withBundleAnalyzer({
   ...nextConfig,
 });
-//module.exports = nextConfig;

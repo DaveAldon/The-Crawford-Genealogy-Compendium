@@ -24,6 +24,7 @@ export const ProfileCard = (props: Props) => {
       className="mb-3 rounded-lg shadow-lg relative flex justify-center">
       <div className="rounded-md overflow-hidden absolute left-0 h-56 w-full">
         <img
+          referrerPolicy="no-referrer"
           alt=""
           style={{
             height: '100%',
@@ -34,6 +35,7 @@ export const ProfileCard = (props: Props) => {
         />
       </div>
       <img
+        referrerPolicy="no-referrer"
         alt="Profile picture"
         className="h-56 object-contain absolute"
         src={profilePicture}

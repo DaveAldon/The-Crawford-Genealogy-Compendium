@@ -16,15 +16,14 @@ export const Video = ({
       }`}>
       <div style={{ height: '500px', backgroundColor: 'black' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <video
+        <iframe
           key={src}
           className="object-contain h-full w-full"
-          autoPlay
-          loop
-          muted
-          playsInline>
-          <source src={src} type="video/mp4" />
-        </video>
+          src={src}
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          referrerPolicy="no-referrer"
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
         {title !== '' ? <InfoOverlay title="" description={title} /> : null}
       </div>
     </div>

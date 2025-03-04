@@ -16,7 +16,12 @@ export const Photo = ({
       }`}>
       <div style={{ height: '500px' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" src={src} className="object-contain h-full w-full" />
+        <img
+          referrerPolicy="no-referrer"
+          alt=""
+          src={src}
+          className="object-contain h-full w-full"
+        />
       </div>
       {title !== '' ? <InfoOverlay title="" description={title} /> : null}
     </div>

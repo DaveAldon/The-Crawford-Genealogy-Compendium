@@ -39,7 +39,7 @@ const SkillData: ISkillData[] = [
     color: SkillType.COMPLETED,
   },
   {
-    title: '2023 Q3',
+    title: '2025 Q4',
     tasks: [
       'Add integrations with other genealogy services, such as Find A Grave',
       'Add a query system to find interesting demographics such as "show all military family members" or "show all people born in the 1800s"',
@@ -49,7 +49,7 @@ const SkillData: ISkillData[] = [
     color: SkillType.INCOMPLETE,
   },
   {
-    title: '2023 Q4',
+    title: '2026 Q1',
     tasks: [
       'Add connections to William Wallace and William H. Crawford',
       'Add a Crawford family history writeup, including the Coat of Arms and arrival to the United States',

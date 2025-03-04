@@ -16,6 +16,7 @@ export const ProfilePhoto = (props: Props) => {
         objectFit: 'cover',
       }}>
       <img
+        referrerPolicy="no-referrer"
         alt={props.alt || ''}
         style={{
           objectFit: 'cover',
